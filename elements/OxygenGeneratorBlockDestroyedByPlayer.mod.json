@@ -1,0 +1,7 @@
+{
+  "_fv": 14,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><xml xmlns=\"https://developers.google.com/blockly/xml\"><block deletable=\"false\" type=\"event_trigger\" x=\"40\" y=\"40\"><field name=\"trigger\">no_ext_trigger</field></block><block type=\"execute_command\" x=\"65\" y=\"221\"><value name=\"command\"><block type=\"text\"><field name=\"TEXT\">/fill ~-3 ~-3 ~-3 ~3 ~3 ~3 minecraft:air replace boss_tools:air_block</field></block></value><value name=\"x\"><block type=\"coord_x\"/></value><value name=\"y\"><block type=\"coord_y\"/></value><value name=\"z\"><block type=\"coord_z\"/></value><next><block type=\"execute_command\"><value name=\"command\"><block type=\"text\"><field name=\"TEXT\">/fill ~-4 ~-4 ~-4 ~4 ~4 ~4 minecraft:air replace boss_tools:air_block</field></block></value><value name=\"x\"><block type=\"coord_x\"/></value><value name=\"y\"><block type=\"coord_y\"/></value><value name=\"z\"><block type=\"coord_z\"/></value><next><block type=\"execute_command\"><value name=\"command\"><block type=\"text\"><field name=\"TEXT\">/fill ~-4 ~-4 ~-4 ~4 ~4 ~4 minecraft:air replace boss_tools:air_block_2</field></block></value><value name=\"x\"><block type=\"coord_x\"/></value><value name=\"y\"><block type=\"coord_y\"/></value><value name=\"z\"><block type=\"coord_z\"/></value></block></next></block></next></block></xml>"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "parent": "boss_tools:custom/glowstonetorch",
+  "textures": {
+    "all": "boss_tools:blocks/torch",
+    "particle": "boss_tools:blocks/torch",
+    "0": "boss_tools:blocks/oak_planks",
+    "2": "boss_tools:blocks/torch",
+    "3": "boss_tools:blocks/glowstonetorchtexture",
+    "missing": "boss_tools:blocks/"
+  }
+}

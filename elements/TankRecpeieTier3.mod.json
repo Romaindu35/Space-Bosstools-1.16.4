@@ -1,0 +1,46 @@
+{
+  "_fv": 14,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:SiliconIngot"
+      },
+      {
+        "value": "CUSTOM:Steahl"
+      },
+      {
+        "value": "CUSTOM:SiliconIngot"
+      },
+      {
+        "value": "CUSTOM:Steahl"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Steahl"
+      },
+      {
+        "value": "CUSTOM:SiliconIngot"
+      },
+      {
+        "value": "CUSTOM:Steahl"
+      },
+      {
+        "value": "CUSTOM:SiliconIngot"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:TankTier3"
+    },
+    "name": "tank_recpeie_tier_3",
+    "namespace": "mod"
+  }
+}

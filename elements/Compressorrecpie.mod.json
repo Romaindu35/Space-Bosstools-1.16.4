@@ -1,0 +1,46 @@
+{
+  "_fv": 14,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:Steahl"
+      },
+      {
+        "value": "Items.IRON_INGOT"
+      },
+      {
+        "value": "CUSTOM:Steahl"
+      },
+      {
+        "value": "CUSTOM:Hammer"
+      },
+      {
+        "value": "Blocks.FURNACE"
+      },
+      {
+        "value": "CUSTOM:Hammer"
+      },
+      {
+        "value": "CUSTOM:Steahl"
+      },
+      {
+        "value": "CUSTOM:Battery"
+      },
+      {
+        "value": "CUSTOM:Steahl"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Compressor"
+    },
+    "name": "compressorrecpie",
+    "namespace": "mod"
+  }
+}

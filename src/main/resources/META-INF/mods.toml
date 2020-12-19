@@ -1,0 +1,33 @@
+modLoader="javafml"
+loaderVersion="[35,)"
+license="Not specified"
+
+[[mods]]
+modId="boss_tools"
+version="3.3"
+displayName="boss tools"
+credits="Made by MrScautHD"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/space-bosstools"
+authors="MrScautHD"
+
+[[dependencies.boss_tools]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.4]"
+    ordering="NONE"
+    side="BOTH"
+
+
+[[dependencies.boss_tools]]
+    modId="obfuscate"
+    mandatory=true
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.boss_tools]]
+    modId="obfuscate"
+    mandatory=false
+    ordering="NONE"
+    side="BOTH"
+

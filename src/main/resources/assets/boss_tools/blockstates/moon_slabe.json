@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "boss_tools:block/moon_slabe"
+    },
+    "type=top": {
+      "model": "boss_tools:block/moon_slabe_top"
+    },
+    "type=double": {
+      "model": "boss_tools:block/moon_slabe_full"
+    }
+  }
+}

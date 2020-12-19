@@ -1,0 +1,11 @@
+{
+  "parent": "boss_tools:custom/flage",
+  "textures": {
+    "all": "boss_tools:blocks/blue_wool",
+    "particle": "boss_tools:blocks/blue_wool",
+    "0": "boss_tools:blocks/smooth_stone",
+    "1": "boss_tools:blocks/blue_wool",
+    "2": "boss_tools:blocks/smooth_stone",
+    "missing": "boss_tools:blocks/"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "oak_planks",
+        "2": "torch",
+        "3": "glowstonetorchtexture",
+        "missing": ""
+      },
+      "name": "default"
+    }
+  }
+}

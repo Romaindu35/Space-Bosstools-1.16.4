@@ -1,0 +1,39 @@
+{
+  "group": "boss_tools",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "3 5",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:red_wool"
+    },
+    "1": {
+      "item": "minecraft:red_wool"
+    },
+    "2": {
+      "item": "minecraft:red_wool"
+    },
+    "3": {
+      "item": "boss_tools:ironplate"
+    },
+    "5": {
+      "item": "boss_tools:ironplate"
+    },
+    "6": {
+      "item": "boss_tools:ironplate"
+    },
+    "7": {
+      "item": "minecraft:iron_ingot"
+    },
+    "8": {
+      "item": "boss_tools:ironplate"
+    }
+  },
+  "result": {
+    "item": "boss_tools:oxygen_tank",
+    "count": 1
+  }
+}

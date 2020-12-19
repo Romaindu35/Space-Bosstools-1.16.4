@@ -1,0 +1,42 @@
+{
+  "group": "boss_tools",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:redstone"
+    },
+    "1": {
+      "item": "boss_tools:ironplate"
+    },
+    "2": {
+      "item": "boss_tools:steahl"
+    },
+    "3": {
+      "item": "minecraft:iron_block"
+    },
+    "4": {
+      "item": "boss_tools:battery"
+    },
+    "5": {
+      "item": "boss_tools:ironplate"
+    },
+    "6": {
+      "item": "minecraft:redstone"
+    },
+    "7": {
+      "item": "boss_tools:ironplate"
+    },
+    "8": {
+      "item": "boss_tools:steahl"
+    }
+  },
+  "result": {
+    "item": "boss_tools:rocked_base",
+    "count": 1
+  }
+}

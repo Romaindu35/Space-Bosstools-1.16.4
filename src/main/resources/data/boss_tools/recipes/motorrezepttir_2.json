@@ -1,0 +1,39 @@
+{
+  "group": "boss_tools",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "3 5",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "boss_tools:moon_tin"
+    },
+    "1": {
+      "item": "boss_tools:steahl"
+    },
+    "2": {
+      "item": "boss_tools:moon_tin"
+    },
+    "3": {
+      "item": "boss_tools:steahl"
+    },
+    "5": {
+      "item": "boss_tools:steahl"
+    },
+    "6": {
+      "item": "boss_tools:moon_tin"
+    },
+    "7": {
+      "item": "boss_tools:steahl"
+    },
+    "8": {
+      "item": "boss_tools:moon_tin"
+    }
+  },
+  "result": {
+    "item": "boss_tools:motor_tier_2",
+    "count": 1
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "4": "dark_oak_log",
+        "5": "emerald_block",
+        "missing": "iron_block"
+      },
+      "name": "default"
+    }
+  }
+}

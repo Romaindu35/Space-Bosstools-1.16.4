@@ -1,0 +1,36 @@
+{
+  "group": "boss_tools",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "3 5",
+    "6 8"
+  ],
+  "key": {
+    "0": {
+      "item": "boss_tools:ironplate"
+    },
+    "1": {
+      "item": "minecraft:white_wool"
+    },
+    "2": {
+      "item": "boss_tools:ironplate"
+    },
+    "3": {
+      "item": "minecraft:white_wool"
+    },
+    "5": {
+      "item": "minecraft:white_wool"
+    },
+    "6": {
+      "item": "boss_tools:ironplate"
+    },
+    "8": {
+      "item": "boss_tools:ironplate"
+    }
+  },
+  "result": {
+    "item": "boss_tools:space_armor_leggings",
+    "count": 1
+  }
+}

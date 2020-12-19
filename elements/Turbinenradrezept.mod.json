@@ -1,0 +1,46 @@
+{
+  "_fv": 14,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:Steahl"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Steahl"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Items.IRON_INGOT"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Steahl"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Steahl"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:TurbinenRad"
+    },
+    "name": "turbinenradrezept",
+    "namespace": "mod"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "group": "boss_tools",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345"
+  ],
+  "key": {
+    "0": {
+      "item": "boss_tools:ironplate"
+    },
+    "1": {
+      "item": "minecraft:iron_helmet"
+    },
+    "2": {
+      "item": "boss_tools:ironplate"
+    },
+    "3": {
+      "item": "boss_tools:ironplate"
+    },
+    "4": {
+      "item": "minecraft:glass"
+    },
+    "5": {
+      "item": "boss_tools:ironplate"
+    }
+  },
+  "result": {
+    "item": "boss_tools:space_armor_helmet",
+    "count": 1
+  }
+}

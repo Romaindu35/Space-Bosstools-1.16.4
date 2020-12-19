@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "boss_tools:blocks/moonstone",
+    "up": "boss_tools:blocks/moonstone",
+    "north": "boss_tools:blocks/moonstone",
+    "east": "boss_tools:blocks/moonstone",
+    "south": "boss_tools:blocks/moonstone",
+    "west": "boss_tools:blocks/moonstone",
+    "particle": "boss_tools:blocks/moonstone"
+  }
+}

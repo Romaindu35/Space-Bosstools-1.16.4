@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "boss_tools:blocks/meteor_texture",
+    "up": "boss_tools:blocks/meteor_texture",
+    "north": "boss_tools:blocks/meteor_texture",
+    "east": "boss_tools:blocks/meteor_texture",
+    "south": "boss_tools:blocks/meteor_texture",
+    "west": "boss_tools:blocks/meteor_texture",
+    "particle": "boss_tools:blocks/meteor_texture"
+  }
+}

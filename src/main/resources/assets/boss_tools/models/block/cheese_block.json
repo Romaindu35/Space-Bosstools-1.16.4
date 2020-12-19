@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "boss_tools:blocks/chesseore",
+    "up": "boss_tools:blocks/chesseore",
+    "north": "boss_tools:blocks/chesseore",
+    "east": "boss_tools:blocks/chesseore",
+    "south": "boss_tools:blocks/chesseore",
+    "west": "boss_tools:blocks/chesseore",
+    "particle": "boss_tools:blocks/chesseore"
+  }
+}

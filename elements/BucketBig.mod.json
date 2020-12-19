@@ -1,0 +1,29 @@
+{
+  "_fv": 14,
+  "_type": "item",
+  "definition": {
+    "renderType": 0,
+    "texture": "bigbucket",
+    "customModelName": "Normal",
+    "name": "Big Bucket",
+    "rarity": "COMMON",
+    "creativeTab": {
+      "value": "CUSTOM:BossTools"
+    },
+    "stackSize": 8,
+    "enchantability": 0,
+    "useDuration": 0,
+    "toolType": 1.0,
+    "damageCount": 0,
+    "destroyAnyBlock": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "specialInfo": [],
+    "hasGlow": false,
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 64
+  }
+}

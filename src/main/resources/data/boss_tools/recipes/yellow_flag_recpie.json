@@ -1,0 +1,36 @@
+{
+  "group": "boss_tools",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "6  "
+  ],
+  "key": {
+    "0": {
+      "item": "boss_tools:iron_stick"
+    },
+    "1": {
+      "item": "minecraft:yellow_wool"
+    },
+    "2": {
+      "item": "minecraft:yellow_wool"
+    },
+    "3": {
+      "item": "boss_tools:iron_stick"
+    },
+    "4": {
+      "item": "minecraft:yellow_wool"
+    },
+    "5": {
+      "item": "minecraft:yellow_wool"
+    },
+    "6": {
+      "item": "boss_tools:iron_stick"
+    }
+  },
+  "result": {
+    "item": "boss_tools:yellow_flag",
+    "count": 1
+  }
+}

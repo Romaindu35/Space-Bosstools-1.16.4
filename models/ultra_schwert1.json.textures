@@ -1,0 +1,12 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "oak_planks",
+        "1": "diamond_block",
+        "missing": "diamond_block"
+      },
+      "name": "default"
+    }
+  }
+}

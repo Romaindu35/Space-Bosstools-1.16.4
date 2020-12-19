@@ -1,0 +1,46 @@
+{
+  "_fv": 14,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:MoonCopperingot"
+      },
+      {
+        "value": "CUSTOM:Battery"
+      },
+      {
+        "value": "CUSTOM:Steahl"
+      },
+      {
+        "value": "CUSTOM:Ironplate"
+      },
+      {
+        "value": "CUSTOM:TurbinenRad"
+      },
+      {
+        "value": "CUSTOM:TurbinenGehause"
+      },
+      {
+        "value": "CUSTOM:MoonCopperingot"
+      },
+      {
+        "value": "CUSTOM:Battery"
+      },
+      {
+        "value": "CUSTOM:Tinplate"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:TurbineTier2"
+    },
+    "name": "turbinenrezepttir_2",
+    "namespace": "mod"
+  }
+}

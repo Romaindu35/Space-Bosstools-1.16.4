@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "bottom": "boss_tools:blocks/moonstone",
+    "top": "boss_tools:blocks/moonstone",
+    "side": "boss_tools:blocks/moonstone"
+  }
+}

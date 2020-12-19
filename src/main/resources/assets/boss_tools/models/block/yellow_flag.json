@@ -1,0 +1,11 @@
+{
+  "parent": "boss_tools:custom/yellowflag",
+  "textures": {
+    "all": "boss_tools:blocks/yellow_wool",
+    "particle": "boss_tools:blocks/yellow_wool",
+    "0": "boss_tools:blocks/smooth_stone",
+    "1": "boss_tools:blocks/yellow_wool",
+    "2": "boss_tools:blocks/smooth_stone",
+    "missing": "boss_tools:blocks/"
+  }
+}
