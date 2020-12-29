@@ -53,25 +53,25 @@ public class RocketTier3MarsTpProcedure extends BossToolsModElements.ModElement 
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (world instanceof World && !((World) world).isRemote) {
+		if (world instanceof ServerWorld) {
 			((World) world).getServer().getCommandManager().handleCommand(new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z),
 					Vector2f.ZERO, (ServerWorld) world, 4, "", new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 					"/effect clear @p");
 		}
-		if (world instanceof World && !((World) world).isRemote) {
+		if (world instanceof ServerWorld) {
 			((World) world).getServer().getCommandManager()
 					.handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 							"/title @p times 20 60 5");
 		}
-		if (world instanceof World && !((World) world).isRemote) {
+		if (world instanceof ServerWorld) {
 			((World) world).getServer().getCommandManager().handleCommand(
 					new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 							new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 					"/title @p title {\"text\":\"Press\",\"color\":\"red\",\"bold\":\"false\"}");
 		}
-		if (world instanceof World && !((World) world).isRemote) {
+		if (world instanceof ServerWorld) {
 			((World) world).getServer().getCommandManager().handleCommand(
 					new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 							new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
@@ -83,7 +83,7 @@ public class RocketTier3MarsTpProcedure extends BossToolsModElements.ModElement 
 		if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 			((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("\u00A7cWARNING! \u00A77Press \u00A7cSPACE\u00A77."), (true));
 		}
-		if (world instanceof World && !((World) world).isRemote) {
+		if (world instanceof ServerWorld) {
 			((World) world).getServer().getCommandManager().handleCommand(
 					new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 							new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),

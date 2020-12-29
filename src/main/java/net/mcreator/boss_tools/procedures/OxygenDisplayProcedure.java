@@ -11,6 +11,7 @@ import net.minecraft.util.SoundCategory;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Direction;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.state.EnumProperty;
 import net.minecraft.state.DirectionProperty;
 import net.minecraft.particles.ParticleTypes;
 import net.minecraft.block.BlockState;
@@ -83,7 +84,11 @@ public class OxygenDisplayProcedure extends BossToolsModElements.ModElement {
 						try {
 							BlockState _bs = world.getBlockState(pos);
 							DirectionProperty property = (DirectionProperty) _bs.getBlock().getStateContainer().getProperty("facing");
-							return _bs.get(property);
+							if (property != null)
+								return _bs.get(property);
+							return Direction.getFacingFromAxisDirection(
+									_bs.get((EnumProperty<Direction.Axis>) _bs.getBlock().getStateContainer().getProperty("axis")),
+									Direction.AxisDirection.POSITIVE);
 						} catch (Exception e) {
 							return Direction.NORTH;
 						}
@@ -98,7 +103,11 @@ public class OxygenDisplayProcedure extends BossToolsModElements.ModElement {
 						try {
 							BlockState _bs = world.getBlockState(pos);
 							DirectionProperty property = (DirectionProperty) _bs.getBlock().getStateContainer().getProperty("facing");
-							return _bs.get(property);
+							if (property != null)
+								return _bs.get(property);
+							return Direction.getFacingFromAxisDirection(
+									_bs.get((EnumProperty<Direction.Axis>) _bs.getBlock().getStateContainer().getProperty("axis")),
+									Direction.AxisDirection.POSITIVE);
 						} catch (Exception e) {
 							return Direction.NORTH;
 						}
@@ -113,7 +122,11 @@ public class OxygenDisplayProcedure extends BossToolsModElements.ModElement {
 						try {
 							BlockState _bs = world.getBlockState(pos);
 							DirectionProperty property = (DirectionProperty) _bs.getBlock().getStateContainer().getProperty("facing");
-							return _bs.get(property);
+							if (property != null)
+								return _bs.get(property);
+							return Direction.getFacingFromAxisDirection(
+									_bs.get((EnumProperty<Direction.Axis>) _bs.getBlock().getStateContainer().getProperty("axis")),
+									Direction.AxisDirection.POSITIVE);
 						} catch (Exception e) {
 							return Direction.NORTH;
 						}
@@ -128,7 +141,11 @@ public class OxygenDisplayProcedure extends BossToolsModElements.ModElement {
 						try {
 							BlockState _bs = world.getBlockState(pos);
 							DirectionProperty property = (DirectionProperty) _bs.getBlock().getStateContainer().getProperty("facing");
-							return _bs.get(property);
+							if (property != null)
+								return _bs.get(property);
+							return Direction.getFacingFromAxisDirection(
+									_bs.get((EnumProperty<Direction.Axis>) _bs.getBlock().getStateContainer().getProperty("axis")),
+									Direction.AxisDirection.POSITIVE);
 						} catch (Exception e) {
 							return Direction.NORTH;
 						}

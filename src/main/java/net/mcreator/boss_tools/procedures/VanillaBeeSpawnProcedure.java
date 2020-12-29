@@ -8,6 +8,7 @@ import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.util.math.vector.Vector2f;
 import net.minecraft.util.math.BlockPos;
@@ -62,11 +63,12 @@ public class VanillaBeeSpawnProcedure extends BossToolsModElements.ModElement {
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		if ((entity instanceof BeeEntity)) {
-			if ((world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName() != null && world
-					.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName().equals(new ResourceLocation("boss_tools:moon_biom")))) {
+			if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+					&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
+							.equals(new ResourceLocation("boss_tools:moon_biom")))) {
 				if (!entity.world.isRemote())
 					entity.remove();
-				if (world instanceof World && !((World) world).isRemote) {
+				if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
@@ -75,11 +77,12 @@ public class VanillaBeeSpawnProcedure extends BossToolsModElements.ModElement {
 			}
 		}
 		if ((entity instanceof BeeEntity)) {
-			if ((world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName() != null && world
-					.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName().equals(new ResourceLocation("boss_tools:mars_biom")))) {
+			if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+					&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
+							.equals(new ResourceLocation("boss_tools:mars_biom")))) {
 				if (!entity.world.isRemote())
 					entity.remove();
-				if (world instanceof World && !((World) world).isRemote) {
+				if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
@@ -88,12 +91,12 @@ public class VanillaBeeSpawnProcedure extends BossToolsModElements.ModElement {
 			}
 		}
 		if ((entity instanceof BeeEntity)) {
-			if ((world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName() != null
-					&& world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName()
+			if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+					&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
 							.equals(new ResourceLocation("boss_tools:orbit_overworld_biom")))) {
 				if (!entity.world.isRemote())
 					entity.remove();
-				if (world instanceof World && !((World) world).isRemote) {
+				if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),

@@ -175,7 +175,10 @@
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "moon"
+      "registry_name": "moon",
+      "metadata": {
+        "ep": false
+      }
     },
     {
       "name": "Moonsand",
@@ -1160,7 +1163,10 @@
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "mars"
+      "registry_name": "mars",
+      "metadata": {
+        "ep": false
+      }
     },
     {
       "name": "Rocketmarsworldtp",
@@ -1499,7 +1505,10 @@
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "umlaufbahnerde"
+      "registry_name": "umlaufbahnerde",
+      "metadata": {
+        "ep": false
+      }
     },
     {
       "name": "Umlaufbahneffects",
@@ -6688,7 +6697,10 @@
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "mercury"
+      "registry_name": "mercury",
+      "metadata": {
+        "ep": false
+      }
     },
     {
       "name": "Mercurybiome",
@@ -7033,7 +7045,10 @@
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "orbit_moon"
+      "registry_name": "orbit_moon",
+      "metadata": {
+        "ep": false
+      }
     },
     {
       "name": "OrbitMars",
@@ -7042,7 +7057,10 @@
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "orbit_mars"
+      "registry_name": "orbit_mars",
+      "metadata": {
+        "ep": false
+      }
     },
     {
       "name": "OrbitMercury",
@@ -7051,7 +7069,10 @@
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "orbit_mercury"
+      "registry_name": "orbit_mercury",
+      "metadata": {
+        "ep": false
+      }
     },
     {
       "name": "RocketTier1OrbitTpMoon",
@@ -10567,6 +10588,15 @@
           }
         ]
       }
+    },
+    {
+      "name": "EnergyCableBase",
+      "type": "block",
+      "sortid": 538,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "energy_cable_base"
     }
   ],
   "variable_elements": [
@@ -10839,6 +10869,7 @@
       "block.boss_tools.compressor": "Compressor",
       "effect.rocketpotion_3": "Rocketpotion3",
       "item.boss_tools.space_armorlegs": "Space Pants",
+      "block.boss_tools.energy_cable_base": "Energy Cable Base",
       "effect.rocketpotion_4": "Rocketpotion4",
       "item.boss_tools.turbine": "Tier 1 Engine",
       "item.minecraft.potion.effect.tier_2_space_station_gui_potion_moon_orbit": "Tier2SpaceStationGUIPotionMoonorbit",
@@ -10901,5 +10932,5 @@
     "modElementsPackage": "net.mcreator.boss_tools",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202000651421
+  "mcreatorVersion": 202000652319
 }

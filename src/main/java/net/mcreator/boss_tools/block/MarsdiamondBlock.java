@@ -26,7 +26,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
-import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
@@ -78,7 +77,7 @@ public class MarsdiamondBlock extends BossToolsModElements.ModElement {
 					return false;
 				return super.generate(world, generator, rand, pos, config);
 			}
-		}.withConfiguration(new OreFeatureConfig(new BlockMatchRuleTest(Blocks.AIR) {
+		}.withConfiguration(new OreFeatureConfig(new BlockMatchRuleTest(MarsStoneBlock.block.getDefaultState().getBlock()) {
 			public boolean test(BlockState blockAt, Random random) {
 				boolean blockCriteria = false;
 				if (blockAt.getBlock() == MarsStoneBlock.block.getDefaultState().getBlock())

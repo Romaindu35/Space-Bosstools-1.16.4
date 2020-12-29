@@ -55,7 +55,7 @@ public class MoonPlayerLeavesDimensionProcedure extends BossToolsModElements.Mod
 		IWorld world = (IWorld) dependencies.get("world");
 		if (entity instanceof LivingEntity)
 			((LivingEntity) entity).clearActivePotions();
-		if (world instanceof World && !((World) world).isRemote) {
+		if (world instanceof ServerWorld) {
 			((World) world).getServer().getCommandManager().handleCommand(new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z),
 					Vector2f.ZERO, (ServerWorld) world, 4, "", new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 					"/effect clear @p");

@@ -36,6 +36,8 @@ import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.item.ItemStack;
 import net.minecraft.inventory.container.INamedContainerProvider;
 import net.minecraft.inventory.container.Container;
+import net.minecraft.entity.projectile.PotionEntity;
+import net.minecraft.entity.projectile.ArrowEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
@@ -81,8 +83,8 @@ public class LandingGearEntity extends BossToolsModElements.ModElement {
 	@Override
 	public void initElements() {
 		entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER).setShouldReceiveVelocityUpdates(true)
-				.setTrackingRange(100).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(0.6f, 1.2f)).build("landing_gear")
-						.setRegistryName("landing_gear");
+				.setTrackingRange(100).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire().size(0.6f, 1.2f))
+						.build("landing_gear").setRegistryName("landing_gear");
 		elements.entities.add(() -> entity);
 	}
 
@@ -170,6 +172,16 @@ public class LandingGearEntity extends BossToolsModElements.ModElement {
 				$_dependencies.put("world", world);
 				LandingGearEntityIsHurtProcedure.executeProcedure($_dependencies);
 			}
+			if (source.getImmediateSource() instanceof ArrowEntity)
+				return false;
+			if (source.getImmediateSource() instanceof PotionEntity)
+				return false;
+			if (source == DamageSource.CACTUS)
+				return false;
+			if (source == DamageSource.DROWN)
+				return false;
+			if (source == DamageSource.LIGHTNING_BOLT)
+				return false;
 			return super.attackEntityFrom(source, amount);
 		}
 

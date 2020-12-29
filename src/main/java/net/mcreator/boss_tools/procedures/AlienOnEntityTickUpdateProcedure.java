@@ -1,6 +1,7 @@
 package net.mcreator.boss_tools.procedures;
 
 import net.minecraft.world.IWorld;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.potion.Effects;
@@ -50,18 +51,20 @@ public class AlienOnEntityTickUpdateProcedure extends BossToolsModElements.ModEl
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if ((world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName() != null
-				&& world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName().equals(new ResourceLocation("boss_tools:moon_biom")))) {
+		if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
+						.equals(new ResourceLocation("boss_tools:moon_biom")))) {
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOW_FALLING, (int) 60, (int) 1, (false), (false)));
 		}
-		if ((world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName() != null
-				&& world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName().equals(new ResourceLocation("boss_tools:mars_biom")))) {
+		if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
+						.equals(new ResourceLocation("boss_tools:mars_biom")))) {
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOW_FALLING, (int) 60, (int) 1, (false), (false)));
 		}
-		if ((world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName() != null
-				&& world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName()
+		if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
 						.equals(new ResourceLocation("boss_tools:orbit_overworld_biom")))) {
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOW_FALLING, (int) 60, (int) 1, (false), (false)));

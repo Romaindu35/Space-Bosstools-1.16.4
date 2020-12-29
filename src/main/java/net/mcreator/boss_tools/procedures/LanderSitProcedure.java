@@ -77,7 +77,7 @@ public class LanderSitProcedure extends BossToolsModElements.ModElement {
 		if (((entity.getPersistentData().getDouble("Landersit")) == 1)) {
 			if (((entity.getPersistentData().getDouble("LanderSpawn")) == 1)) {
 				entity.getPersistentData().putDouble("LanderSpawn", 0);
-				if (world instanceof World && !((World) world).isRemote) {
+				if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
@@ -146,7 +146,7 @@ public class LanderSitProcedure extends BossToolsModElements.ModElement {
 		if (((entity.getPersistentData().getDouble("Landersit")) == 2)) {
 			if (((entity.getPersistentData().getDouble("LanderSpawn")) == 1)) {
 				entity.getPersistentData().putDouble("LanderSpawn", 0);
-				if (world instanceof World && !((World) world).isRemote) {
+				if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
@@ -215,7 +215,7 @@ public class LanderSitProcedure extends BossToolsModElements.ModElement {
 		if (((entity.getPersistentData().getDouble("Landersit")) == 3)) {
 			if (((entity.getPersistentData().getDouble("LanderSpawn")) == 1)) {
 				entity.getPersistentData().putDouble("LanderSpawn", 0);
-				if (world instanceof World && !((World) world).isRemote) {
+				if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),

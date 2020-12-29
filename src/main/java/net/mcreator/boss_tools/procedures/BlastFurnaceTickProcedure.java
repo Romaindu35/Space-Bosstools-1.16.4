@@ -116,13 +116,14 @@ public class BlastFurnaceTickProcedure extends BossToolsModElements.ModElement {
 								return _retval.get();
 							}
 						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
-			if (world instanceof World && !((World) world).isRemote) {
+			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
 					_tileEntity.getTileData().putDouble("recipe", 0);
-				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+				if (world instanceof World)
+					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 		}
 		if (((previousRecepie) != (new Object() {
@@ -133,13 +134,14 @@ public class BlastFurnaceTickProcedure extends BossToolsModElements.ModElement {
 				return -1;
 			}
 		}.getValue(new BlockPos((int) x, (int) y, (int) z), "recipe")))) {
-			if (world instanceof World && !((World) world).isRemote) {
+			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
 					_tileEntity.getTileData().putDouble("timer", 0);
-				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+				if (world instanceof World)
+					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 		}
 		if (((new Object() {
@@ -240,13 +242,14 @@ public class BlastFurnaceTickProcedure extends BossToolsModElements.ModElement {
 						}
 					}
 				}
-				if (world instanceof World && !((World) world).isRemote) {
+				if (!world.isRemote()) {
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 					TileEntity _tileEntity = world.getTileEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_tileEntity != null)
 						_tileEntity.getTileData().putDouble("timer", 0);
-					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+					if (world instanceof World)
+						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 				}
 			}
 			if (((new Object() {
@@ -332,21 +335,23 @@ public class BlastFurnaceTickProcedure extends BossToolsModElements.ModElement {
 										});
 									}
 								}
-								if (world instanceof World && !((World) world).isRemote) {
+								if (!world.isRemote()) {
 									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 									TileEntity _tileEntity = world.getTileEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_tileEntity != null)
 										_tileEntity.getTileData().putDouble("fuel", 660);
-									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+									if (world instanceof World)
+										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 								}
-								if (world instanceof World && !((World) world).isRemote) {
+								if (!world.isRemote()) {
 									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 									TileEntity _tileEntity = world.getTileEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_tileEntity != null)
 										_tileEntity.getTileData().putDouble("maxFuel", 660);
-									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+									if (world instanceof World)
+										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 								}
 							} else if (((new Object() {
 								public ItemStack getItemStack(BlockPos pos, int sltid) {
@@ -375,32 +380,35 @@ public class BlastFurnaceTickProcedure extends BossToolsModElements.ModElement {
 										});
 									}
 								}
-								if (world instanceof World && !((World) world).isRemote) {
+								if (!world.isRemote()) {
 									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 									TileEntity _tileEntity = world.getTileEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_tileEntity != null)
 										_tileEntity.getTileData().putDouble("fuel", 960);
-									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+									if (world instanceof World)
+										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 								}
-								if (world instanceof World && !((World) world).isRemote) {
+								if (!world.isRemote()) {
 									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 									TileEntity _tileEntity = world.getTileEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_tileEntity != null)
 										_tileEntity.getTileData().putDouble("maxFuel", 960);
-									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+									if (world instanceof World)
+										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 								}
 							}
 						}
 					} else {
-						if (world instanceof World && !((World) world).isRemote) {
+						if (!world.isRemote()) {
 							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 							TileEntity _tileEntity = world.getTileEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_tileEntity != null)
 								_tileEntity.getTileData().putDouble("timer", 0);
-							((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+							if (world instanceof World)
+								((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 						}
 					}
 				}
@@ -419,21 +427,23 @@ public class BlastFurnaceTickProcedure extends BossToolsModElements.ModElement {
 			}
 		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == new ItemStack(Items.IRON_INGOT, (int) (1))
 				.getItem()) == (false))) {
-			if (world instanceof World && !((World) world).isRemote) {
+			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
 					_tileEntity.getTileData().putDouble("recipe", 0);
-				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+				if (world instanceof World)
+					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
-			if (world instanceof World && !((World) world).isRemote) {
+			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
 					_tileEntity.getTileData().putDouble("timer", 0);
-				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+				if (world instanceof World)
+					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 		}
 		if (((new Object() {
@@ -444,7 +454,7 @@ public class BlastFurnaceTickProcedure extends BossToolsModElements.ModElement {
 				return -1;
 			}
 		}.getValue(new BlockPos((int) x, (int) y, (int) z), "fuel")) > 0)) {
-			if (world instanceof World && !((World) world).isRemote) {
+			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
@@ -457,7 +467,8 @@ public class BlastFurnaceTickProcedure extends BossToolsModElements.ModElement {
 							return -1;
 						}
 					}.getValue(new BlockPos((int) x, (int) y, (int) z), "fuel")) - 1));
-				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+				if (world instanceof World)
+					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (((new Object() {
 				public double getValue(BlockPos pos, String tag) {
@@ -479,7 +490,7 @@ public class BlastFurnaceTickProcedure extends BossToolsModElements.ModElement {
 						return _retval.get();
 					}
 				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) <= 63)) {
-					if (world instanceof World && !((World) world).isRemote) {
+					if (!world.isRemote()) {
 						BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 						TileEntity _tileEntity = world.getTileEntity(_bp);
 						BlockState _bs = world.getBlockState(_bp);
@@ -492,12 +503,13 @@ public class BlastFurnaceTickProcedure extends BossToolsModElements.ModElement {
 									return -1;
 								}
 							}.getValue(new BlockPos((int) x, (int) y, (int) z), "timer")) + 1));
-						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+						if (world instanceof World)
+							((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 					}
 				}
 			}
 		}
-		if (world instanceof World && !((World) world).isRemote) {
+		if (!world.isRemote()) {
 			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 			TileEntity _tileEntity = world.getTileEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
@@ -517,9 +529,10 @@ public class BlastFurnaceTickProcedure extends BossToolsModElements.ModElement {
 						return -1;
 					}
 				}.getValue(new BlockPos((int) x, (int) y, (int) z), "maxFuel"))) * 100));
-			((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+			if (world instanceof World)
+				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
-		if (world instanceof World && !((World) world).isRemote) {
+		if (!world.isRemote()) {
 			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 			TileEntity _tileEntity = world.getTileEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
@@ -532,9 +545,10 @@ public class BlastFurnaceTickProcedure extends BossToolsModElements.ModElement {
 						return -1;
 					}
 				}.getValue(new BlockPos((int) x, (int) y, (int) z), "timer")));
-			((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+			if (world instanceof World)
+				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
-		if (world instanceof World && !((World) world).isRemote) {
+		if (!world.isRemote()) {
 			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 			TileEntity _tileEntity = world.getTileEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
@@ -547,7 +561,8 @@ public class BlastFurnaceTickProcedure extends BossToolsModElements.ModElement {
 						return -1;
 					}
 				}.getValue(new BlockPos((int) x, (int) y, (int) z), "fuelRemaining")));
-			((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+			if (world instanceof World)
+				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
 	}
 }

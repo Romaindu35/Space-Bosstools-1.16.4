@@ -31,7 +31,6 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
-import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
@@ -91,7 +90,7 @@ public class MooncopperOreBlock extends BossToolsModElements.ModElement {
 					return false;
 				return super.generate(world, generator, rand, pos, config);
 			}
-		}.withConfiguration(new OreFeatureConfig(new BlockMatchRuleTest(Blocks.AIR) {
+		}.withConfiguration(new OreFeatureConfig(new BlockMatchRuleTest(MoonStoneBlock.block.getDefaultState().getBlock()) {
 			public boolean test(BlockState blockAt, Random random) {
 				boolean blockCriteria = false;
 				if (blockAt.getBlock() == MoonStoneBlock.block.getDefaultState().getBlock())

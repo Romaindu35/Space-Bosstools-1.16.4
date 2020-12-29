@@ -45,30 +45,30 @@ public class RocketEntityDiesProcedure extends BossToolsModElements.ModElement {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (world instanceof World && !((World) world).isRemote) {
+		if (world instanceof ServerWorld) {
 			((World) world).getServer().getCommandManager().handleCommand(
 					new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 							new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 					"/give @p boss_tools:rocket_item");
 		}
-		if (world instanceof World && !((World) world).isRemote) {
+		if (world instanceof ServerWorld) {
 			((World) world).getServer().getCommandManager().handleCommand(new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z),
 					Vector2f.ZERO, (ServerWorld) world, 4, "", new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 					"/tp @p ~1 250 ~1");
 		}
-		if (world instanceof World && !((World) world).isRemote) {
+		if (world instanceof ServerWorld) {
 			((World) world).getServer().getCommandManager().handleCommand(
 					new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 							new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 					"/setblock ~1 250 ~1 boss_tools:moon_portal");
 		}
-		if (world instanceof World && !((World) world).isRemote) {
+		if (world instanceof ServerWorld) {
 			((World) world).getServer().getCommandManager().handleCommand(
 					new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 							new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 					"/playsound minecraft:block.anvil.destroy block @p");
 		}
-		if (world instanceof World && !((World) world).isRemote) {
+		if (world instanceof ServerWorld) {
 			((World) world).getServer().getCommandManager().handleCommand(
 					new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 							new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),

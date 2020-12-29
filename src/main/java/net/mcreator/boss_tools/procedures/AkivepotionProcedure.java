@@ -6,12 +6,13 @@ import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.DamageSource;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.item.ItemStack;
-import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
@@ -63,24 +64,36 @@ public class AkivepotionProcedure extends BossToolsModElements.ModElement {
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		double Damage = 0;
-		if (((world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName() != null
-				&& world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName().equals(new ResourceLocation("boss_tools:moon_biom")))
-				|| ((world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName() != null && world
-						.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName().equals(new ResourceLocation("boss_tools:mars_biom")))
-						|| ((world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName() != null
-								&& world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName()
+		if (((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
+						.equals(new ResourceLocation("boss_tools:moon_biom")))
+				|| ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+						&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
+								.equals(new ResourceLocation("boss_tools:mars_biom")))
+						|| ((world.func_241828_r().getRegistry(Registry.BIOME_KEY)
+								.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+								&& world.func_241828_r().getRegistry(Registry.BIOME_KEY)
+										.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
 										.equals(new ResourceLocation("boss_tools:mercurybiome")))
-								|| ((world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName() != null
-										&& world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName()
+								|| ((world.func_241828_r().getRegistry(Registry.BIOME_KEY)
+										.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+										&& world.func_241828_r().getRegistry(Registry.BIOME_KEY)
+												.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
 												.equals(new ResourceLocation("boss_tools:orbit_overworld_biom")))
-										|| ((world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName() != null
-												&& world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName()
+										|| ((world.func_241828_r().getRegistry(Registry.BIOME_KEY)
+												.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+												&& world.func_241828_r().getRegistry(Registry.BIOME_KEY)
+														.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
 														.equals(new ResourceLocation("boss_tools:orbit_moon_biom")))
-												|| ((world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName() != null
-														&& world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName()
+												|| ((world.func_241828_r().getRegistry(Registry.BIOME_KEY)
+														.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+														&& world.func_241828_r().getRegistry(Registry.BIOME_KEY)
+																.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
 																.equals(new ResourceLocation("boss_tools:orbit_mars_biom")))
-														|| (world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName() != null
-																&& world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName()
+														|| (world.func_241828_r().getRegistry(Registry.BIOME_KEY)
+																.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+																&& world.func_241828_r().getRegistry(Registry.BIOME_KEY)
+																		.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
 																		.equals(new ResourceLocation("boss_tools:orbit_mercury_biom")))))))))) {
 			if (((entity.getPersistentData().getBoolean("SpaceSuitH")) == (false))) {
 				entity.attackEntityFrom(DamageSource.WITHER, (float) 1);
@@ -107,20 +120,24 @@ public class AkivepotionProcedure extends BossToolsModElements.ModElement {
 				return false;
 			}
 		}.check(entity)))) {
-			if ((!(((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.armorInventory.get((int) 0) : ItemStack.EMPTY)
-					.getItem() == new ItemStack(SpaceArmorItem.helmet, (int) (1)).getItem()))) {
+			if ((!(((entity instanceof LivingEntity)
+					? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 0))
+					: ItemStack.EMPTY).getItem() == new ItemStack(SpaceArmorItem.helmet, (int) (1)).getItem()))) {
 				entity.getPersistentData().putBoolean("SpaceSuitH", (false));
 			}
-			if ((!(((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.armorInventory.get((int) 1) : ItemStack.EMPTY)
-					.getItem() == new ItemStack(SpaceArmorItem.body, (int) (1)).getItem()))) {
+			if ((!(((entity instanceof LivingEntity)
+					? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 1))
+					: ItemStack.EMPTY).getItem() == new ItemStack(SpaceArmorItem.body, (int) (1)).getItem()))) {
 				entity.getPersistentData().putBoolean("SpaceSuitC", (false));
 			}
-			if ((!(((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.armorInventory.get((int) 2) : ItemStack.EMPTY)
-					.getItem() == new ItemStack(SpaceArmorItem.legs, (int) (1)).getItem()))) {
+			if ((!(((entity instanceof LivingEntity)
+					? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 2))
+					: ItemStack.EMPTY).getItem() == new ItemStack(SpaceArmorItem.legs, (int) (1)).getItem()))) {
 				entity.getPersistentData().putBoolean("SpaceSuitL", (false));
 			}
-			if ((!(((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.armorInventory.get((int) 3) : ItemStack.EMPTY)
-					.getItem() == new ItemStack(SpaceArmorItem.boots, (int) (1)).getItem()))) {
+			if ((!(((entity instanceof LivingEntity)
+					? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 3))
+					: ItemStack.EMPTY).getItem() == new ItemStack(SpaceArmorItem.boots, (int) (1)).getItem()))) {
 				entity.getPersistentData().putBoolean("SpaceSuitB", (false));
 			}
 		}

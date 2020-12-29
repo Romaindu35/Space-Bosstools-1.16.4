@@ -1,6 +1,7 @@
 
 package net.mcreator.boss_tools.world.dimension;
 
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
 import net.minecraftforge.fml.DeferredWorkQueue;
@@ -38,6 +39,10 @@ public class OrbitMercuryDimension extends BossToolsModElements.ModElement {
 	public OrbitMercuryDimension(BossToolsModElements instance) {
 		super(instance, 78);
 		MinecraftForge.EVENT_BUS.register(this);
+	}
+
+	@Override
+	public void init(FMLCommonSetupEvent event) {
 		DeferredWorkQueue.runLater(() -> {
 			try {
 				ObfuscationReflectionHelper.setPrivateValue(WorldCarver.class, WorldCarver.CAVE, new ImmutableSet.Builder<Block>()

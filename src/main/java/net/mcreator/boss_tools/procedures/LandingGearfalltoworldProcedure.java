@@ -10,6 +10,7 @@ import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.util.math.vector.Vector2f;
 import net.minecraft.util.math.BlockPos;
@@ -225,13 +226,13 @@ public class LandingGearfalltoworldProcedure extends BossToolsModElements.ModEle
 			}
 		}
 		if (((entity.getRidingEntity()) instanceof LandingGearEntity.CustomEntity)) {
-			if ((world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName() != null
-					&& world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName()
+			if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+					&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
 							.equals(new ResourceLocation("boss_tools:orbit_overworld_biom")))) {
 				if ((((entity.getRidingEntity()).getPosY()) < 1)) {
 					if (!(entity.getRidingEntity()).world.isRemote())
 						(entity.getRidingEntity()).remove();
-					if (world instanceof World && !((World) world).isRemote) {
+					if (world instanceof ServerWorld) {
 						((World) world).getServer().getCommandManager().handleCommand(
 								new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 										new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
@@ -366,13 +367,13 @@ public class LandingGearfalltoworldProcedure extends BossToolsModElements.ModEle
 					}
 				}
 			}
-			if ((world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName() != null
-					&& world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName()
+			if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+					&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
 							.equals(new ResourceLocation("boss_tools:orbit_moon_biom")))) {
 				if ((((entity.getRidingEntity()).getPosY()) < 1)) {
 					if (!(entity.getRidingEntity()).world.isRemote())
 						(entity.getRidingEntity()).remove();
-					if (world instanceof World && !((World) world).isRemote) {
+					if (world instanceof ServerWorld) {
 						((World) world).getServer().getCommandManager().handleCommand(
 								new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 										new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
@@ -507,13 +508,13 @@ public class LandingGearfalltoworldProcedure extends BossToolsModElements.ModEle
 					}
 				}
 			}
-			if ((world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName() != null
-					&& world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName()
+			if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+					&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
 							.equals(new ResourceLocation("boss_tools:orbit_mars_biom")))) {
 				if ((((entity.getRidingEntity()).getPosY()) < 1)) {
 					if (!(entity.getRidingEntity()).world.isRemote())
 						(entity.getRidingEntity()).remove();
-					if (world instanceof World && !((World) world).isRemote) {
+					if (world instanceof ServerWorld) {
 						((World) world).getServer().getCommandManager().handleCommand(
 								new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 										new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
@@ -648,13 +649,13 @@ public class LandingGearfalltoworldProcedure extends BossToolsModElements.ModEle
 					}
 				}
 			}
-			if ((world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName() != null
-					&& world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName()
+			if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+					&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
 							.equals(new ResourceLocation("boss_tools:orbit_mercury_biom")))) {
 				if ((((entity.getRidingEntity()).getPosY()) < 1)) {
 					if (!(entity.getRidingEntity()).world.isRemote())
 						(entity.getRidingEntity()).remove();
-					if (world instanceof World && !((World) world).isRemote) {
+					if (world instanceof ServerWorld) {
 						((World) world).getServer().getCommandManager().handleCommand(
 								new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 										new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),

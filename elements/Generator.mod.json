@@ -1,5 +1,5 @@
 {
-  "_fv": 14,
+  "_fv": 15,
   "_type": "block",
   "definition": {
     "texture": "generator_top",
@@ -97,9 +97,6 @@
     "fluidRestrictions": [],
     "onTickUpdate": {
       "name": "CoalGeneratorTick"
-    },
-    "onRandomUpdateEvent": {
-      "name": "OxygenDisplay"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],

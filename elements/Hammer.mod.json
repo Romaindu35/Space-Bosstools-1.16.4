@@ -1,5 +1,5 @@
 {
-  "_fv": 14,
+  "_fv": 15,
   "_type": "item",
   "definition": {
     "renderType": 0,
@@ -14,7 +14,7 @@
     "enchantability": 0,
     "useDuration": 0,
     "toolType": 1.0,
-    "damageCount": 3,
+    "damageCount": 9,
     "recipeRemainder": {
       "value": ""
     },

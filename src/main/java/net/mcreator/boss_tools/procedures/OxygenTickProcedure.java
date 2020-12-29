@@ -114,13 +114,14 @@ public class OxygenTickProcedure extends BossToolsModElements.ModElement {
 								return _retval.get();
 							}
 						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
-			if (world instanceof World && !((World) world).isRemote) {
+			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
 					_tileEntity.getTileData().putDouble("recipe", 0);
-				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+				if (world instanceof World)
+					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 		} else if ((((new Object() {
 			public ItemStack getItemStack(BlockPos pos, int sltid) {
@@ -146,22 +147,24 @@ public class OxygenTickProcedure extends BossToolsModElements.ModElement {
 						return _retval.get();
 					}
 				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0))) {
-			if (world instanceof World && !((World) world).isRemote) {
+			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
 					_tileEntity.getTileData().putDouble("recipe", 0);
-				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+				if (world instanceof World)
+					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 		} else {
-			if (world instanceof World && !((World) world).isRemote) {
+			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
 					_tileEntity.getTileData().putDouble("recipe", (-1));
-				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+				if (world instanceof World)
+					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 		}
 		if (((previousRecepie) != (new Object() {
@@ -172,13 +175,14 @@ public class OxygenTickProcedure extends BossToolsModElements.ModElement {
 				return -1;
 			}
 		}.getValue(new BlockPos((int) x, (int) y, (int) z), "recipe")))) {
-			if (world instanceof World && !((World) world).isRemote) {
+			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
 					_tileEntity.getTileData().putDouble("timer", 0);
-				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+				if (world instanceof World)
+					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 		}
 		if (((new Object() {
@@ -205,7 +209,7 @@ public class OxygenTickProcedure extends BossToolsModElements.ModElement {
 						return -1;
 					}
 				}.getValue(new BlockPos((int) x, (int) y, (int) z), "recipe")) == 0)) {
-					if (world instanceof World && !((World) world).isRemote) {
+					if (world instanceof ServerWorld) {
 						((World) world).getServer().getCommandManager()
 								.handleCommand(new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4,
 										"", new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(), "");
@@ -246,13 +250,14 @@ public class OxygenTickProcedure extends BossToolsModElements.ModElement {
 						}
 					}
 				}
-				if (world instanceof World && !((World) world).isRemote) {
+				if (!world.isRemote()) {
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 					TileEntity _tileEntity = world.getTileEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_tileEntity != null)
 						_tileEntity.getTileData().putDouble("timer", 0);
-					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+					if (world instanceof World)
+						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 				}
 			}
 			if (((new Object() {
@@ -330,21 +335,23 @@ public class OxygenTickProcedure extends BossToolsModElements.ModElement {
 										});
 									}
 								}
-								if (world instanceof World && !((World) world).isRemote) {
+								if (!world.isRemote()) {
 									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 									TileEntity _tileEntity = world.getTileEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_tileEntity != null)
 										_tileEntity.getTileData().putDouble("fuel", 200);
-									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+									if (world instanceof World)
+										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 								}
-								if (world instanceof World && !((World) world).isRemote) {
+								if (!world.isRemote()) {
 									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 									TileEntity _tileEntity = world.getTileEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_tileEntity != null)
 										_tileEntity.getTileData().putDouble("maxFuel", 200);
-									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+									if (world instanceof World)
+										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 								}
 							}
 						} else if (((new Object() {
@@ -382,21 +389,23 @@ public class OxygenTickProcedure extends BossToolsModElements.ModElement {
 										});
 									}
 								}
-								if (world instanceof World && !((World) world).isRemote) {
+								if (!world.isRemote()) {
 									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 									TileEntity _tileEntity = world.getTileEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_tileEntity != null)
 										_tileEntity.getTileData().putDouble("fuel", 200);
-									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+									if (world instanceof World)
+										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 								}
-								if (world instanceof World && !((World) world).isRemote) {
+								if (!world.isRemote()) {
 									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 									TileEntity _tileEntity = world.getTileEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_tileEntity != null)
 										_tileEntity.getTileData().putDouble("maxFuel", 200);
-									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+									if (world instanceof World)
+										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 								}
 							}
 						} else if (((new Object() {
@@ -434,21 +443,23 @@ public class OxygenTickProcedure extends BossToolsModElements.ModElement {
 										});
 									}
 								}
-								if (world instanceof World && !((World) world).isRemote) {
+								if (!world.isRemote()) {
 									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 									TileEntity _tileEntity = world.getTileEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_tileEntity != null)
 										_tileEntity.getTileData().putDouble("fuel", 200);
-									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+									if (world instanceof World)
+										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 								}
-								if (world instanceof World && !((World) world).isRemote) {
+								if (!world.isRemote()) {
 									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 									TileEntity _tileEntity = world.getTileEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_tileEntity != null)
 										_tileEntity.getTileData().putDouble("maxFuel", 200);
-									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+									if (world instanceof World)
+										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 								}
 							}
 						} else if (((new Object() {
@@ -486,21 +497,23 @@ public class OxygenTickProcedure extends BossToolsModElements.ModElement {
 										});
 									}
 								}
-								if (world instanceof World && !((World) world).isRemote) {
+								if (!world.isRemote()) {
 									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 									TileEntity _tileEntity = world.getTileEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_tileEntity != null)
 										_tileEntity.getTileData().putDouble("fuel", 200);
-									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+									if (world instanceof World)
+										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 								}
-								if (world instanceof World && !((World) world).isRemote) {
+								if (!world.isRemote()) {
 									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 									TileEntity _tileEntity = world.getTileEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_tileEntity != null)
 										_tileEntity.getTileData().putDouble("maxFuel", 200);
-									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+									if (world instanceof World)
+										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 								}
 							}
 						} else if (((new Object() {
@@ -538,21 +551,23 @@ public class OxygenTickProcedure extends BossToolsModElements.ModElement {
 										});
 									}
 								}
-								if (world instanceof World && !((World) world).isRemote) {
+								if (!world.isRemote()) {
 									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 									TileEntity _tileEntity = world.getTileEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_tileEntity != null)
 										_tileEntity.getTileData().putDouble("fuel", 200);
-									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+									if (world instanceof World)
+										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 								}
-								if (world instanceof World && !((World) world).isRemote) {
+								if (!world.isRemote()) {
 									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 									TileEntity _tileEntity = world.getTileEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_tileEntity != null)
 										_tileEntity.getTileData().putDouble("maxFuel", 200);
-									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+									if (world instanceof World)
+										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 								}
 							}
 						} else if (((new Object() {
@@ -590,21 +605,23 @@ public class OxygenTickProcedure extends BossToolsModElements.ModElement {
 										});
 									}
 								}
-								if (world instanceof World && !((World) world).isRemote) {
+								if (!world.isRemote()) {
 									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 									TileEntity _tileEntity = world.getTileEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_tileEntity != null)
 										_tileEntity.getTileData().putDouble("fuel", 200);
-									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+									if (world instanceof World)
+										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 								}
-								if (world instanceof World && !((World) world).isRemote) {
+								if (!world.isRemote()) {
 									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 									TileEntity _tileEntity = world.getTileEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_tileEntity != null)
 										_tileEntity.getTileData().putDouble("maxFuel", 200);
-									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+									if (world instanceof World)
+										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 								}
 							}
 						} else if (((new Object() {
@@ -642,33 +659,36 @@ public class OxygenTickProcedure extends BossToolsModElements.ModElement {
 										});
 									}
 								}
-								if (world instanceof World && !((World) world).isRemote) {
+								if (!world.isRemote()) {
 									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 									TileEntity _tileEntity = world.getTileEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_tileEntity != null)
 										_tileEntity.getTileData().putDouble("fuel", 200);
-									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+									if (world instanceof World)
+										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 								}
-								if (world instanceof World && !((World) world).isRemote) {
+								if (!world.isRemote()) {
 									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 									TileEntity _tileEntity = world.getTileEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_tileEntity != null)
 										_tileEntity.getTileData().putDouble("maxFuel", 200);
-									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+									if (world instanceof World)
+										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 								}
 							}
 						}
 					}
 				} else {
-					if (world instanceof World && !((World) world).isRemote) {
+					if (!world.isRemote()) {
 						BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 						TileEntity _tileEntity = world.getTileEntity(_bp);
 						BlockState _bs = world.getBlockState(_bp);
 						if (_tileEntity != null)
 							_tileEntity.getTileData().putDouble("timer", 0);
-						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+						if (world instanceof World)
+							((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 					}
 				}
 			}
@@ -711,7 +731,7 @@ public class OxygenTickProcedure extends BossToolsModElements.ModElement {
 							return ItemStack.EMPTY;
 						}
 					}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getOrCreateTag().getDouble("Energy")) <= 23999)) {
-						if (world instanceof World && !((World) world).isRemote) {
+						if (!world.isRemote()) {
 							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 							TileEntity _tileEntity = world.getTileEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
@@ -724,7 +744,8 @@ public class OxygenTickProcedure extends BossToolsModElements.ModElement {
 										return -1;
 									}
 								}.getValue(new BlockPos((int) x, (int) y, (int) z), "fuel")) - 1));
-							((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+							if (world instanceof World)
+								((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 						}
 					}
 				}
@@ -737,7 +758,7 @@ public class OxygenTickProcedure extends BossToolsModElements.ModElement {
 					return -1;
 				}
 			}.getValue(new BlockPos((int) x, (int) y, (int) z), "recipe")) >= 0)) {
-				if (world instanceof World && !((World) world).isRemote) {
+				if (!world.isRemote()) {
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 					TileEntity _tileEntity = world.getTileEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
@@ -750,7 +771,8 @@ public class OxygenTickProcedure extends BossToolsModElements.ModElement {
 								return -1;
 							}
 						}.getValue(new BlockPos((int) x, (int) y, (int) z), "timer")) + 1));
-					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+					if (world instanceof World)
+						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 				}
 				if ((((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
@@ -794,7 +816,7 @@ public class OxygenTickProcedure extends BossToolsModElements.ModElement {
 				}
 			}
 		}
-		if (world instanceof World && !((World) world).isRemote) {
+		if (!world.isRemote()) {
 			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 			TileEntity _tileEntity = world.getTileEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
@@ -814,9 +836,10 @@ public class OxygenTickProcedure extends BossToolsModElements.ModElement {
 						return -1;
 					}
 				}.getValue(new BlockPos((int) x, (int) y, (int) z), "maxFuel"))) * 100));
-			((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+			if (world instanceof World)
+				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
-		if (world instanceof World && !((World) world).isRemote) {
+		if (!world.isRemote()) {
 			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 			TileEntity _tileEntity = world.getTileEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
@@ -830,9 +853,10 @@ public class OxygenTickProcedure extends BossToolsModElements.ModElement {
 						return _retval.get();
 					}
 				}.getEnergyStored(new BlockPos((int) x, (int) y, (int) z))));
-			((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+			if (world instanceof World)
+				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
-		if (world instanceof World && !((World) world).isRemote) {
+		if (!world.isRemote()) {
 			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 			TileEntity _tileEntity = world.getTileEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
@@ -845,7 +869,8 @@ public class OxygenTickProcedure extends BossToolsModElements.ModElement {
 						return -1;
 					}
 				}.getValue(new BlockPos((int) x, (int) y, (int) z), "fuel")));
-			((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+			if (world instanceof World)
+				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
 	}
 }

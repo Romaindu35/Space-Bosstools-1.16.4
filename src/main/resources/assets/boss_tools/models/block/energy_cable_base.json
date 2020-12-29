@@ -1,0 +1,9 @@
+{
+  "parent": "boss_tools:custom/energy_cable_base",
+  "textures": {
+    "all": "boss_tools:blocks/energy_cable",
+    "particle": "boss_tools:blocks/energy_cable",
+    "0": "boss_tools:blocks/energy_cable",
+    "1": "boss_tools:blocks/energy_cable_lightning"
+  }
+}

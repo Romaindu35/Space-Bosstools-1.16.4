@@ -68,19 +68,19 @@ public class RocketOnEntityTickUpdateProcedure extends BossToolsModElements.ModE
 		double geckolibsync = 0;
 		if ((entity.isBeingRidden())) {
 			if (((entity.getPosY()) > 600)) {
-				if (world instanceof World && !((World) world).isRemote) {
+				if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 							"/stopsound @p neutral boss_tools:rocketfly");
 				}
-				if (world instanceof World && !((World) world).isRemote) {
+				if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 							"/effect give @p boss_tools:rocketpotion_7 999999");
 				}
-				if (world instanceof World && !((World) world).isRemote) {
+				if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
@@ -103,7 +103,7 @@ public class RocketOnEntityTickUpdateProcedure extends BossToolsModElements.ModE
 			}
 		}.check(entity))) {
 			if (((entity.isBeingRidden()) == (true))) {
-				if (world instanceof World && !((World) world).isRemote) {
+				if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
@@ -111,13 +111,13 @@ public class RocketOnEntityTickUpdateProcedure extends BossToolsModElements.ModE
 				}
 			}
 			if (((entity.isBeingRidden()) == (false))) {
-				if (world instanceof World && !((World) world).isRemote) {
+				if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 							"/particle minecraft:flame ~ ~-2 ~ .1 .1 .1 .001 100 force");
 				}
-				if (world instanceof World && !((World) world).isRemote) {
+				if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
@@ -129,20 +129,20 @@ public class RocketOnEntityTickUpdateProcedure extends BossToolsModElements.ModE
 			if (!entity.world.isRemote())
 				entity.remove();
 		}
-		if (world instanceof World && !((World) world).isRemote) {
+		if (world instanceof ServerWorld) {
 			((World) world).getServer().getCommandManager()
 					.handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 							"/team add SpaceBossToolsRo");
 		}
-		if (world instanceof World && !((World) world).isRemote) {
+		if (world instanceof ServerWorld) {
 			((World) world).getServer().getCommandManager().handleCommand(
 					new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 							new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 					"/team modify SpaceBossToolsRo collisionRule never");
 		}
-		if (world instanceof World && !((World) world).isRemote) {
+		if (world instanceof ServerWorld) {
 			((World) world).getServer().getCommandManager().handleCommand(
 					new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 							new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
@@ -216,7 +216,7 @@ public class RocketOnEntityTickUpdateProcedure extends BossToolsModElements.ModE
 			}
 		}.check(entity))) {
 			if (((entity.getPersistentData().getDouble("fly")) <= 200)) {
-				if (world instanceof World && !((World) world).isRemote) {
+				if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
@@ -226,13 +226,13 @@ public class RocketOnEntityTickUpdateProcedure extends BossToolsModElements.ModE
 		}
 		if ((entity.isBeingRidden())) {
 			if (((entity.getPersistentData().getDouble("fly")) == 1)) {
-				if (world instanceof World && !((World) world).isRemote) {
+				if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 							"/title @p times 5 10 10");
 				}
-				if (world instanceof World && !((World) world).isRemote) {
+				if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
@@ -240,13 +240,13 @@ public class RocketOnEntityTickUpdateProcedure extends BossToolsModElements.ModE
 				}
 			}
 			if (((entity.getPersistentData().getDouble("fly")) == 20)) {
-				if (world instanceof World && !((World) world).isRemote) {
+				if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 							"/title @p times 5 10 10");
 				}
-				if (world instanceof World && !((World) world).isRemote) {
+				if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
@@ -254,13 +254,13 @@ public class RocketOnEntityTickUpdateProcedure extends BossToolsModElements.ModE
 				}
 			}
 			if (((entity.getPersistentData().getDouble("fly")) == 40)) {
-				if (world instanceof World && !((World) world).isRemote) {
+				if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 							"/title @p times 5 10 10");
 				}
-				if (world instanceof World && !((World) world).isRemote) {
+				if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
@@ -268,13 +268,13 @@ public class RocketOnEntityTickUpdateProcedure extends BossToolsModElements.ModE
 				}
 			}
 			if (((entity.getPersistentData().getDouble("fly")) == 60)) {
-				if (world instanceof World && !((World) world).isRemote) {
+				if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 							"/title @p times 5 10 10");
 				}
-				if (world instanceof World && !((World) world).isRemote) {
+				if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
@@ -282,13 +282,13 @@ public class RocketOnEntityTickUpdateProcedure extends BossToolsModElements.ModE
 				}
 			}
 			if (((entity.getPersistentData().getDouble("fly")) == 80)) {
-				if (world instanceof World && !((World) world).isRemote) {
+				if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 							"/title @p times 5 10 10");
 				}
-				if (world instanceof World && !((World) world).isRemote) {
+				if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
@@ -296,13 +296,13 @@ public class RocketOnEntityTickUpdateProcedure extends BossToolsModElements.ModE
 				}
 			}
 			if (((entity.getPersistentData().getDouble("fly")) == 100)) {
-				if (world instanceof World && !((World) world).isRemote) {
+				if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 							"/title @p times 5 10 10");
 				}
-				if (world instanceof World && !((World) world).isRemote) {
+				if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
@@ -310,13 +310,13 @@ public class RocketOnEntityTickUpdateProcedure extends BossToolsModElements.ModE
 				}
 			}
 			if (((entity.getPersistentData().getDouble("fly")) == 120)) {
-				if (world instanceof World && !((World) world).isRemote) {
+				if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 							"/title @p times 5 10 10");
 				}
-				if (world instanceof World && !((World) world).isRemote) {
+				if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
@@ -324,13 +324,13 @@ public class RocketOnEntityTickUpdateProcedure extends BossToolsModElements.ModE
 				}
 			}
 			if (((entity.getPersistentData().getDouble("fly")) == 140)) {
-				if (world instanceof World && !((World) world).isRemote) {
+				if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 							"/title @p times 5 10 10");
 				}
-				if (world instanceof World && !((World) world).isRemote) {
+				if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
@@ -338,13 +338,13 @@ public class RocketOnEntityTickUpdateProcedure extends BossToolsModElements.ModE
 				}
 			}
 			if (((entity.getPersistentData().getDouble("fly")) == 160)) {
-				if (world instanceof World && !((World) world).isRemote) {
+				if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 							"/title @p times 5 10 10");
 				}
-				if (world instanceof World && !((World) world).isRemote) {
+				if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
@@ -352,13 +352,13 @@ public class RocketOnEntityTickUpdateProcedure extends BossToolsModElements.ModE
 				}
 			}
 			if (((entity.getPersistentData().getDouble("fly")) == 180)) {
-				if (world instanceof World && !((World) world).isRemote) {
+				if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 							"/title @p times 5 10 10");
 				}
-				if (world instanceof World && !((World) world).isRemote) {
+				if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),

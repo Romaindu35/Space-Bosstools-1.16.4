@@ -57,10 +57,7 @@
         "Name": "minecraft:air"
       },
       "default_fluid": {
-        "Name": "minecraft:air",
-        "Properties": {
-          "level": "0"
-        }
+        "Name": "minecraft:air"
       },
       "noise": {
         "density_factor": 0,

@@ -6,6 +6,7 @@ import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.ResourceLocation;
@@ -68,28 +69,40 @@ public class FallGravityProcedure extends BossToolsModElements.ModElement {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (((world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName() != null
-				&& world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName().equals(new ResourceLocation("boss_tools:moon_biom")))
-				|| ((world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName() != null && world
-						.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName().equals(new ResourceLocation("boss_tools:mars_biom")))
-						|| ((world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName() != null
-								&& world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName()
+		if (((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
+						.equals(new ResourceLocation("boss_tools:moon_biom")))
+				|| ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+						&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
+								.equals(new ResourceLocation("boss_tools:mars_biom")))
+						|| ((world.func_241828_r().getRegistry(Registry.BIOME_KEY)
+								.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+								&& world.func_241828_r().getRegistry(Registry.BIOME_KEY)
+										.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
 										.equals(new ResourceLocation("boss_tools:mercurybiome")))
-								|| ((world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName() != null
-										&& world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName()
+								|| ((world.func_241828_r().getRegistry(Registry.BIOME_KEY)
+										.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+										&& world.func_241828_r().getRegistry(Registry.BIOME_KEY)
+												.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
 												.equals(new ResourceLocation("boss_tools:orbit_overworld_biom")))
-										|| ((world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName() != null
-												&& world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName()
+										|| ((world.func_241828_r().getRegistry(Registry.BIOME_KEY)
+												.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+												&& world.func_241828_r().getRegistry(Registry.BIOME_KEY)
+														.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
 														.equals(new ResourceLocation("boss_tools:orbit_moon_biom")))
-												|| ((world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName() != null
-														&& world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName()
+												|| ((world.func_241828_r().getRegistry(Registry.BIOME_KEY)
+														.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+														&& world.func_241828_r().getRegistry(Registry.BIOME_KEY)
+																.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
 																.equals(new ResourceLocation("boss_tools:orbit_mars_biom")))
-														|| (world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName() != null
-																&& world.getBiome(new BlockPos((int) x, (int) y, (int) z)).getRegistryName()
+														|| (world.func_241828_r().getRegistry(Registry.BIOME_KEY)
+																.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+																&& world.func_241828_r().getRegistry(Registry.BIOME_KEY)
+																		.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
 																		.equals(new ResourceLocation("boss_tools:orbit_mercury_biom")))))))))) {
 			if (((entity.getMotion().getY()) <= (-0.1))) {
 				entity.setMotion((entity.getMotion().getX()), ((entity.getMotion().getY()) + 0.05), (entity.getMotion().getZ()));
-				entity.fallDistance = (float) (0);
+				entity.fallDistance = (float) (0.2);
 			}
 			{
 				List<Entity> _entfound = world.getEntitiesWithinAABB(Entity.class,

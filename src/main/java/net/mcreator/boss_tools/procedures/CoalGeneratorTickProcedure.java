@@ -111,13 +111,70 @@ public class CoalGeneratorTickProcedure extends BossToolsModElements.ModElement 
 								return _retval.get();
 							}
 						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
-			if (world instanceof World && !((World) world).isRemote) {
+			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
 					_tileEntity.getTileData().putDouble("recipe", 0);
-				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+				if (world instanceof World)
+					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+			}
+		} else if ((((new Object() {
+			public ItemStack getItemStack(BlockPos pos, int sltid) {
+				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+				TileEntity _ent = world.getTileEntity(pos);
+				if (_ent != null) {
+					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+						_retval.set(capability.getStackInSlot(sltid).copy());
+					});
+				}
+				return _retval.get();
+			}
+		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == new ItemStack(Blocks.COAL_BLOCK, (int) (1)).getItem())
+				&& ((((new Object() {
+					public ItemStack getItemStack(BlockPos pos, int sltid) {
+						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+						TileEntity _ent = world.getTileEntity(pos);
+						if (_ent != null) {
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+								_retval.set(capability.getStackInSlot(sltid).copy());
+							});
+						}
+						return _retval.get();
+					}
+				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == new ItemStack(Blocks.COAL_BLOCK, (int) (1))
+						.getItem()) && ((new Object() {
+							public int getAmount(BlockPos pos, int sltid) {
+								AtomicInteger _retval = new AtomicInteger(0);
+								TileEntity _ent = world.getTileEntity(pos);
+								if (_ent != null) {
+									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+										_retval.set(capability.getStackInSlot(sltid).getCount());
+									});
+								}
+								return _retval.get();
+							}
+						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) <= 1)) || ((new Object() {
+							public int getAmount(BlockPos pos, int sltid) {
+								AtomicInteger _retval = new AtomicInteger(0);
+								TileEntity _ent = world.getTileEntity(pos);
+								if (_ent != null) {
+									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+										_retval.set(capability.getStackInSlot(sltid).getCount());
+									});
+								}
+								return _retval.get();
+							}
+						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
+			if (!world.isRemote()) {
+				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				TileEntity _tileEntity = world.getTileEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_tileEntity != null)
+					_tileEntity.getTileData().putDouble("recipe", 0);
+				if (world instanceof World)
+					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 		} else if ((((new Object() {
 			public ItemStack getItemStack(BlockPos pos, int sltid) {
@@ -143,13 +200,14 @@ public class CoalGeneratorTickProcedure extends BossToolsModElements.ModElement 
 						return _retval.get();
 					}
 				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0))) {
-			if (world instanceof World && !((World) world).isRemote) {
+			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
 					_tileEntity.getTileData().putDouble("recipe", 0);
-				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+				if (world instanceof World)
+					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 		}
 		if (((previousRecepie) != (new Object() {
@@ -160,13 +218,14 @@ public class CoalGeneratorTickProcedure extends BossToolsModElements.ModElement 
 				return -1;
 			}
 		}.getValue(new BlockPos((int) x, (int) y, (int) z), "recipe")))) {
-			if (world instanceof World && !((World) world).isRemote) {
+			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
 					_tileEntity.getTileData().putDouble("timer", 0);
-				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+				if (world instanceof World)
+					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 		}
 		if (((new Object() {
@@ -235,13 +294,72 @@ public class CoalGeneratorTickProcedure extends BossToolsModElements.ModElement 
 						}
 					}
 				}
-				if (world instanceof World && !((World) world).isRemote) {
+				if (!world.isRemote()) {
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 					TileEntity _tileEntity = world.getTileEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_tileEntity != null)
 						_tileEntity.getTileData().putDouble("timer", 0);
-					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+					if (world instanceof World)
+						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+				}
+			} else if (((new Object() {
+				public double getValue(BlockPos pos, String tag) {
+					TileEntity tileEntity = world.getTileEntity(pos);
+					if (tileEntity != null)
+						return tileEntity.getTileData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(new BlockPos((int) x, (int) y, (int) z), "timer")) >= 150)) {
+				if (((new Object() {
+					public double getValue(BlockPos pos, String tag) {
+						TileEntity tileEntity = world.getTileEntity(pos);
+						if (tileEntity != null)
+							return tileEntity.getTileData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(new BlockPos((int) x, (int) y, (int) z), "recipe")) == 1)) {
+					{
+						TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+						int _amount = (int) 1;
+						if (_ent != null)
+							_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.receiveEnergy(_amount, false));
+					}
+				} else if (((new Object() {
+					public double getValue(BlockPos pos, String tag) {
+						TileEntity tileEntity = world.getTileEntity(pos);
+						if (tileEntity != null)
+							return tileEntity.getTileData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(new BlockPos((int) x, (int) y, (int) z), "recipe")) == 1)) {
+					{
+						TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+						if (_ent != null) {
+							final int _sltid = (int) (0);
+							final int _amount = (int) 1;
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+								if (capability instanceof IItemHandlerModifiable) {
+									ItemStack _stk = capability.getStackInSlot(_sltid).copy();
+									_stk.shrink(_amount);
+									((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
+								}
+							});
+						}
+					}
+					{
+						TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+						if (_ent != null) {
+							final int _sltid = (int) (2);
+							final ItemStack _setstack = new ItemStack(Blocks.AIR, (int) (1));
+							_setstack.setCount((int) 1);
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+								if (capability instanceof IItemHandlerModifiable) {
+									((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+								}
+							});
+						}
+					}
 				}
 			}
 			if (((new Object() {
@@ -311,32 +429,80 @@ public class CoalGeneratorTickProcedure extends BossToolsModElements.ModElement 
 									});
 								}
 							}
-							if (world instanceof World && !((World) world).isRemote) {
+							if (!world.isRemote()) {
 								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 								TileEntity _tileEntity = world.getTileEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
 								if (_tileEntity != null)
 									_tileEntity.getTileData().putDouble("fuel", 350);
-								((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+								if (world instanceof World)
+									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 							}
-							if (world instanceof World && !((World) world).isRemote) {
+							if (!world.isRemote()) {
 								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 								TileEntity _tileEntity = world.getTileEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
 								if (_tileEntity != null)
 									_tileEntity.getTileData().putDouble("maxFuel", 350);
-								((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+								if (world instanceof World)
+									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+							}
+						} else if (((new Object() {
+							public ItemStack getItemStack(BlockPos pos, int sltid) {
+								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+								TileEntity _ent = world.getTileEntity(pos);
+								if (_ent != null) {
+									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+										_retval.set(capability.getStackInSlot(sltid).copy());
+									});
+								}
+								return _retval.get();
+							}
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == new ItemStack(Blocks.COAL_BLOCK, (int) (1))
+								.getItem())) {
+							{
+								TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+								if (_ent != null) {
+									final int _sltid = (int) (0);
+									final int _amount = (int) 1;
+									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+										if (capability instanceof IItemHandlerModifiable) {
+											ItemStack _stk = capability.getStackInSlot(_sltid).copy();
+											_stk.shrink(_amount);
+											((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
+										}
+									});
+								}
+							}
+							if (!world.isRemote()) {
+								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+								TileEntity _tileEntity = world.getTileEntity(_bp);
+								BlockState _bs = world.getBlockState(_bp);
+								if (_tileEntity != null)
+									_tileEntity.getTileData().putDouble("fuel", 1000);
+								if (world instanceof World)
+									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+							}
+							if (!world.isRemote()) {
+								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+								TileEntity _tileEntity = world.getTileEntity(_bp);
+								BlockState _bs = world.getBlockState(_bp);
+								if (_tileEntity != null)
+									_tileEntity.getTileData().putDouble("maxFuel", 1000);
+								if (world instanceof World)
+									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 							}
 						}
 					}
 				} else {
-					if (world instanceof World && !((World) world).isRemote) {
+					if (!world.isRemote()) {
 						BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 						TileEntity _tileEntity = world.getTileEntity(_bp);
 						BlockState _bs = world.getBlockState(_bp);
 						if (_tileEntity != null)
 							_tileEntity.getTileData().putDouble("timer", 0);
-						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+						if (world instanceof World)
+							((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 					}
 				}
 			}
@@ -349,7 +515,7 @@ public class CoalGeneratorTickProcedure extends BossToolsModElements.ModElement 
 				return -1;
 			}
 		}.getValue(new BlockPos((int) x, (int) y, (int) z), "fuel")) > 0)) {
-			if (world instanceof World && !((World) world).isRemote) {
+			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
@@ -362,7 +528,8 @@ public class CoalGeneratorTickProcedure extends BossToolsModElements.ModElement 
 							return -1;
 						}
 					}.getValue(new BlockPos((int) x, (int) y, (int) z), "fuel")) - 1));
-				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+				if (world instanceof World)
+					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (((new Object() {
 				public double getValue(BlockPos pos, String tag) {
@@ -372,7 +539,7 @@ public class CoalGeneratorTickProcedure extends BossToolsModElements.ModElement 
 					return -1;
 				}
 			}.getValue(new BlockPos((int) x, (int) y, (int) z), "recipe")) >= 0)) {
-				if (world instanceof World && !((World) world).isRemote) {
+				if (!world.isRemote()) {
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 					TileEntity _tileEntity = world.getTileEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
@@ -385,7 +552,8 @@ public class CoalGeneratorTickProcedure extends BossToolsModElements.ModElement 
 								return -1;
 							}
 						}.getValue(new BlockPos((int) x, (int) y, (int) z), "timer")) + 1));
-					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+					if (world instanceof World)
+						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 				}
 				{
 					TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
@@ -395,7 +563,7 @@ public class CoalGeneratorTickProcedure extends BossToolsModElements.ModElement 
 				}
 			}
 		}
-		if (world instanceof World && !((World) world).isRemote) {
+		if (!world.isRemote()) {
 			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 			TileEntity _tileEntity = world.getTileEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
@@ -415,9 +583,10 @@ public class CoalGeneratorTickProcedure extends BossToolsModElements.ModElement 
 						return -1;
 					}
 				}.getValue(new BlockPos((int) x, (int) y, (int) z), "maxFuel"))) * 100));
-			((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+			if (world instanceof World)
+				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
-		if (world instanceof World && !((World) world).isRemote) {
+		if (!world.isRemote()) {
 			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 			TileEntity _tileEntity = world.getTileEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
@@ -430,9 +599,10 @@ public class CoalGeneratorTickProcedure extends BossToolsModElements.ModElement 
 						return -1;
 					}
 				}.getValue(new BlockPos((int) x, (int) y, (int) z), "fuelRemaining")));
-			((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+			if (world instanceof World)
+				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
-		if (world instanceof World && !((World) world).isRemote) {
+		if (!world.isRemote()) {
 			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 			TileEntity _tileEntity = world.getTileEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
@@ -446,7 +616,8 @@ public class CoalGeneratorTickProcedure extends BossToolsModElements.ModElement 
 						return _retval.get();
 					}
 				}.getEnergyStored(new BlockPos((int) x, (int) y, (int) z))));
-			((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+			if (world instanceof World)
+				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
 		if ((new Object() {
 			public boolean canReceiveEnergy(BlockPos pos) {

@@ -50,7 +50,7 @@ public class OxygenaddlargeProcedure extends BossToolsModElements.ModElement {
 				return -1;
 			}
 		}.getValue(new BlockPos((int) x, (int) y, (int) z), "OxygenLarge")) == 0)) {
-			if (world instanceof World && !((World) world).isRemote) {
+			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
@@ -63,7 +63,8 @@ public class OxygenaddlargeProcedure extends BossToolsModElements.ModElement {
 							return -1;
 						}
 					}.getValue(new BlockPos((int) x, (int) y, (int) z), "OxygenLarge")) + 1));
-				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+				if (world instanceof World)
+					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 		}
 	}

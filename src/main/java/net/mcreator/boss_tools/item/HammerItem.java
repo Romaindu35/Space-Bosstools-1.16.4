@@ -25,7 +25,7 @@ public class HammerItem extends BossToolsModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(BossToolsItemGroup.tab).maxDamage(3).rarity(Rarity.COMMON));
+			super(new Item.Properties().group(BossToolsItemGroup.tab).maxDamage(9).rarity(Rarity.COMMON));
 			setRegistryName("hammer");
 		}
 

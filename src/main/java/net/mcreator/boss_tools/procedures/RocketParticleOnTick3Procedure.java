@@ -54,13 +54,13 @@ public class RocketParticleOnTick3Procedure extends BossToolsModElements.ModElem
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		if (((entity.getRidingEntity()) instanceof RocketTier3Entity.CustomEntity)) {
-			if (world instanceof World && !((World) world).isRemote) {
+			if (world instanceof ServerWorld) {
 				((World) world).getServer().getCommandManager().handleCommand(
 						new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 								new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 						"/execute at @p run particle minecraft:flame ~ ~-3.4 ~ .1 .1 .1 .001 100 force");
 			}
-			if (world instanceof World && !((World) world).isRemote) {
+			if (world instanceof ServerWorld) {
 				((World) world).getServer().getCommandManager().handleCommand(
 						new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 								new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),

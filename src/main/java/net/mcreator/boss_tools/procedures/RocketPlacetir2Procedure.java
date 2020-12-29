@@ -51,7 +51,7 @@ public class RocketPlacetir2Procedure extends BossToolsModElements.ModElement {
 		IWorld world = (IWorld) dependencies.get("world");
 		if (((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == RockedBaseBlock.block.getDefaultState().getBlock())) {
 			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
-			if (world instanceof World && !((World) world).isRemote) {
+			if (world instanceof ServerWorld) {
 				((World) world).getServer().getCommandManager().handleCommand(
 						new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 								new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),

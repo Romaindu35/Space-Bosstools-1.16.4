@@ -45,73 +45,73 @@ public class MoonPortalTriggerUsed2Procedure extends BossToolsModElements.ModEle
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (world instanceof World && !((World) world).isRemote) {
+		if (world instanceof ServerWorld) {
 			((World) world).getServer().getCommandManager().handleCommand(
 					new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 							new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 					"/fill ~ ~-3 ~ ~ ~4 ~-5 minecraft:air replace boss_tools:moon_portal");
 		}
-		if (world instanceof World && !((World) world).isRemote) {
+		if (world instanceof ServerWorld) {
 			((World) world).getServer().getCommandManager().handleCommand(
 					new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 							new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 					"/fill ~ ~-3 ~ ~ ~4 ~5 minecraft:air replace boss_tools:moon_portal");
 		}
-		if (world instanceof World && !((World) world).isRemote) {
+		if (world instanceof ServerWorld) {
 			((World) world).getServer().getCommandManager().handleCommand(
 					new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 							new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 					"/fill ~ ~-3 ~-3 ~-3 ~4 ~5 minecraft:air replace boss_tools:moon_portal");
 		}
-		if (world instanceof World && !((World) world).isRemote) {
+		if (world instanceof ServerWorld) {
 			((World) world).getServer().getCommandManager().handleCommand(
 					new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 							new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 					"/fill ~ ~-3 ~3 ~-3 ~4 ~5 minecraft:air replace boss_tools:moon_portal");
 		}
-		if (world instanceof World && !((World) world).isRemote) {
+		if (world instanceof ServerWorld) {
 			((World) world).getServer().getCommandManager().handleCommand(
 					new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 							new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 					"/fill ~ ~-3 ~2 ~-3 ~4 ~5 minecraft:air replace boss_tools:moon_portal");
 		}
-		if (world instanceof World && !((World) world).isRemote) {
+		if (world instanceof ServerWorld) {
 			((World) world).getServer().getCommandManager().handleCommand(
 					new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 							new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 					"/fill ~ ~-3 ~3 ~-3 ~4 ~5 minecraft:air replace boss_tools:moon_portal");
 		}
-		if (world instanceof World && !((World) world).isRemote) {
+		if (world instanceof ServerWorld) {
 			((World) world).getServer().getCommandManager().handleCommand(
 					new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 							new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 					"/fill ~ ~-3 ~2 ~-3 ~4 ~5 minecraft:air replace boss_tools:moon_portal");
 		}
-		if (world instanceof World && !((World) world).isRemote) {
+		if (world instanceof ServerWorld) {
 			((World) world).getServer().getCommandManager().handleCommand(
 					new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 							new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 					"/fill ~ ~-3 ~1 ~-3 ~4 ~5 minecraft:air replace boss_tools:moon_portal");
 		}
-		if (world instanceof World && !((World) world).isRemote) {
+		if (world instanceof ServerWorld) {
 			((World) world).getServer().getCommandManager().handleCommand(
 					new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 							new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 					"/fill ~5 ~-3 ~ ~ ~4 ~-5 minecraft:air replace boss_tools:moon_portal");
 		}
-		if (world instanceof World && !((World) world).isRemote) {
+		if (world instanceof ServerWorld) {
 			((World) world).getServer().getCommandManager().handleCommand(
 					new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 							new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 					"/fill ~-5 ~-3 ~ ~ ~4 ~-5 minecraft:air replace boss_tools:moon_portal");
 		}
-		if (world instanceof World && !((World) world).isRemote) {
+		if (world instanceof ServerWorld) {
 			((World) world).getServer().getCommandManager().handleCommand(
 					new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 							new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 					"/fill ~5 ~-5 ~ ~ ~4 ~-5 minecraft:air replace boss_tools:moon_portal");
 		}
-		if (world instanceof World && !((World) world).isRemote) {
+		if (world instanceof ServerWorld) {
 			((World) world).getServer().getCommandManager().handleCommand(
 					new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 							new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),

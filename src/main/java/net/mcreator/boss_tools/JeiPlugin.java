@@ -149,6 +149,8 @@ public class JeiPlugin implements IModPlugin {
         registration.addRecipes(generateOxygenGeneratorRecipes(), OxygenGeneratorJeiCategory.Uid);
         //Generator
         registration.addRecipes(generateGeneratorRecipes(), GeneratorJeiCategory.Uid);
+        //generator Recpie 2
+        registration.addRecipes(generateGeneratorRecipes2(), GeneratorJeiCategory.Uid);
         //workbench
         registration.addRecipes(generateWorkbenchRecipes(), WorkbenchJeiCategory.Uid);
 		//workbench Tier 2
@@ -200,6 +202,16 @@ public class JeiPlugin implements IModPlugin {
         List<GeneratorJeiCategory.GeneratorRecipeWrapper> recipes = new ArrayList<>();
         ArrayList<ItemStack> inputs = new ArrayList<>();
         inputs.add(new ItemStack(Items.COAL));
+        inputs.add(new ItemStack(Items.COAL_BLOCK));
+        // ...
+        recipes.add(new GeneratorJeiCategory.GeneratorRecipeWrapper(inputs));
+        return recipes;
+    }
+        //Generator
+        private List<GeneratorJeiCategory.GeneratorRecipeWrapper> generateGeneratorRecipes2() {
+        List<GeneratorJeiCategory.GeneratorRecipeWrapper> recipes = new ArrayList<>();
+        ArrayList<ItemStack> inputs = new ArrayList<>();
+        inputs.add(new ItemStack(Items.COAL_BLOCK));
         // ...
         recipes.add(new GeneratorJeiCategory.GeneratorRecipeWrapper(inputs));
         return recipes;

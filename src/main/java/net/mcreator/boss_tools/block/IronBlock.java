@@ -79,7 +79,7 @@ public class IronBlock extends BossToolsModElements.ModElement {
 					return false;
 				return super.generate(world, generator, rand, pos, config);
 			}
-		}.withConfiguration(new OreFeatureConfig(new BlockMatchRuleTest(Blocks.AIR) {
+		}.withConfiguration(new OreFeatureConfig(new BlockMatchRuleTest(MarsStoneBlock.block.getDefaultState().getBlock()) {
 			public boolean test(BlockState blockAt, Random random) {
 				boolean blockCriteria = false;
 				if (blockAt.getBlock() == MarsStoneBlock.block.getDefaultState().getBlock())
