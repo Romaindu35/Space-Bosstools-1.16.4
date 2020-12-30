@@ -22,7 +22,7 @@
     "hasFog": false,
     "isDark": false,
     "doesWaterVaporize": true,
-    "sleepResult": "DENY",
+    "sleepResult": "ALLOW",
     "hasSkyLight": false,
     "imitateOverworldBehaviour": false,
     "onPlayerEntersDimension": {
