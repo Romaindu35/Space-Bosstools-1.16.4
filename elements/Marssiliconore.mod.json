@@ -102,9 +102,9 @@
         "value": "CUSTOM:MarsStone"
       }
     ],
-    "frequencyPerChunks": 10,
-    "frequencyOnChunk": 16,
+    "frequencyPerChunks": 1,
+    "frequencyOnChunk": 8,
     "minGenerateHeight": 1,
-    "maxGenerateHeight": 19
+    "maxGenerateHeight": 40
   }
 }

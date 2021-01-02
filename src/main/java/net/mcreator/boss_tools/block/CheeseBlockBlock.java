@@ -88,6 +88,6 @@ public class CheeseBlockBlock extends BossToolsModElements.ModElement {
 			protected IRuleTestType<?> getType() {
 				return IRuleTestType.BLOCK_MATCH;
 			}
-		}, block.getDefaultState(), 8)).range(40).square().func_242731_b(1));
+		}, block.getDefaultState(), 10)).range(40).square().func_242731_b(3));
 	}
 }
