@@ -89,7 +89,7 @@
     "energyMaxReceive": 200,
     "energyMaxExtract": 200,
     "isFluidTank": true,
-    "fluidCapacity": 300,
+    "fluidCapacity": 3000,
     "fluidRestrictions": [
       {
         "value": "CUSTOM:Fuel"

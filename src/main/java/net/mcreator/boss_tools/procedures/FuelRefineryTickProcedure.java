@@ -305,7 +305,7 @@ public class FuelRefineryTickProcedure extends BossToolsModElements.ModElement {
 											.ifPresent(capability -> _retval.set(capability.getFluidInTank(tank).getAmount()));
 								return _retval.get();
 							}
-						}.getFluidTankLevel(new BlockPos((int) x, (int) y, (int) z), (int) 1)) <= 299)) {
+						}.getFluidTankLevel(new BlockPos((int) x, (int) y, (int) z), (int) 1)) <= 2990)) {
 							if (((new Object() {
 								public ItemStack getItemStack(BlockPos pos, int sltid) {
 									AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -456,7 +456,7 @@ public class FuelRefineryTickProcedure extends BossToolsModElements.ModElement {
 										.ifPresent(capability -> _retval.set(capability.getFluidInTank(tank).getAmount()));
 							return _retval.get();
 						}
-					}.getFluidTankLevel(new BlockPos((int) x, (int) y, (int) z), (int) 1)) <= 299)) {
+					}.getFluidTankLevel(new BlockPos((int) x, (int) y, (int) z), (int) 1)) <= 2999)) {
 						{
 							TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 							int _amount = (int) 1;
@@ -465,7 +465,7 @@ public class FuelRefineryTickProcedure extends BossToolsModElements.ModElement {
 						}
 						{
 							TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-							int _amount = (int) 1;
+							int _amount = (int) 10;
 							if (_ent != null)
 								_ent.getCapability(CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY, null).ifPresent(
 										capability -> capability.fill(new FluidStack(FuelBlock.still, _amount), IFluidHandler.FluidAction.EXECUTE));
@@ -507,7 +507,7 @@ public class FuelRefineryTickProcedure extends BossToolsModElements.ModElement {
 									.ifPresent(capability -> _retval.set(capability.getFluidInTank(tank).getAmount()));
 						return _retval.get();
 					}
-				}.getFluidTankLevel(new BlockPos((int) x, (int) y, (int) z), (int) 1)) >= 100)) {
+				}.getFluidTankLevel(new BlockPos((int) x, (int) y, (int) z), (int) 1)) >= 1000)) {
 					{
 						TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 						if (_ent != null) {
@@ -523,7 +523,7 @@ public class FuelRefineryTickProcedure extends BossToolsModElements.ModElement {
 					}
 					{
 						TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-						int _amount = (int) 100;
+						int _amount = (int) 1000;
 						if (_ent != null)
 							_ent.getCapability(CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY, null)
 									.ifPresent(capability -> capability.drain(_amount, IFluidHandler.FluidAction.EXECUTE));
@@ -564,7 +564,7 @@ public class FuelRefineryTickProcedure extends BossToolsModElements.ModElement {
 									.ifPresent(capability -> _retval.set(capability.getFluidInTank(tank).getAmount()));
 						return _retval.get();
 					}
-				}.getFluidTankLevel(new BlockPos((int) x, (int) y, (int) z), (int) 1)) >= 300)) {
+				}.getFluidTankLevel(new BlockPos((int) x, (int) y, (int) z), (int) 1)) >= 3000)) {
 					{
 						TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 						if (_ent != null) {
@@ -580,7 +580,7 @@ public class FuelRefineryTickProcedure extends BossToolsModElements.ModElement {
 					}
 					{
 						TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-						int _amount = (int) 300;
+						int _amount = (int) 3000;
 						if (_ent != null)
 							_ent.getCapability(CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY, null)
 									.ifPresent(capability -> capability.drain(_amount, IFluidHandler.FluidAction.EXECUTE));

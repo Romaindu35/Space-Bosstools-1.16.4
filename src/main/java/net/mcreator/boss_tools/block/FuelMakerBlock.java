@@ -368,7 +368,7 @@ public class FuelMakerBlock extends BossToolsModElements.ModElement {
 				return retval;
 			}
 		};
-		private final FluidTank fluidTank = new FluidTank(300, fs -> {
+		private final FluidTank fluidTank = new FluidTank(3000, fs -> {
 			if (fs.getFluid() == FuelBlock.still)
 				return true;
 			if (fs.getFluid() == FuelBlock.flowing)

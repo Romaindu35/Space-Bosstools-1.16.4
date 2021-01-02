@@ -52,6 +52,6 @@ public class Fueltank12Procedure extends BossToolsModElements.ModElement {
 							.ifPresent(capability -> _retval.set(capability.getFluidInTank(tank).getAmount()));
 				return _retval.get();
 			}
-		}.getFluidTankLevel(new BlockPos((int) x, (int) y, (int) z), (int) 1)) >= 72);
+		}.getFluidTankLevel(new BlockPos((int) x, (int) y, (int) z), (int) 1)) >= 720);
 	}
 }

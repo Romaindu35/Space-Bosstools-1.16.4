@@ -217,7 +217,7 @@ public class LandingGearEntity extends BossToolsModElements.ModElement {
 			return super.getCapability(capability, side);
 		}
 
-		@Override
+	/*	@Override
 		protected void dropInventory() {
 			super.dropInventory();
 			for (int i = 0; i < inventory.getSlots(); ++i) {
@@ -226,7 +226,7 @@ public class LandingGearEntity extends BossToolsModElements.ModElement {
 					this.entityDropItem(itemstack);
 				}
 			}
-		}
+		}*/
 
 		@Override
 		public void writeAdditional(CompoundNBT compound) {
