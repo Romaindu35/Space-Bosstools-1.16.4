@@ -100,9 +100,9 @@
         "value": "CUSTOM:MoonStone"
       }
     ],
-    "frequencyPerChunks": 3,
+    "frequencyPerChunks": 4,
     "frequencyOnChunk": 10,
     "minGenerateHeight": 1,
-    "maxGenerateHeight": 40
+    "maxGenerateHeight": 75
   }
 }

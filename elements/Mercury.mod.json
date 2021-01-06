@@ -25,12 +25,6 @@
     "sleepResult": "ALLOW",
     "hasSkyLight": false,
     "imitateOverworldBehaviour": false,
-    "onPlayerEntersDimension": {
-      "name": "MoonPlayerEntersDimension"
-    },
-    "onPlayerLeavesDimension": {
-      "name": "MoonPlayerLeavesDimension"
-    },
     "portalFrame": {
       "value": "CUSTOM:MoonPortalblock"
     },
@@ -47,12 +41,6 @@
     },
     "texture": "adminstaff",
     "portalTexture": "portalframe1",
-    "enablePortal": false,
-    "whenPortaTriggerlUsed": {
-      "name": "MoonPortalTriggerUsed2"
-    },
-    "onPortalTickUpdate": {
-      "name": "MoonOnPortalTickUpdate1"
-    }
+    "enablePortal": false
   }
 }

@@ -87,6 +87,6 @@ public class MercuryIronoreBlock extends BossToolsModElements.ModElement {
 			protected IRuleTestType<?> getType() {
 				return IRuleTestType.BLOCK_MATCH;
 			}
-		}, block.getDefaultState(), 10)).range(40).square().func_242731_b(5));
+		}, block.getDefaultState(), 12)).range(64).square().func_242731_b(5));
 	}
 }

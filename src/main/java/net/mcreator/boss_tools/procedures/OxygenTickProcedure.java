@@ -811,7 +811,7 @@ public class OxygenTickProcedure extends BossToolsModElements.ModElement {
 									return ((LockableLootTileEntity) _ent).getStackInSlot(sltid);
 								return ItemStack.EMPTY;
 							}
-						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getOrCreateTag().getDouble("Energy")) + 1));
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getOrCreateTag().getDouble("Energy")) + 2));
 					}
 				}
 			}

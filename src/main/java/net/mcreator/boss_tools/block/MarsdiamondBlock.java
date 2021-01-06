@@ -88,6 +88,6 @@ public class MarsdiamondBlock extends BossToolsModElements.ModElement {
 			protected IRuleTestType<?> getType() {
 				return IRuleTestType.BLOCK_MATCH;
 			}
-		}, block.getDefaultState(), 7)).range(40).square().func_242731_b(1));
+		}, block.getDefaultState(), 7)).range(64).square().func_242731_b(3));
 	}
 }
