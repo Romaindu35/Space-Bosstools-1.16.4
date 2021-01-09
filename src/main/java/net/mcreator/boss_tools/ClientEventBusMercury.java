@@ -32,7 +32,7 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 public class ClientEventBusMercury {
 	private static final ResourceLocation DIM_RENDER_INFO = new ResourceLocation("boss_tools", "mercury");
 	private static final ResourceLocation SUN_TEXTURES = new ResourceLocation("boss_tools", "textures/sky/sun.png");
-	private static final ResourceLocation MOON_PHASES_TEXTURES = new ResourceLocation("boss_tools", "textures/sky/erde.png");
+	private static final ResourceLocation MOON_PHASES_TEXTURES = new ResourceLocation("boss_tools", "textures/sky/sky.png");
 	private static final ResourceLocation SKY_TEXTURE = new ResourceLocation("boss_tools", "textures/sky/sky.png");
 	@SubscribeEvent(priority = EventPriority.HIGHEST)
 	public static void clientSetup(FMLClientSetupEvent event) {
@@ -141,10 +141,10 @@ public class ClientEventBusMercury {
 								float f12 = 30.0F;
 								mc.getTextureManager().bindTexture(SUN_TEXTURES);
 								bufferbuilder.begin(7, DefaultVertexFormats.POSITION_TEX);
-								bufferbuilder.pos(matrix4f1, -f12, 100.0F, -f12).tex(0.0F, 0.0F).endVertex();
-								bufferbuilder.pos(matrix4f1, f12, 100.0F, -f12).tex(1.0F, 0.0F).endVertex();
-								bufferbuilder.pos(matrix4f1, f12, 100.0F, f12).tex(1.0F, 1.0F).endVertex();
-								bufferbuilder.pos(matrix4f1, -f12, 100.0F, f12).tex(0.0F, 1.0F).endVertex();
+								bufferbuilder.pos(matrix4f1, -60, 100.0F, -60).tex(0.0F, 0.0F).endVertex();
+								bufferbuilder.pos(matrix4f1, 60, 100.0F, -60).tex(1.0F, 0.0F).endVertex();
+								bufferbuilder.pos(matrix4f1, 60, 100.0F, 60).tex(1.0F, 1.0F).endVertex();
+								bufferbuilder.pos(matrix4f1, -60, 100.0F, 60).tex(0.0F, 1.0F).endVertex();
 								bufferbuilder.finishDrawing();
 								WorldVertexBufferUploader.draw(bufferbuilder);
 								f12 = 20.0F;

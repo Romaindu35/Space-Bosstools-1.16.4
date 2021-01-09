@@ -61,49 +61,49 @@ public class JumpGravityProcedure extends BossToolsModElements.ModElement {
 				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
 						.equals(new ResourceLocation("boss_tools:moon_biom")))) {
 			if ((entity instanceof PlayerEntity)) {
-				entity.setMotion((entity.getMotion().getX()), ((entity.getMotion().getY()) + 0.2), (entity.getMotion().getZ()));
+				entity.setMotion((entity.getMotion().getX()), ((entity.getMotion().getY()) + 0.25), (entity.getMotion().getZ()));
 			}
 		}
 		if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
 				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
 						.equals(new ResourceLocation("boss_tools:mars_biom")))) {
 			if ((entity instanceof PlayerEntity)) {
-				entity.setMotion((entity.getMotion().getX()), ((entity.getMotion().getY()) + 0.2), (entity.getMotion().getZ()));
+				entity.setMotion((entity.getMotion().getX()), ((entity.getMotion().getY()) + 0.25), (entity.getMotion().getZ()));
 			}
 		}
 		if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
 				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
 						.equals(new ResourceLocation("boss_tools:mercurybiome")))) {
 			if ((entity instanceof PlayerEntity)) {
-				entity.setMotion((entity.getMotion().getX()), ((entity.getMotion().getY()) + 0.2), (entity.getMotion().getZ()));
+				entity.setMotion((entity.getMotion().getX()), ((entity.getMotion().getY()) + 0.25), (entity.getMotion().getZ()));
 			}
 		}
 		if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
 				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
 						.equals(new ResourceLocation("boss_tools:orbit_overworld_biom")))) {
 			if ((entity instanceof PlayerEntity)) {
-				entity.setMotion((entity.getMotion().getX()), ((entity.getMotion().getY()) + 0.2), (entity.getMotion().getZ()));
+				entity.setMotion((entity.getMotion().getX()), ((entity.getMotion().getY()) + 0.25), (entity.getMotion().getZ()));
 			}
 		}
 		if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
 				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
 						.equals(new ResourceLocation("boss_tools:orbit_moon_biom")))) {
 			if ((entity instanceof PlayerEntity)) {
-				entity.setMotion((entity.getMotion().getX()), ((entity.getMotion().getY()) + 0.2), (entity.getMotion().getZ()));
+				entity.setMotion((entity.getMotion().getX()), ((entity.getMotion().getY()) + 0.25), (entity.getMotion().getZ()));
 			}
 		}
 		if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
 				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
 						.equals(new ResourceLocation("boss_tools:orbit_mars_biom")))) {
 			if ((entity instanceof PlayerEntity)) {
-				entity.setMotion((entity.getMotion().getX()), ((entity.getMotion().getY()) + 0.2), (entity.getMotion().getZ()));
+				entity.setMotion((entity.getMotion().getX()), ((entity.getMotion().getY()) + 0.25), (entity.getMotion().getZ()));
 			}
 		}
 		if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
 				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
 						.equals(new ResourceLocation("boss_tools:orbit_mercury_biom")))) {
 			if ((entity instanceof PlayerEntity)) {
-				entity.setMotion((entity.getMotion().getX()), ((entity.getMotion().getY()) + 0.2), (entity.getMotion().getZ()));
+				entity.setMotion((entity.getMotion().getX()), ((entity.getMotion().getY()) + 0.25), (entity.getMotion().getZ()));
 			}
 		}
 	}

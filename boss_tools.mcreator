@@ -10655,6 +10655,213 @@
       "locked_code": true,
       "ids": {},
       "registry_name": "client_event_bus_mercury_orbit"
+    },
+    {
+      "name": "HammerDupFixRecpie1",
+      "type": "recipe",
+      "sortid": 546,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hammer_dup_fix_recpie_1"
+    },
+    {
+      "name": "HammerDupFixRecpie2",
+      "type": "recipe",
+      "sortid": 547,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hammer_dup_fix_recpie_2"
+    },
+    {
+      "name": "HammerDupFixRecpie3",
+      "type": "recipe",
+      "sortid": 548,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hammer_dup_fix_recpie_3"
+    },
+    {
+      "name": "HammerDupFixRecpie4",
+      "type": "recipe",
+      "sortid": 549,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hammer_dup_fix_recpie_4"
+    },
+    {
+      "name": "HammerDupFixRecpie5",
+      "type": "recipe",
+      "sortid": 550,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hammer_dup_fix_recpie_5"
+    },
+    {
+      "name": "HammerDupFixRecpie6",
+      "type": "recipe",
+      "sortid": 551,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hammer_dup_fix_recpie_6"
+    },
+    {
+      "name": "HammerDupFixRecpie7",
+      "type": "recipe",
+      "sortid": 552,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hammer_dup_fix_recpie_7"
+    },
+    {
+      "name": "HammerDupFixRecpie8",
+      "type": "recipe",
+      "sortid": 553,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hammer_dup_fix_recpie_8"
+    },
+    {
+      "name": "HammerDupFixRecpie9",
+      "type": "recipe",
+      "sortid": 554,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hammer_dup_fix_recpie_9"
+    },
+    {
+      "name": "HammerDupFixRecpie10",
+      "type": "recipe",
+      "sortid": 555,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hammer_dup_fix_recpie_10"
+    },
+    {
+      "name": "HammerDupFixRecpie11",
+      "type": "recipe",
+      "sortid": 556,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hammer_dup_fix_recpie_11"
+    },
+    {
+      "name": "HammerDupFixRecpie12",
+      "type": "recipe",
+      "sortid": 557,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hammer_dup_fix_recpie_12"
+    },
+    {
+      "name": "HammerDupFixRecpie13",
+      "type": "recipe",
+      "sortid": 558,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hammer_dup_fix_recpie_13"
+    },
+    {
+      "name": "HammerDupFixRecpie14",
+      "type": "recipe",
+      "sortid": 559,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hammer_dup_fix_recpie_14"
+    },
+    {
+      "name": "HammerDupFixRecpie15",
+      "type": "recipe",
+      "sortid": 560,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hammer_dup_fix_recpie_15"
+    },
+    {
+      "name": "HammerDupFixRecpie16",
+      "type": "recipe",
+      "sortid": 561,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hammer_dup_fix_recpie_16"
+    },
+    {
+      "name": "HammerDupFixRecpie17",
+      "type": "recipe",
+      "sortid": 562,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hammer_dup_fix_recpie_17"
+    },
+    {
+      "name": "HammerDupFixRecpie18",
+      "type": "recipe",
+      "sortid": 563,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hammer_dup_fix_recpie_18"
+    },
+    {
+      "name": "HammerDupFixRecpie19",
+      "type": "recipe",
+      "sortid": 564,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hammer_dup_fix_recpie_19"
+    },
+    {
+      "name": "HammerDupFixRecpie20",
+      "type": "recipe",
+      "sortid": 565,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hammer_dup_fix_recpie_20"
+    },
+    {
+      "name": "HammerDupFixRecpie21",
+      "type": "recipe",
+      "sortid": 566,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hammer_dup_fix_recpie_21"
+    },
+    {
+      "name": "HammerDupFixRecpie22",
+      "type": "recipe",
+      "sortid": 567,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hammer_dup_fix_recpie_22"
+    },
+    {
+      "name": "HammerDupFixRecpie23",
+      "type": "recipe",
+      "sortid": 568,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hammer_dup_fix_recpie_23"
     }
   ],
   "variable_elements": [

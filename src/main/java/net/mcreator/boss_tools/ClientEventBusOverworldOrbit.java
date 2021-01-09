@@ -32,7 +32,7 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 @Mod.EventBusSubscriber(modid = "boss_tools", bus = Bus.MOD, value = Dist.CLIENT)
 public class ClientEventBusOverworldOrbit {
 	private static final ResourceLocation DIM_RENDER_INFO = new ResourceLocation("boss_tools", "umlaufbahnerde");
-	private static final ResourceLocation SUN_TEXTURES = new ResourceLocation("boss_tools", "textures/sky/earth.png");
+	private static final ResourceLocation SUN_TEXTURES = new ResourceLocation("boss_tools", "textures/sky/earth_orbit.png");
 	private static final ResourceLocation MOON_PHASES_TEXTURES = new ResourceLocation("boss_tools", "textures/sky/sun.png");
 	private static final ResourceLocation SKY_TEXTURE = new ResourceLocation("boss_tools", "textures/sky/sky.png");
 	@SubscribeEvent(priority = EventPriority.HIGHEST)

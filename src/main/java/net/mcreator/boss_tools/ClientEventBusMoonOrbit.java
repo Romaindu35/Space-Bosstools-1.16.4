@@ -32,7 +32,7 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 @Mod.EventBusSubscriber(modid = "boss_tools", bus = Bus.MOD, value = Dist.CLIENT)
 public class ClientEventBusMoonOrbit {
 	private static final ResourceLocation DIM_RENDER_INFO = new ResourceLocation("boss_tools", "orbit_moon");
-	private static final ResourceLocation SUN_TEXTURES = new ResourceLocation("boss_tools", "textures/sky/earth.png");
+	private static final ResourceLocation SUN_TEXTURES = new ResourceLocation("boss_tools", "textures/sky/moon.png");
 	private static final ResourceLocation MOON_PHASES_TEXTURES = new ResourceLocation("boss_tools", "textures/sky/sun.png");
 	private static final ResourceLocation SKY_TEXTURE = new ResourceLocation("boss_tools", "textures/sky/sky.png");
 	@SubscribeEvent(priority = EventPriority.HIGHEST)
@@ -150,10 +150,10 @@ public class ClientEventBusMoonOrbit {
 								
 								//new System (Sun main Planet)
 								float f17 = (float) mc.player.getEyePosition(partialTicks).y /*- world.getWorldInfo().getVoidFogHeight()*/;
-								bufferbuilder.pos(matrix4f1, -300.0F, -f17 -18.0F, 300.0F).tex(0.0F, 0.0F).endVertex(); //350 is nice but fps xD
-						     	bufferbuilder.pos(matrix4f1, 300.0F, -f17 -18.0F, 300.0F).tex(1.0F, 0.0F).endVertex();
-						     	bufferbuilder.pos(matrix4f1, 300.0F, -f17 -18.0F, -300.0F).tex(1.0F, 1.0F).endVertex();
-						     	bufferbuilder.pos(matrix4f1, -300.0F, -f17 -18.0F, -300.0F).tex(0.0F, 1.0F).endVertex();
+								bufferbuilder.pos(matrix4f1, -150.0F, -f17 -18.0F, 150.0F).tex(0.0F, 0.0F).endVertex(); //350 is nice but fps xD
+						     	bufferbuilder.pos(matrix4f1, 150.0F, -f17 -18.0F, 150.0F).tex(1.0F, 0.0F).endVertex();
+						     	bufferbuilder.pos(matrix4f1, 150.0F, -f17 -18.0F, -150.0F).tex(1.0F, 1.0F).endVertex();
+						     	bufferbuilder.pos(matrix4f1, -150.0F, -f17 -18.0F, -150.0F).tex(0.0F, 1.0F).endVertex();
 								bufferbuilder.finishDrawing();
 								WorldVertexBufferUploader.draw(bufferbuilder);
 								f12 = 20.0F;
