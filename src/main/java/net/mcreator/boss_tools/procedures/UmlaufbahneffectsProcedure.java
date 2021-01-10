@@ -71,7 +71,7 @@ public class UmlaufbahneffectsProcedure extends BossToolsModElements.ModElement 
 						((World) world).getServer().getCommandManager().handleCommand(
 								new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 										new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-								"/execute in minecraft:overworld run teleport @p ~ 250 ~");
+								"/execute in minecraft:overworld run teleport @p ~ 450 ~");
 					}
 				}
 			}
@@ -85,7 +85,7 @@ public class UmlaufbahneffectsProcedure extends BossToolsModElements.ModElement 
 						((World) world).getServer().getCommandManager().handleCommand(
 								new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 										new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-								"/execute in boss_tools:moon run teleport @p ~ 250 ~");
+								"/execute in boss_tools:moon run teleport @p ~ 450 ~");
 					}
 				}
 			}
@@ -99,7 +99,7 @@ public class UmlaufbahneffectsProcedure extends BossToolsModElements.ModElement 
 						((World) world).getServer().getCommandManager().handleCommand(
 								new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 										new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-								"/execute in boss_tools:mars run teleport @p ~ 250 ~");
+								"/execute in boss_tools:mars run teleport @p ~ 450 ~");
 					}
 				}
 			}
@@ -113,7 +113,7 @@ public class UmlaufbahneffectsProcedure extends BossToolsModElements.ModElement 
 						((World) world).getServer().getCommandManager().handleCommand(
 								new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 										new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-								"/execute in boss_tools:mercury run teleport @p ~ 250 ~");
+								"/execute in boss_tools:mercury run teleport @p ~ 450 ~");
 					}
 				}
 			}

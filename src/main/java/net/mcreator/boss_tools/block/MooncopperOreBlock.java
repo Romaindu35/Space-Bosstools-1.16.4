@@ -101,6 +101,6 @@ public class MooncopperOreBlock extends BossToolsModElements.ModElement {
 			protected IRuleTestType<?> getType() {
 				return IRuleTestType.BLOCK_MATCH;
 			}
-		}, block.getDefaultState(), 9)).range(64).square().func_242731_b(3));
+		}, block.getDefaultState(), 9)).range(25).square().func_242731_b(3));
 	}
 }

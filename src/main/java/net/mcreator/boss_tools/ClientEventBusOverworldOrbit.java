@@ -150,10 +150,10 @@ public class ClientEventBusOverworldOrbit {
 								
 								//new System (Sun main Planet)
 								float f17 = (float) mc.player.getEyePosition(partialTicks).y /*- world.getWorldInfo().getVoidFogHeight()*/;
-								bufferbuilder.pos(matrix4f1, -300.0F, -f17 -18.0F, 300.0F).tex(0.0F, 0.0F).endVertex(); //350 is nice but fps xD
-						     	bufferbuilder.pos(matrix4f1, 300.0F, -f17 -18.0F, 300.0F).tex(1.0F, 0.0F).endVertex();
-						     	bufferbuilder.pos(matrix4f1, 300.0F, -f17 -18.0F, -300.0F).tex(1.0F, 1.0F).endVertex();
-						     	bufferbuilder.pos(matrix4f1, -300.0F, -f17 -18.0F, -300.0F).tex(0.0F, 1.0F).endVertex();
+								bufferbuilder.pos(matrix4f1, -250.0F, -f17 -18.0F, 250.0F).tex(0.0F, 0.0F).endVertex(); //350 is nice but fps xD
+						     	bufferbuilder.pos(matrix4f1, 250.0F, -f17 -18.0F, 250.0F).tex(1.0F, 0.0F).endVertex();
+						     	bufferbuilder.pos(matrix4f1, 250.0F, -f17 -18.0F, -250.0F).tex(1.0F, 1.0F).endVertex();
+						     	bufferbuilder.pos(matrix4f1, -250.0F, -f17 -18.0F, -250.0F).tex(0.0F, 1.0F).endVertex();
 								bufferbuilder.finishDrawing();
 								WorldVertexBufferUploader.draw(bufferbuilder);
 								f12 = 20.0F;

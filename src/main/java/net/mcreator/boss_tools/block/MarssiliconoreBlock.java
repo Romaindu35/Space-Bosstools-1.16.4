@@ -101,6 +101,6 @@ public class MarssiliconoreBlock extends BossToolsModElements.ModElement {
 			protected IRuleTestType<?> getType() {
 				return IRuleTestType.BLOCK_MATCH;
 			}
-		}, block.getDefaultState(), 8)).range(64).square().func_242731_b(3));
+		}, block.getDefaultState(), 8)).range(20).square().func_242731_b(3));
 	}
 }
