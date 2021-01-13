@@ -100,7 +100,11 @@ public class FallGravityProcedure extends BossToolsModElements.ModElement {
 																&& world.func_241828_r().getRegistry(Registry.BIOME_KEY)
 																		.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
 																		.equals(new ResourceLocation("boss_tools:orbit_mercury_biom")))))))))) {
-			if (((entity.getMotion().getY()) <= (-0.1))) {
+			if (((entity.getMotion().getY()) <= (-0.01))) {
+				entity.setMotion((entity.getMotion().getX()), ((entity.getMotion().getY()) + 0.05), (entity.getMotion().getZ()));
+				entity.fallDistance = (float) (0.2);
+			}
+			if (((entity.getMotion().getY()) >= 0.08)) {
 				entity.setMotion((entity.getMotion().getX()), ((entity.getMotion().getY()) + 0.05), (entity.getMotion().getZ()));
 				entity.fallDistance = (float) (0.2);
 			}
@@ -135,7 +139,7 @@ public class FallGravityProcedure extends BossToolsModElements.ModElement {
 						}.compareDistOf(x, y, z)).collect(Collectors.toList());
 				for (Entity entityiterator : _entfound) {
 					if ((!(entityiterator instanceof PlayerEntity))) {
-						if ((!(entityiterator instanceof ItemEntity))) {
+						if ((!(entityiterator instanceof RocketEntity.CustomEntity))) {
 							if ((!(entityiterator instanceof LandingGearEntity.CustomEntity))) {
 								if ((!(entityiterator instanceof RocketEntity.CustomEntity))) {
 									if ((!(entityiterator instanceof RocketTier2Entity.CustomEntity))) {
