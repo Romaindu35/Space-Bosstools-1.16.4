@@ -1,5 +1,6 @@
 package net.mcreator.boss_tools.procedures;
 
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.common.MinecraftForge;
@@ -12,6 +13,7 @@ import net.minecraft.util.registry.Registry;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.util.math.vector.Vector2f;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.SoundCategory;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.entity.Entity;
 import net.minecraft.command.ICommandSource;
@@ -150,6 +152,15 @@ public class RemoveFireProcedure extends BossToolsModElements.ModElement {
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 							"/setblock ~ ~ ~ boss_tools:torch");
 				}
+				if (world instanceof World && !world.isRemote()) {
+					((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.extinguish")),
+							SoundCategory.NEUTRAL, (float) 1, (float) 1);
+				} else {
+					((World) world).playSound(x, y, z,
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.extinguish")),
+							SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
+				}
 			}
 		}
 		if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
@@ -161,6 +172,15 @@ public class RemoveFireProcedure extends BossToolsModElements.ModElement {
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 							"/setblock ~ ~ ~ boss_tools:torch");
+				}
+				if (world instanceof World && !world.isRemote()) {
+					((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.extinguish")),
+							SoundCategory.NEUTRAL, (float) 1, (float) 1);
+				} else {
+					((World) world).playSound(x, y, z,
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.extinguish")),
+							SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
 				}
 			}
 		}
@@ -174,6 +194,15 @@ public class RemoveFireProcedure extends BossToolsModElements.ModElement {
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 							"/setblock ~ ~ ~ boss_tools:torch");
 				}
+				if (world instanceof World && !world.isRemote()) {
+					((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.extinguish")),
+							SoundCategory.NEUTRAL, (float) 1, (float) 1);
+				} else {
+					((World) world).playSound(x, y, z,
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.extinguish")),
+							SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
+				}
 			}
 		}
 		if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
@@ -185,6 +214,15 @@ public class RemoveFireProcedure extends BossToolsModElements.ModElement {
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 							"/setblock ~ ~ ~ boss_tools:torch");
+				}
+				if (world instanceof World && !world.isRemote()) {
+					((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.extinguish")),
+							SoundCategory.NEUTRAL, (float) 1, (float) 1);
+				} else {
+					((World) world).playSound(x, y, z,
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.extinguish")),
+							SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
 				}
 			}
 		}
@@ -198,6 +236,15 @@ public class RemoveFireProcedure extends BossToolsModElements.ModElement {
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 							"/setblock ~ ~ ~ boss_tools:torch");
 				}
+				if (world instanceof World && !world.isRemote()) {
+					((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.extinguish")),
+							SoundCategory.NEUTRAL, (float) 1, (float) 1);
+				} else {
+					((World) world).playSound(x, y, z,
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.extinguish")),
+							SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
+				}
 			}
 		}
 		if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
@@ -210,6 +257,15 @@ public class RemoveFireProcedure extends BossToolsModElements.ModElement {
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 							"/setblock ~ ~ ~ boss_tools:torch");
 				}
+				if (world instanceof World && !world.isRemote()) {
+					((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.extinguish")),
+							SoundCategory.NEUTRAL, (float) 1, (float) 1);
+				} else {
+					((World) world).playSound(x, y, z,
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.extinguish")),
+							SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
+				}
 			}
 		}
 		if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
@@ -221,6 +277,15 @@ public class RemoveFireProcedure extends BossToolsModElements.ModElement {
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 							"/setblock ~ ~ ~ boss_tools:torch");
+				}
+				if (world instanceof World && !world.isRemote()) {
+					((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.extinguish")),
+							SoundCategory.NEUTRAL, (float) 1, (float) 1);
+				} else {
+					((World) world).playSound(x, y, z,
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.extinguish")),
+							SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
 				}
 			}
 		}
@@ -234,6 +299,15 @@ public class RemoveFireProcedure extends BossToolsModElements.ModElement {
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 							"/setblock ~ ~ ~ boss_tools:torch");
 				}
+				if (world instanceof World && !world.isRemote()) {
+					((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.extinguish")),
+							SoundCategory.NEUTRAL, (float) 1, (float) 1);
+				} else {
+					((World) world).playSound(x, y, z,
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.extinguish")),
+							SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
+				}
 			}
 		}
 		if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
@@ -245,6 +319,15 @@ public class RemoveFireProcedure extends BossToolsModElements.ModElement {
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 							"/setblock ~ ~ ~ boss_tools:torch");
+				}
+				if (world instanceof World && !world.isRemote()) {
+					((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.extinguish")),
+							SoundCategory.NEUTRAL, (float) 1, (float) 1);
+				} else {
+					((World) world).playSound(x, y, z,
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.extinguish")),
+							SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
 				}
 			}
 		}
@@ -258,6 +341,15 @@ public class RemoveFireProcedure extends BossToolsModElements.ModElement {
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 							"/setblock ~ ~ ~ boss_tools:torch");
 				}
+				if (world instanceof World && !world.isRemote()) {
+					((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.extinguish")),
+							SoundCategory.NEUTRAL, (float) 1, (float) 1);
+				} else {
+					((World) world).playSound(x, y, z,
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.extinguish")),
+							SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
+				}
 			}
 		}
 		if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
@@ -269,6 +361,15 @@ public class RemoveFireProcedure extends BossToolsModElements.ModElement {
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 							"/setblock ~ ~ ~ boss_tools:torch");
+				}
+				if (world instanceof World && !world.isRemote()) {
+					((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.extinguish")),
+							SoundCategory.NEUTRAL, (float) 1, (float) 1);
+				} else {
+					((World) world).playSound(x, y, z,
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.extinguish")),
+							SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
 				}
 			}
 		}
@@ -282,6 +383,15 @@ public class RemoveFireProcedure extends BossToolsModElements.ModElement {
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 							"/setblock ~ ~ ~ boss_tools:torch");
 				}
+				if (world instanceof World && !world.isRemote()) {
+					((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.extinguish")),
+							SoundCategory.NEUTRAL, (float) 1, (float) 1);
+				} else {
+					((World) world).playSound(x, y, z,
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.extinguish")),
+							SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
+				}
 			}
 		}
 		if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
@@ -294,6 +404,15 @@ public class RemoveFireProcedure extends BossToolsModElements.ModElement {
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 							"/setblock ~ ~ ~ boss_tools:torch");
 				}
+				if (world instanceof World && !world.isRemote()) {
+					((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.extinguish")),
+							SoundCategory.NEUTRAL, (float) 1, (float) 1);
+				} else {
+					((World) world).playSound(x, y, z,
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.extinguish")),
+							SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
+				}
 			}
 		}
 		if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
@@ -305,6 +424,15 @@ public class RemoveFireProcedure extends BossToolsModElements.ModElement {
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 							"/setblock ~ ~ ~ boss_tools:torch");
+				}
+				if (world instanceof World && !world.isRemote()) {
+					((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.extinguish")),
+							SoundCategory.NEUTRAL, (float) 1, (float) 1);
+				} else {
+					((World) world).playSound(x, y, z,
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.extinguish")),
+							SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
 				}
 			}
 		}

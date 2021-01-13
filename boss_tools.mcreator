@@ -2130,53 +2130,6 @@
       }
     },
     {
-      "name": "GlowstoneTorch",
-      "type": "block",
-      "sortid": 47,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "glowstone_torch"
-    },
-    {
-      "name": "GlowstoneTorchtick",
-      "type": "procedure",
-      "sortid": 197,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "glowstone_torchtick",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "GlowstoneTorchRezept",
-      "type": "recipe",
-      "sortid": 198,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "glowstone_torch_rezept"
-    },
-    {
       "name": "TorchOnBlockRightClicked",
       "type": "procedure",
       "sortid": 199,
@@ -7838,15 +7791,6 @@
       }
     },
     {
-      "name": "GlowstoneTorchParticle",
-      "type": "particle",
-      "sortid": 436,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "glowstone_torch_particle"
-    },
-    {
       "name": "LandingGearfalltoworld",
       "type": "procedure",
       "sortid": 437,
@@ -10909,7 +10853,6 @@
       "item.boss_tools.rocket": "Rocket Spawn Egg",
       "item.boss_tools.space_armor_boots": "Space Boots",
       "effect.tier_3_space_station_gui_potion_overworld_orbit": "Tier3SpaceStationGUIPotionOverworldorbit",
-      "block.boss_tools.glowstone_torch": "Glowstone Torch",
       "item.minecraft.splash_potion.effect.damage_remove": "Splash SpaceSuite",
       "item.boss_tools.fuel_bucked": "Fuel Bucket",
       "item.boss_tools.mars": "Admin Feuerzeug",
@@ -11176,5 +11119,5 @@
     "modElementsPackage": "net.mcreator.boss_tools",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202000652319
+  "mcreatorVersion": 202100102311
 }

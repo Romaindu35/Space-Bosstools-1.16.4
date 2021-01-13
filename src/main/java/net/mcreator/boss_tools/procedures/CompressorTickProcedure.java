@@ -59,21 +59,21 @@ public class CompressorTickProcedure extends BossToolsModElements.ModElement {
 		double previousRecepie = 0;
 		double loading = 0;
 		previousRecepie = (double) (new Object() {
-			public double getValue(BlockPos pos, String tag) {
+			public double getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(new BlockPos((int) x, (int) y, (int) z), "recipe"));
+		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe"));
 		loading = (double) (new Object() {
-			public double getValue(BlockPos pos, String tag) {
+			public double getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(new BlockPos((int) x, (int) y, (int) z), "loading"));
+		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "loading"));
 		if ((((new Object() {
 			public ItemStack getItemStack(BlockPos pos, int sltid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -99,7 +99,7 @@ public class CompressorTickProcedure extends BossToolsModElements.ModElement {
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == new ItemStack(Blocks.AIR, (int) (1)).getItem())
 						&& ((new Object() {
-							public int getAmount(BlockPos pos, int sltid) {
+							public int getAmount(IWorld world, BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
 								if (_ent != null) {
@@ -109,8 +109,8 @@ public class CompressorTickProcedure extends BossToolsModElements.ModElement {
 								}
 								return _retval.get();
 							}
-						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) <= 1)) || ((new Object() {
-							public int getAmount(BlockPos pos, int sltid) {
+						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) <= 1)) || ((new Object() {
+							public int getAmount(IWorld world, BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
 								if (_ent != null) {
@@ -120,7 +120,7 @@ public class CompressorTickProcedure extends BossToolsModElements.ModElement {
 								}
 								return _retval.get();
 							}
-						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
+						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
 			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -155,7 +155,7 @@ public class CompressorTickProcedure extends BossToolsModElements.ModElement {
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == new ItemStack(Blocks.AIR, (int) (1)).getItem())
 						&& ((new Object() {
-							public int getAmount(BlockPos pos, int sltid) {
+							public int getAmount(IWorld world, BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
 								if (_ent != null) {
@@ -165,8 +165,8 @@ public class CompressorTickProcedure extends BossToolsModElements.ModElement {
 								}
 								return _retval.get();
 							}
-						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) <= 1)) || ((new Object() {
-							public int getAmount(BlockPos pos, int sltid) {
+						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) <= 1)) || ((new Object() {
+							public int getAmount(IWorld world, BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
 								if (_ent != null) {
@@ -176,7 +176,7 @@ public class CompressorTickProcedure extends BossToolsModElements.ModElement {
 								}
 								return _retval.get();
 							}
-						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
+						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
 			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -211,7 +211,7 @@ public class CompressorTickProcedure extends BossToolsModElements.ModElement {
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == new ItemStack(Blocks.AIR, (int) (1)).getItem())
 						&& ((new Object() {
-							public int getAmount(BlockPos pos, int sltid) {
+							public int getAmount(IWorld world, BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
 								if (_ent != null) {
@@ -221,8 +221,8 @@ public class CompressorTickProcedure extends BossToolsModElements.ModElement {
 								}
 								return _retval.get();
 							}
-						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) <= 1)) || ((new Object() {
-							public int getAmount(BlockPos pos, int sltid) {
+						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) <= 1)) || ((new Object() {
+							public int getAmount(IWorld world, BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
 								if (_ent != null) {
@@ -232,7 +232,7 @@ public class CompressorTickProcedure extends BossToolsModElements.ModElement {
 								}
 								return _retval.get();
 							}
-						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
+						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
 			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -244,13 +244,13 @@ public class CompressorTickProcedure extends BossToolsModElements.ModElement {
 			}
 		}
 		if (((previousRecepie) != (new Object() {
-			public double getValue(BlockPos pos, String tag) {
+			public double getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(new BlockPos((int) x, (int) y, (int) z), "recipe")))) {
+		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe")))) {
 			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -262,36 +262,36 @@ public class CompressorTickProcedure extends BossToolsModElements.ModElement {
 			}
 		}
 		if (((new Object() {
-			public double getValue(BlockPos pos, String tag) {
+			public double getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(new BlockPos((int) x, (int) y, (int) z), "recipe")) >= 0)) {
+		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe")) >= 0)) {
 			if (((new Object() {
-				public double getValue(BlockPos pos, String tag) {
+				public double getValue(IWorld world, BlockPos pos, String tag) {
 					TileEntity tileEntity = world.getTileEntity(pos);
 					if (tileEntity != null)
 						return tileEntity.getTileData().getDouble(tag);
 					return -1;
 				}
-			}.getValue(new BlockPos((int) x, (int) y, (int) z), "timer")) >= 200)) {
+			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "timer")) >= 200)) {
 				if (((new Object() {
-					public double getValue(BlockPos pos, String tag) {
+					public double getValue(IWorld world, BlockPos pos, String tag) {
 						TileEntity tileEntity = world.getTileEntity(pos);
 						if (tileEntity != null)
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(new BlockPos((int) x, (int) y, (int) z), "recipe")) == 0)) {
+				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe")) == 0)) {
 					{
 						TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 						if (_ent != null) {
 							final int _sltid = (int) (2);
 							final ItemStack _setstack = new ItemStack(CompressesteelItem.block, (int) (1));
 							_setstack.setCount((int) ((new Object() {
-								public int getAmount(BlockPos pos, int sltid) {
+								public int getAmount(IWorld world, BlockPos pos, int sltid) {
 									AtomicInteger _retval = new AtomicInteger(0);
 									TileEntity _ent = world.getTileEntity(pos);
 									if (_ent != null) {
@@ -301,7 +301,7 @@ public class CompressorTickProcedure extends BossToolsModElements.ModElement {
 									}
 									return _retval.get();
 								}
-							}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
+							}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
 							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 								if (capability instanceof IItemHandlerModifiable) {
 									((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -324,20 +324,20 @@ public class CompressorTickProcedure extends BossToolsModElements.ModElement {
 						}
 					}
 				} else if (((new Object() {
-					public double getValue(BlockPos pos, String tag) {
+					public double getValue(IWorld world, BlockPos pos, String tag) {
 						TileEntity tileEntity = world.getTileEntity(pos);
 						if (tileEntity != null)
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(new BlockPos((int) x, (int) y, (int) z), "recipe")) == 1)) {
+				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe")) == 1)) {
 					{
 						TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 						if (_ent != null) {
 							final int _sltid = (int) (2);
 							final ItemStack _setstack = new ItemStack(CompressedTinItem.block, (int) (1));
 							_setstack.setCount((int) ((new Object() {
-								public int getAmount(BlockPos pos, int sltid) {
+								public int getAmount(IWorld world, BlockPos pos, int sltid) {
 									AtomicInteger _retval = new AtomicInteger(0);
 									TileEntity _ent = world.getTileEntity(pos);
 									if (_ent != null) {
@@ -347,7 +347,7 @@ public class CompressorTickProcedure extends BossToolsModElements.ModElement {
 									}
 									return _retval.get();
 								}
-							}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
+							}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
 							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 								if (capability instanceof IItemHandlerModifiable) {
 									((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -370,20 +370,20 @@ public class CompressorTickProcedure extends BossToolsModElements.ModElement {
 						}
 					}
 				} else if (((new Object() {
-					public double getValue(BlockPos pos, String tag) {
+					public double getValue(IWorld world, BlockPos pos, String tag) {
 						TileEntity tileEntity = world.getTileEntity(pos);
 						if (tileEntity != null)
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(new BlockPos((int) x, (int) y, (int) z), "recipe")) == 2)) {
+				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe")) == 2)) {
 					{
 						TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 						if (_ent != null) {
 							final int _sltid = (int) (2);
 							final ItemStack _setstack = new ItemStack(CompressedsiliconItem.block, (int) (1));
 							_setstack.setCount((int) ((new Object() {
-								public int getAmount(BlockPos pos, int sltid) {
+								public int getAmount(IWorld world, BlockPos pos, int sltid) {
 									AtomicInteger _retval = new AtomicInteger(0);
 									TileEntity _ent = world.getTileEntity(pos);
 									if (_ent != null) {
@@ -393,7 +393,7 @@ public class CompressorTickProcedure extends BossToolsModElements.ModElement {
 									}
 									return _retval.get();
 								}
-							}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
+							}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
 							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 								if (capability instanceof IItemHandlerModifiable) {
 									((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -427,13 +427,13 @@ public class CompressorTickProcedure extends BossToolsModElements.ModElement {
 				}
 			}
 			if (((new Object() {
-				public double getValue(BlockPos pos, String tag) {
+				public double getValue(IWorld world, BlockPos pos, String tag) {
 					TileEntity tileEntity = world.getTileEntity(pos);
 					if (tileEntity != null)
 						return tileEntity.getTileData().getDouble(tag);
 					return -1;
 				}
-			}.getValue(new BlockPos((int) x, (int) y, (int) z), "fuel")) == 0)) {
+			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "fuel")) == 0)) {
 				if (((((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -472,7 +472,7 @@ public class CompressorTickProcedure extends BossToolsModElements.ModElement {
 								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == new ItemStack(Blocks.AIR, (int) (1))
 										.getItem()))) == (true))) {
 					if ((((new Object() {
-						public int getAmount(BlockPos pos, int sltid) {
+						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null) {
@@ -482,8 +482,8 @@ public class CompressorTickProcedure extends BossToolsModElements.ModElement {
 							}
 							return _retval.get();
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (0))) > 0) && ((new Object() {
-						public int getAmount(BlockPos pos, int sltid) {
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (0))) > 0) && ((new Object() {
+						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null) {
@@ -493,9 +493,9 @@ public class CompressorTickProcedure extends BossToolsModElements.ModElement {
 							}
 							return _retval.get();
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (0))) != 0))) {
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (0))) != 0))) {
 						if (((new Object() {
-							public int getAmount(BlockPos pos, int sltid) {
+							public int getAmount(IWorld world, BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
 								if (_ent != null) {
@@ -505,9 +505,9 @@ public class CompressorTickProcedure extends BossToolsModElements.ModElement {
 								}
 								return _retval.get();
 							}
-						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) <= 63)) {
+						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) <= 63)) {
 							if (((new Object() {
-								public int getEnergyStored(BlockPos pos) {
+								public int getEnergyStored(IWorld world, BlockPos pos) {
 									AtomicInteger _retval = new AtomicInteger(0);
 									TileEntity _ent = world.getTileEntity(pos);
 									if (_ent != null)
@@ -515,7 +515,7 @@ public class CompressorTickProcedure extends BossToolsModElements.ModElement {
 												.ifPresent(capability -> _retval.set(capability.getEnergyStored()));
 									return _retval.get();
 								}
-							}.getEnergyStored(new BlockPos((int) x, (int) y, (int) z))) >= 1)) {
+							}.getEnergyStored(world, new BlockPos((int) x, (int) y, (int) z))) >= 1)) {
 								{
 									TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 									if (_ent != null) {
@@ -599,7 +599,7 @@ public class CompressorTickProcedure extends BossToolsModElements.ModElement {
 								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == new ItemStack(Blocks.AIR, (int) (1))
 										.getItem()))) == (true))) {
 					if ((((new Object() {
-						public int getAmount(BlockPos pos, int sltid) {
+						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null) {
@@ -609,8 +609,8 @@ public class CompressorTickProcedure extends BossToolsModElements.ModElement {
 							}
 							return _retval.get();
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (0))) > 0) && ((new Object() {
-						public int getAmount(BlockPos pos, int sltid) {
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (0))) > 0) && ((new Object() {
+						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null) {
@@ -620,9 +620,9 @@ public class CompressorTickProcedure extends BossToolsModElements.ModElement {
 							}
 							return _retval.get();
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (0))) != 0))) {
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (0))) != 0))) {
 						if (((new Object() {
-							public int getAmount(BlockPos pos, int sltid) {
+							public int getAmount(IWorld world, BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
 								if (_ent != null) {
@@ -632,9 +632,9 @@ public class CompressorTickProcedure extends BossToolsModElements.ModElement {
 								}
 								return _retval.get();
 							}
-						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) <= 63)) {
+						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) <= 63)) {
 							if (((new Object() {
-								public int getEnergyStored(BlockPos pos) {
+								public int getEnergyStored(IWorld world, BlockPos pos) {
 									AtomicInteger _retval = new AtomicInteger(0);
 									TileEntity _ent = world.getTileEntity(pos);
 									if (_ent != null)
@@ -642,7 +642,7 @@ public class CompressorTickProcedure extends BossToolsModElements.ModElement {
 												.ifPresent(capability -> _retval.set(capability.getEnergyStored()));
 									return _retval.get();
 								}
-							}.getEnergyStored(new BlockPos((int) x, (int) y, (int) z))) >= 1)) {
+							}.getEnergyStored(world, new BlockPos((int) x, (int) y, (int) z))) >= 1)) {
 								{
 									TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 									if (_ent != null) {
@@ -726,7 +726,7 @@ public class CompressorTickProcedure extends BossToolsModElements.ModElement {
 								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == new ItemStack(Blocks.AIR, (int) (1))
 										.getItem()))) == (true))) {
 					if ((((new Object() {
-						public int getAmount(BlockPos pos, int sltid) {
+						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null) {
@@ -736,8 +736,8 @@ public class CompressorTickProcedure extends BossToolsModElements.ModElement {
 							}
 							return _retval.get();
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (0))) > 0) && ((new Object() {
-						public int getAmount(BlockPos pos, int sltid) {
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (0))) > 0) && ((new Object() {
+						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null) {
@@ -747,9 +747,9 @@ public class CompressorTickProcedure extends BossToolsModElements.ModElement {
 							}
 							return _retval.get();
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (0))) != 0))) {
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (0))) != 0))) {
 						if (((new Object() {
-							public int getAmount(BlockPos pos, int sltid) {
+							public int getAmount(IWorld world, BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
 								if (_ent != null) {
@@ -759,9 +759,9 @@ public class CompressorTickProcedure extends BossToolsModElements.ModElement {
 								}
 								return _retval.get();
 							}
-						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) <= 63)) {
+						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) <= 63)) {
 							if (((new Object() {
-								public int getEnergyStored(BlockPos pos) {
+								public int getEnergyStored(IWorld world, BlockPos pos) {
 									AtomicInteger _retval = new AtomicInteger(0);
 									TileEntity _ent = world.getTileEntity(pos);
 									if (_ent != null)
@@ -769,7 +769,7 @@ public class CompressorTickProcedure extends BossToolsModElements.ModElement {
 												.ifPresent(capability -> _retval.set(capability.getEnergyStored()));
 									return _retval.get();
 								}
-							}.getEnergyStored(new BlockPos((int) x, (int) y, (int) z))) >= 1)) {
+							}.getEnergyStored(world, new BlockPos((int) x, (int) y, (int) z))) >= 1)) {
 								{
 									TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 									if (_ent != null) {
@@ -875,14 +875,14 @@ public class CompressorTickProcedure extends BossToolsModElements.ModElement {
 			}
 		}
 		if ((((new Object() {
-			public int getEnergyStored(BlockPos pos) {
+			public int getEnergyStored(IWorld world, BlockPos pos) {
 				AtomicInteger _retval = new AtomicInteger(0);
 				TileEntity _ent = world.getTileEntity(pos);
 				if (_ent != null)
 					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
 				return _retval.get();
 			}
-		}.getEnergyStored(new BlockPos((int) x, (int) y, (int) z))) == 0) == (true))) {
+		}.getEnergyStored(world, new BlockPos((int) x, (int) y, (int) z))) == 0) == (true))) {
 			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -903,39 +903,39 @@ public class CompressorTickProcedure extends BossToolsModElements.ModElement {
 			}
 		}
 		if (((new Object() {
-			public double getValue(BlockPos pos, String tag) {
+			public double getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(new BlockPos((int) x, (int) y, (int) z), "fuel")) > 0)) {
+		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "fuel")) > 0)) {
 			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
 					_tileEntity.getTileData().putDouble("fuel", ((new Object() {
-						public double getValue(BlockPos pos, String tag) {
+						public double getValue(IWorld world, BlockPos pos, String tag) {
 							TileEntity tileEntity = world.getTileEntity(pos);
 							if (tileEntity != null)
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(new BlockPos((int) x, (int) y, (int) z), "fuel")) - 1));
+					}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "fuel")) - 1));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (((new Object() {
-				public double getValue(BlockPos pos, String tag) {
+				public double getValue(IWorld world, BlockPos pos, String tag) {
 					TileEntity tileEntity = world.getTileEntity(pos);
 					if (tileEntity != null)
 						return tileEntity.getTileData().getDouble(tag);
 					return -1;
 				}
-			}.getValue(new BlockPos((int) x, (int) y, (int) z), "recipe")) >= 0)) {
+			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe")) >= 0)) {
 				if (((new Object() {
-					public int getAmount(BlockPos pos, int sltid) {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -945,16 +945,16 @@ public class CompressorTickProcedure extends BossToolsModElements.ModElement {
 						}
 						return _retval.get();
 					}
-				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) <= 63)) {
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) <= 63)) {
 					if (((new Object() {
-						public int getEnergyStored(BlockPos pos) {
+						public int getEnergyStored(IWorld world, BlockPos pos) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null)
 								_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
 							return _retval.get();
 						}
-					}.getEnergyStored(new BlockPos((int) x, (int) y, (int) z))) >= 1)) {
+					}.getEnergyStored(world, new BlockPos((int) x, (int) y, (int) z))) >= 1)) {
 						if ((((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -998,13 +998,13 @@ public class CompressorTickProcedure extends BossToolsModElements.ModElement {
 								BlockState _bs = world.getBlockState(_bp);
 								if (_tileEntity != null)
 									_tileEntity.getTileData().putDouble("timer", ((new Object() {
-										public double getValue(BlockPos pos, String tag) {
+										public double getValue(IWorld world, BlockPos pos, String tag) {
 											TileEntity tileEntity = world.getTileEntity(pos);
 											if (tileEntity != null)
 												return tileEntity.getTileData().getDouble(tag);
 											return -1;
 										}
-									}.getValue(new BlockPos((int) x, (int) y, (int) z), "timer")) + 1));
+									}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "timer")) + 1));
 								if (world instanceof World)
 									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 							}
@@ -1059,13 +1059,13 @@ public class CompressorTickProcedure extends BossToolsModElements.ModElement {
 								BlockState _bs = world.getBlockState(_bp);
 								if (_tileEntity != null)
 									_tileEntity.getTileData().putDouble("timer", ((new Object() {
-										public double getValue(BlockPos pos, String tag) {
+										public double getValue(IWorld world, BlockPos pos, String tag) {
 											TileEntity tileEntity = world.getTileEntity(pos);
 											if (tileEntity != null)
 												return tileEntity.getTileData().getDouble(tag);
 											return -1;
 										}
-									}.getValue(new BlockPos((int) x, (int) y, (int) z), "timer")) + 1));
+									}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "timer")) + 1));
 								if (world instanceof World)
 									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 							}
@@ -1120,13 +1120,13 @@ public class CompressorTickProcedure extends BossToolsModElements.ModElement {
 								BlockState _bs = world.getBlockState(_bp);
 								if (_tileEntity != null)
 									_tileEntity.getTileData().putDouble("timer", ((new Object() {
-										public double getValue(BlockPos pos, String tag) {
+										public double getValue(IWorld world, BlockPos pos, String tag) {
 											TileEntity tileEntity = world.getTileEntity(pos);
 											if (tileEntity != null)
 												return tileEntity.getTileData().getDouble(tag);
 											return -1;
 										}
-									}.getValue(new BlockPos((int) x, (int) y, (int) z), "timer")) + 1));
+									}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "timer")) + 1));
 								if (world instanceof World)
 									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 							}
@@ -1148,20 +1148,20 @@ public class CompressorTickProcedure extends BossToolsModElements.ModElement {
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
 				_tileEntity.getTileData().putDouble("fuelRemaining", (((new Object() {
-					public double getValue(BlockPos pos, String tag) {
+					public double getValue(IWorld world, BlockPos pos, String tag) {
 						TileEntity tileEntity = world.getTileEntity(pos);
 						if (tileEntity != null)
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(new BlockPos((int) x, (int) y, (int) z), "fuel")) / (new Object() {
-					public double getValue(BlockPos pos, String tag) {
+				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "fuel")) / (new Object() {
+					public double getValue(IWorld world, BlockPos pos, String tag) {
 						TileEntity tileEntity = world.getTileEntity(pos);
 						if (tileEntity != null)
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(new BlockPos((int) x, (int) y, (int) z), "maxFuel"))) * 100));
+				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "maxFuel"))) * 100));
 			if (world instanceof World)
 				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
@@ -1171,13 +1171,13 @@ public class CompressorTickProcedure extends BossToolsModElements.ModElement {
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
 				_tileEntity.getTileData().putDouble("loading", (new Object() {
-					public double getValue(BlockPos pos, String tag) {
+					public double getValue(IWorld world, BlockPos pos, String tag) {
 						TileEntity tileEntity = world.getTileEntity(pos);
 						if (tileEntity != null)
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(new BlockPos((int) x, (int) y, (int) z), "timer")));
+				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "timer")));
 			if (world instanceof World)
 				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
@@ -1187,13 +1187,13 @@ public class CompressorTickProcedure extends BossToolsModElements.ModElement {
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
 				_tileEntity.getTileData().putDouble("fire", (new Object() {
-					public double getValue(BlockPos pos, String tag) {
+					public double getValue(IWorld world, BlockPos pos, String tag) {
 						TileEntity tileEntity = world.getTileEntity(pos);
 						if (tileEntity != null)
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(new BlockPos((int) x, (int) y, (int) z), "fuelRemaining")));
+				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "fuelRemaining")));
 			if (world instanceof World)
 				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
@@ -1203,14 +1203,14 @@ public class CompressorTickProcedure extends BossToolsModElements.ModElement {
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
 				_tileEntity.getTileData().putDouble("EnergyGui", (new Object() {
-					public int getEnergyStored(BlockPos pos) {
+					public int getEnergyStored(IWorld world, BlockPos pos) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null)
 							_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
 						return _retval.get();
 					}
-				}.getEnergyStored(new BlockPos((int) x, (int) y, (int) z))));
+				}.getEnergyStored(world, new BlockPos((int) x, (int) y, (int) z))));
 			if (world instanceof World)
 				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}

@@ -55,30 +55,30 @@ public class OxygenDisplayProcedure extends BossToolsModElements.ModElement {
 		IWorld world = (IWorld) dependencies.get("world");
 		double firehaight = 0;
 		if (((new Object() {
-			public double getValue(BlockPos pos, String tag) {
+			public double getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(new BlockPos((int) x, (int) y, (int) z), "fuel")) > 0)) {
+		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "fuel")) > 0)) {
 			if (((new Object() {
-				public int getEnergyStored(BlockPos pos) {
+				public int getEnergyStored(IWorld world, BlockPos pos) {
 					AtomicInteger _retval = new AtomicInteger(0);
 					TileEntity _ent = world.getTileEntity(pos);
 					if (_ent != null)
 						_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
 					return _retval.get();
 				}
-			}.getEnergyStored(new BlockPos((int) x, (int) y, (int) z))) >= 1)) {
+			}.getEnergyStored(world, new BlockPos((int) x, (int) y, (int) z))) >= 1)) {
 				firehaight = (double) (((new Object() {
-					public double getValue(BlockPos pos, String tag) {
+					public double getValue(IWorld world, BlockPos pos, String tag) {
 						TileEntity tileEntity = world.getTileEntity(pos);
 						if (tileEntity != null)
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(new BlockPos((int) x, (int) y, (int) z), "fuelRemaining")) / 100) * 0.0625);
+				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "fuelRemaining")) / 100) * 0.0625);
 				if (((new Object() {
 					public Direction getDirection(BlockPos pos) {
 						try {
