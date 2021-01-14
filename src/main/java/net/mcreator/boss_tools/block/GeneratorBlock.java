@@ -112,7 +112,7 @@ public class GeneratorBlock extends BossToolsModElements.ModElement {
 		@OnlyIn(Dist.CLIENT)
 		public void addInformation(ItemStack itemstack, IBlockReader world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
-			list.add(new StringTextComponent("\u00A7aProducing \u00A722 \u00A7aFE/t"));
+			list.add(new StringTextComponent("\u00A79Producing: \u00A772 \u00A77FE/t"));
 		}
 
 		@Override

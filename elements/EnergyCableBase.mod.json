@@ -26,8 +26,10 @@
     "Mx": 0.7,
     "My": 0.7,
     "Mz": 0.7,
-    "name": "Energy Cable Base",
-    "specialInfo": [],
+    "name": "Energy Cable",
+    "specialInfo": [
+      "§9Capacity: §72 FE/t"
+    ],
     "hardness": 0.5,
     "resistance": 10.0,
     "hasGravity": false,
@@ -48,7 +50,7 @@
     "material": {
       "value": "WOOD"
     },
-    "tickRate": 10,
+    "tickRate": 1,
     "tickRandomly": false,
     "isReplaceable": false,
     "colorOnMap": "DEFAULT",
@@ -71,7 +73,7 @@
     "breakHarvestLevel": 1,
     "spawnParticles": false,
     "particleToSpawn": {
-      "value": "CUSTOM:GlowstoneTorchParticle"
+      "value": "EXPLOSION_NORMAL"
     },
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.5,
@@ -87,12 +89,15 @@
     "inventoryInSlotIDs": [],
     "hasEnergyStorage": true,
     "energyInitial": 0,
-    "energyCapacity": 10,
+    "energyCapacity": 20,
     "energyMaxReceive": 200,
     "energyMaxExtract": 200,
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onTickUpdate": {
+      "name": "EnergyCableBaseUpdateTick"
+    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [],

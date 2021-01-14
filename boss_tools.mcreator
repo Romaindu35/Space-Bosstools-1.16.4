@@ -10785,6 +10785,35 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "hammer_dup_fix_recpie_23"
+    },
+    {
+      "name": "EnergyCableBaseUpdateTick",
+      "type": "procedure",
+      "sortid": 569,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "energy_cable_base_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -10839,8 +10868,8 @@
       "block.boss_tools.moon_slabe": "Moon Stone Slab",
       "item.minecraft.lingering_potion.effect.rocket_paticle": "Lingering RocketParticle",
       "item.minecraft.potion.effect.rocketpotion": "Rocketpotion",
-      "item.minecraft.tipped_arrow.effect.damage_remove": "Arrow of SpaceSuite",
       "block.boss_tools.cheese_block": "Cheese Ore",
+      "item.minecraft.tipped_arrow.effect.damage_remove": "Arrow of SpaceSuite",
       "item.boss_tools.oxygen_tank": "Oxygen Tank",
       "item.minecraft.lingering_potion.effect.tier_2_space_station_gui_potion_mars_orbit": "Lingering Tier2SpaceStationGUIPotionMarsorbit",
       "item.minecraft.potion.effect.tier_2_space_station_gui_potion_overworld_orbit": "Tier2SpaceStationGUIPotionOverworldorbit",
@@ -10849,9 +10878,9 @@
       "item.boss_tools.rocket_tier_2": "Rocket Spawn Egg",
       "item.boss_tools.tank_tier_3": "Tier 3 Tank",
       "block.boss_tools.blasting_furnace": "Blast Furnace",
-      "effect.tier_2_space_station_gui_potion_overworld_orbit": "Tier2SpaceStationGUIPotionOverworldorbit",
-      "item.boss_tools.rocket": "Rocket Spawn Egg",
       "item.boss_tools.space_armor_boots": "Space Boots",
+      "item.boss_tools.rocket": "Rocket Spawn Egg",
+      "effect.tier_2_space_station_gui_potion_overworld_orbit": "Tier2SpaceStationGUIPotionOverworldorbit",
       "effect.tier_3_space_station_gui_potion_overworld_orbit": "Tier3SpaceStationGUIPotionOverworldorbit",
       "item.minecraft.splash_potion.effect.damage_remove": "Splash SpaceSuite",
       "item.boss_tools.fuel_bucked": "Fuel Bucket",
@@ -10876,16 +10905,16 @@
       "item.minecraft.potion.effect.tier_3_space_station_gui_potion_overworld_orbit": "Tier3SpaceStationGUIPotionOverworldorbit",
       "biome.boss_tools.orbit_moon_biom": "Orbit Biome",
       "block.boss_tools.red_flag": "Red Flag",
-      "item.boss_tools.landing_gear_spawn_egg": "Landing Gear Spawn Egg",
-      "item.boss_tools.moon": "Admin Feuerzeug",
       "item.boss_tools.orbit_placer": "Space Station",
-      "item.minecraft.tipped_arrow.effect.tier_3_space_station_gui_potion_mars_orbit": "Arrow of Tier3SpaceStationGUIPotionMarsorbit",
+      "item.boss_tools.moon": "Admin Feuerzeug",
+      "item.boss_tools.landing_gear_spawn_egg": "Landing Gear Spawn Egg",
       "block.boss_tools.rocked_base": "Rocket Launch Pad",
-      "item.minecraft.lingering_potion.effect.tier_3_space_station_gui_potion_mars_orbit": "Lingering Tier3SpaceStationGUIPotionMarsorbit",
+      "item.minecraft.tipped_arrow.effect.tier_3_space_station_gui_potion_mars_orbit": "Arrow of Tier3SpaceStationGUIPotionMarsorbit",
       "item.minecraft.splash_potion.effect.rocketpotion": "Splash Rocketpotion",
+      "item.minecraft.lingering_potion.effect.tier_3_space_station_gui_potion_mars_orbit": "Lingering Tier3SpaceStationGUIPotionMarsorbit",
       "item.minecraft.lingering_potion.effect.rocket_potion_9": "Lingering Rocketpotion 9",
-      "item.minecraft.lingering_potion.effect.rocket_potion_8": "Lingering Rocketpotion 8",
       "item.minecraft.potion.effect.bee_potion": "BeePotion",
+      "item.minecraft.lingering_potion.effect.rocket_potion_8": "Lingering Rocketpotion 8",
       "key.categories.spacebosstools": "Space-Bosstools",
       "item.boss_tools.hammer": "Hammer",
       "item.boss_tools.fuel_bucket_big": "Big Fuel Bucket",
@@ -11056,7 +11085,7 @@
       "block.boss_tools.compressor": "Compressor",
       "effect.rocketpotion_3": "Rocketpotion3",
       "item.boss_tools.space_armorlegs": "Space Pants",
-      "block.boss_tools.energy_cable_base": "Energy Cable Base",
+      "block.boss_tools.energy_cable_base": "Energy Cable",
       "effect.rocketpotion_4": "Rocketpotion4",
       "item.boss_tools.turbine": "Tier 1 Engine",
       "item.minecraft.potion.effect.tier_2_space_station_gui_potion_moon_orbit": "Tier2SpaceStationGUIPotionMoonorbit",
