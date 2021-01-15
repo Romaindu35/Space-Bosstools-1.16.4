@@ -57,13 +57,13 @@ public class CoalGeneratorTickProcedure extends BossToolsModElements.ModElement 
 		double Energy = 0;
 		double Energy2 = 0;
 		previousRecepie = (double) (new Object() {
-			public double getValue(IWorld world, BlockPos pos, String tag) {
+			public double getValue(BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe"));
+		}.getValue(new BlockPos((int) x, (int) y, (int) z), "recipe"));
 		if ((((new Object() {
 			public ItemStack getItemStack(BlockPos pos, int sltid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -89,7 +89,7 @@ public class CoalGeneratorTickProcedure extends BossToolsModElements.ModElement 
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == new ItemStack(Items.COAL, (int) (1)).getItem())
 						&& ((new Object() {
-							public int getAmount(IWorld world, BlockPos pos, int sltid) {
+							public int getAmount(BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
 								if (_ent != null) {
@@ -99,8 +99,8 @@ public class CoalGeneratorTickProcedure extends BossToolsModElements.ModElement 
 								}
 								return _retval.get();
 							}
-						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) <= 1)) || ((new Object() {
-							public int getAmount(IWorld world, BlockPos pos, int sltid) {
+						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) <= 1)) || ((new Object() {
+							public int getAmount(BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
 								if (_ent != null) {
@@ -110,7 +110,7 @@ public class CoalGeneratorTickProcedure extends BossToolsModElements.ModElement 
 								}
 								return _retval.get();
 							}
-						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
+						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
 			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -145,7 +145,7 @@ public class CoalGeneratorTickProcedure extends BossToolsModElements.ModElement 
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == new ItemStack(Blocks.COAL_BLOCK, (int) (1))
 						.getItem()) && ((new Object() {
-							public int getAmount(IWorld world, BlockPos pos, int sltid) {
+							public int getAmount(BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
 								if (_ent != null) {
@@ -155,8 +155,8 @@ public class CoalGeneratorTickProcedure extends BossToolsModElements.ModElement 
 								}
 								return _retval.get();
 							}
-						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) <= 1)) || ((new Object() {
-							public int getAmount(IWorld world, BlockPos pos, int sltid) {
+						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) <= 1)) || ((new Object() {
+							public int getAmount(BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
 								if (_ent != null) {
@@ -166,7 +166,7 @@ public class CoalGeneratorTickProcedure extends BossToolsModElements.ModElement 
 								}
 								return _retval.get();
 							}
-						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
+						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
 			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -189,7 +189,7 @@ public class CoalGeneratorTickProcedure extends BossToolsModElements.ModElement 
 			}
 		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == new ItemStack(Blocks.AIR, (int) (1)).getItem())
 				&& ((new Object() {
-					public int getAmount(IWorld world, BlockPos pos, int sltid) {
+					public int getAmount(BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -199,7 +199,7 @@ public class CoalGeneratorTickProcedure extends BossToolsModElements.ModElement 
 						}
 						return _retval.get();
 					}
-				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0))) {
+				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0))) {
 			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -211,13 +211,13 @@ public class CoalGeneratorTickProcedure extends BossToolsModElements.ModElement 
 			}
 		}
 		if (((previousRecepie) != (new Object() {
-			public double getValue(IWorld world, BlockPos pos, String tag) {
+			public double getValue(BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe")))) {
+		}.getValue(new BlockPos((int) x, (int) y, (int) z), "recipe")))) {
 			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -229,29 +229,29 @@ public class CoalGeneratorTickProcedure extends BossToolsModElements.ModElement 
 			}
 		}
 		if (((new Object() {
-			public double getValue(IWorld world, BlockPos pos, String tag) {
+			public double getValue(BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe")) >= 0)) {
+		}.getValue(new BlockPos((int) x, (int) y, (int) z), "recipe")) >= 0)) {
 			if (((new Object() {
-				public double getValue(IWorld world, BlockPos pos, String tag) {
+				public double getValue(BlockPos pos, String tag) {
 					TileEntity tileEntity = world.getTileEntity(pos);
 					if (tileEntity != null)
 						return tileEntity.getTileData().getDouble(tag);
 					return -1;
 				}
-			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "timer")) >= 150)) {
+			}.getValue(new BlockPos((int) x, (int) y, (int) z), "timer")) >= 150)) {
 				if (((new Object() {
-					public double getValue(IWorld world, BlockPos pos, String tag) {
+					public double getValue(BlockPos pos, String tag) {
 						TileEntity tileEntity = world.getTileEntity(pos);
 						if (tileEntity != null)
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe")) == 0)) {
+				}.getValue(new BlockPos((int) x, (int) y, (int) z), "recipe")) == 0)) {
 					{
 						TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 						int _amount = (int) 1;
@@ -259,13 +259,13 @@ public class CoalGeneratorTickProcedure extends BossToolsModElements.ModElement 
 							_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.receiveEnergy(_amount, false));
 					}
 				} else if (((new Object() {
-					public double getValue(IWorld world, BlockPos pos, String tag) {
+					public double getValue(BlockPos pos, String tag) {
 						TileEntity tileEntity = world.getTileEntity(pos);
 						if (tileEntity != null)
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe")) == 1)) {
+				}.getValue(new BlockPos((int) x, (int) y, (int) z), "recipe")) == 1)) {
 					{
 						TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 						if (_ent != null) {
@@ -304,21 +304,21 @@ public class CoalGeneratorTickProcedure extends BossToolsModElements.ModElement 
 						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 				}
 			} else if (((new Object() {
-				public double getValue(IWorld world, BlockPos pos, String tag) {
+				public double getValue(BlockPos pos, String tag) {
 					TileEntity tileEntity = world.getTileEntity(pos);
 					if (tileEntity != null)
 						return tileEntity.getTileData().getDouble(tag);
 					return -1;
 				}
-			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "timer")) >= 150)) {
+			}.getValue(new BlockPos((int) x, (int) y, (int) z), "timer")) >= 150)) {
 				if (((new Object() {
-					public double getValue(IWorld world, BlockPos pos, String tag) {
+					public double getValue(BlockPos pos, String tag) {
 						TileEntity tileEntity = world.getTileEntity(pos);
 						if (tileEntity != null)
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe")) == 1)) {
+				}.getValue(new BlockPos((int) x, (int) y, (int) z), "recipe")) == 1)) {
 					{
 						TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 						int _amount = (int) 1;
@@ -326,13 +326,13 @@ public class CoalGeneratorTickProcedure extends BossToolsModElements.ModElement 
 							_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.receiveEnergy(_amount, false));
 					}
 				} else if (((new Object() {
-					public double getValue(IWorld world, BlockPos pos, String tag) {
+					public double getValue(BlockPos pos, String tag) {
 						TileEntity tileEntity = world.getTileEntity(pos);
 						if (tileEntity != null)
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe")) == 1)) {
+				}.getValue(new BlockPos((int) x, (int) y, (int) z), "recipe")) == 1)) {
 					{
 						TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 						if (_ent != null) {
@@ -363,15 +363,15 @@ public class CoalGeneratorTickProcedure extends BossToolsModElements.ModElement 
 				}
 			}
 			if (((new Object() {
-				public double getValue(IWorld world, BlockPos pos, String tag) {
+				public double getValue(BlockPos pos, String tag) {
 					TileEntity tileEntity = world.getTileEntity(pos);
 					if (tileEntity != null)
 						return tileEntity.getTileData().getDouble(tag);
 					return -1;
 				}
-			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "fuel")) == 0)) {
+			}.getValue(new BlockPos((int) x, (int) y, (int) z), "fuel")) == 0)) {
 				if ((((new Object() {
-					public int getAmount(IWorld world, BlockPos pos, int sltid) {
+					public int getAmount(BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -381,8 +381,8 @@ public class CoalGeneratorTickProcedure extends BossToolsModElements.ModElement 
 						}
 						return _retval.get();
 					}
-				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (0))) > 0) && ((new Object() {
-					public int getAmount(IWorld world, BlockPos pos, int sltid) {
+				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (0))) > 0) && ((new Object() {
+					public int getAmount(BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -392,16 +392,16 @@ public class CoalGeneratorTickProcedure extends BossToolsModElements.ModElement 
 						}
 						return _retval.get();
 					}
-				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (0))) != 0))) {
+				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (0))) != 0))) {
 					if (((new Object() {
-						public int getEnergyStored(IWorld world, BlockPos pos) {
+						public int getEnergyStored(BlockPos pos) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null)
 								_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
 							return _retval.get();
 						}
-					}.getEnergyStored(world, new BlockPos((int) x, (int) y, (int) z))) < 9000)) {
+					}.getEnergyStored(new BlockPos((int) x, (int) y, (int) z))) < 9000)) {
 						if (((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -508,50 +508,50 @@ public class CoalGeneratorTickProcedure extends BossToolsModElements.ModElement 
 			}
 		}
 		if (((new Object() {
-			public double getValue(IWorld world, BlockPos pos, String tag) {
+			public double getValue(BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "fuel")) > 0)) {
+		}.getValue(new BlockPos((int) x, (int) y, (int) z), "fuel")) > 0)) {
 			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
 					_tileEntity.getTileData().putDouble("fuel", ((new Object() {
-						public double getValue(IWorld world, BlockPos pos, String tag) {
+						public double getValue(BlockPos pos, String tag) {
 							TileEntity tileEntity = world.getTileEntity(pos);
 							if (tileEntity != null)
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "fuel")) - 1));
+					}.getValue(new BlockPos((int) x, (int) y, (int) z), "fuel")) - 1));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (((new Object() {
-				public double getValue(IWorld world, BlockPos pos, String tag) {
+				public double getValue(BlockPos pos, String tag) {
 					TileEntity tileEntity = world.getTileEntity(pos);
 					if (tileEntity != null)
 						return tileEntity.getTileData().getDouble(tag);
 					return -1;
 				}
-			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe")) >= 0)) {
+			}.getValue(new BlockPos((int) x, (int) y, (int) z), "recipe")) >= 0)) {
 				if (!world.isRemote()) {
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 					TileEntity _tileEntity = world.getTileEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_tileEntity != null)
 						_tileEntity.getTileData().putDouble("timer", ((new Object() {
-							public double getValue(IWorld world, BlockPos pos, String tag) {
+							public double getValue(BlockPos pos, String tag) {
 								TileEntity tileEntity = world.getTileEntity(pos);
 								if (tileEntity != null)
 									return tileEntity.getTileData().getDouble(tag);
 								return -1;
 							}
-						}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "timer")) + 1));
+						}.getValue(new BlockPos((int) x, (int) y, (int) z), "timer")) + 1));
 					if (world instanceof World)
 						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 				}
@@ -569,20 +569,20 @@ public class CoalGeneratorTickProcedure extends BossToolsModElements.ModElement 
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
 				_tileEntity.getTileData().putDouble("fuelRemaining", (((new Object() {
-					public double getValue(IWorld world, BlockPos pos, String tag) {
+					public double getValue(BlockPos pos, String tag) {
 						TileEntity tileEntity = world.getTileEntity(pos);
 						if (tileEntity != null)
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "fuel")) / (new Object() {
-					public double getValue(IWorld world, BlockPos pos, String tag) {
+				}.getValue(new BlockPos((int) x, (int) y, (int) z), "fuel")) / (new Object() {
+					public double getValue(BlockPos pos, String tag) {
 						TileEntity tileEntity = world.getTileEntity(pos);
 						if (tileEntity != null)
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "maxFuel"))) * 100));
+				}.getValue(new BlockPos((int) x, (int) y, (int) z), "maxFuel"))) * 100));
 			if (world instanceof World)
 				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
@@ -592,13 +592,13 @@ public class CoalGeneratorTickProcedure extends BossToolsModElements.ModElement 
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
 				_tileEntity.getTileData().putDouble("fire", (new Object() {
-					public double getValue(IWorld world, BlockPos pos, String tag) {
+					public double getValue(BlockPos pos, String tag) {
 						TileEntity tileEntity = world.getTileEntity(pos);
 						if (tileEntity != null)
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "fuelRemaining")));
+				}.getValue(new BlockPos((int) x, (int) y, (int) z), "fuelRemaining")));
 			if (world instanceof World)
 				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
@@ -608,28 +608,28 @@ public class CoalGeneratorTickProcedure extends BossToolsModElements.ModElement 
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
 				_tileEntity.getTileData().putDouble("EnergyGui", (new Object() {
-					public int getEnergyStored(IWorld world, BlockPos pos) {
+					public int getEnergyStored(BlockPos pos) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null)
 							_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
 						return _retval.get();
 					}
-				}.getEnergyStored(world, new BlockPos((int) x, (int) y, (int) z))));
+				}.getEnergyStored(new BlockPos((int) x, (int) y, (int) z))));
 			if (world instanceof World)
 				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
 		if ((new Object() {
-			public boolean canReceiveEnergy(IWorld world, BlockPos pos) {
+			public boolean canReceiveEnergy(BlockPos pos) {
 				AtomicBoolean _retval = new AtomicBoolean(false);
 				TileEntity _ent = world.getTileEntity(pos);
 				if (_ent != null)
 					_ent.getCapability(CapabilityEnergy.ENERGY, Direction.UP).ifPresent(capability -> _retval.set(capability.canReceive()));
 				return _retval.get();
 			}
-		}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y + 1), (int) z)))) {
+		}.canReceiveEnergy(new BlockPos((int) x, (int) (y + 1), (int) z)))) {
 			Energy = (double) (new Object() {
-				public int extractEnergySimulate(IWorld world, BlockPos pos, int _amount) {
+				public int extractEnergySimulate(BlockPos pos, int _amount) {
 					AtomicInteger _retval = new AtomicInteger(0);
 					TileEntity _ent = world.getTileEntity(pos);
 					if (_ent != null)
@@ -637,9 +637,9 @@ public class CoalGeneratorTickProcedure extends BossToolsModElements.ModElement 
 								.ifPresent(capability -> _retval.set(capability.extractEnergy(_amount, true)));
 					return _retval.get();
 				}
-			}.extractEnergySimulate(world, new BlockPos((int) x, (int) y, (int) z), (int) 1));
+			}.extractEnergySimulate(new BlockPos((int) x, (int) y, (int) z), (int) 1));
 			Energy = (double) (new Object() {
-				public int receiveEnergySimulate(IWorld world, BlockPos pos, int _amount) {
+				public int receiveEnergySimulate(BlockPos pos, int _amount) {
 					AtomicInteger _retval = new AtomicInteger(0);
 					TileEntity _ent = world.getTileEntity(pos);
 					if (_ent != null)
@@ -647,7 +647,7 @@ public class CoalGeneratorTickProcedure extends BossToolsModElements.ModElement 
 								.ifPresent(capability -> _retval.set(capability.receiveEnergy(_amount, true)));
 					return _retval.get();
 				}
-			}.receiveEnergySimulate(world, new BlockPos((int) x, (int) (y + 1), (int) z), (int) (Energy)));
+			}.receiveEnergySimulate(new BlockPos((int) x, (int) (y + 1), (int) z), (int) (Energy)));
 			{
 				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 				int _amount = (int) (Energy);
@@ -662,16 +662,16 @@ public class CoalGeneratorTickProcedure extends BossToolsModElements.ModElement 
 			}
 		}
 		if ((new Object() {
-			public boolean canReceiveEnergy(IWorld world, BlockPos pos) {
+			public boolean canReceiveEnergy(BlockPos pos) {
 				AtomicBoolean _retval = new AtomicBoolean(false);
 				TileEntity _ent = world.getTileEntity(pos);
 				if (_ent != null)
 					_ent.getCapability(CapabilityEnergy.ENERGY, Direction.DOWN).ifPresent(capability -> _retval.set(capability.canReceive()));
 				return _retval.get();
 			}
-		}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y - 1), (int) z)))) {
+		}.canReceiveEnergy(new BlockPos((int) x, (int) (y - 1), (int) z)))) {
 			Energy2 = (double) (new Object() {
-				public int extractEnergySimulate(IWorld world, BlockPos pos, int _amount) {
+				public int extractEnergySimulate(BlockPos pos, int _amount) {
 					AtomicInteger _retval = new AtomicInteger(0);
 					TileEntity _ent = world.getTileEntity(pos);
 					if (_ent != null)
@@ -679,9 +679,9 @@ public class CoalGeneratorTickProcedure extends BossToolsModElements.ModElement 
 								.ifPresent(capability -> _retval.set(capability.extractEnergy(_amount, true)));
 					return _retval.get();
 				}
-			}.extractEnergySimulate(world, new BlockPos((int) x, (int) y, (int) z), (int) 1));
+			}.extractEnergySimulate(new BlockPos((int) x, (int) y, (int) z), (int) 1));
 			Energy2 = (double) (new Object() {
-				public int receiveEnergySimulate(IWorld world, BlockPos pos, int _amount) {
+				public int receiveEnergySimulate(BlockPos pos, int _amount) {
 					AtomicInteger _retval = new AtomicInteger(0);
 					TileEntity _ent = world.getTileEntity(pos);
 					if (_ent != null)
@@ -689,7 +689,7 @@ public class CoalGeneratorTickProcedure extends BossToolsModElements.ModElement 
 								.ifPresent(capability -> _retval.set(capability.receiveEnergy(_amount, true)));
 					return _retval.get();
 				}
-			}.receiveEnergySimulate(world, new BlockPos((int) x, (int) (y - 1), (int) z), (int) (Energy2)));
+			}.receiveEnergySimulate(new BlockPos((int) x, (int) (y - 1), (int) z), (int) (Energy2)));
 			{
 				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 				int _amount = (int) (Energy2);

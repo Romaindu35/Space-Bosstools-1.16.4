@@ -15,8 +15,6 @@
     "displayFluidOverlay": false,
     "itemTexture": "",
     "blockBase": "Slab",
-    "tintType": "No tint",
-    "isItemTinted": false,
     "hasTransparency": false,
     "connectedSides": false,
     "transparencyType": "SOLID",

@@ -15,8 +15,6 @@
     "displayFluidOverlay": false,
     "itemTexture": "torch",
     "particleTexture": "",
-    "tintType": "No tint",
-    "isItemTinted": false,
     "hasTransparency": true,
     "connectedSides": false,
     "transparencyType": "TRANSLUCENT",

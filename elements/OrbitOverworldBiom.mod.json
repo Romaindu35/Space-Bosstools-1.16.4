@@ -13,9 +13,6 @@
       "value": -16777216,
       "falpha": 0.0
     },
-    "moodSoundDelay": 0,
-    "spawnParticles": false,
-    "particlesProbability": 0.0,
     "biomeCategory": "NONE",
     "parent": {
       "value": "No parent"
@@ -41,7 +38,6 @@
     "vanillaTreeType": "Default",
     "treeType": 1,
     "minHeight": 7,
-    "maxWaterDepth": 0,
     "treeStem": {
       "value": "Blocks.AIR"
     },

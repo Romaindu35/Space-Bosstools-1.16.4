@@ -19,7 +19,6 @@
       "value": ""
     },
     "destroyAnyBlock": false,
-    "immuneToFire": false,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "enableMeleeDamage": false,

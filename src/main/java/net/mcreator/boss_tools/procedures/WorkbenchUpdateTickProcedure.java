@@ -69,7 +69,7 @@ public class WorkbenchUpdateTickProcedure extends BossToolsModElements.ModElemen
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		if ((((new Object() {
-			public int getAmount(IWorld world, BlockPos pos, int sltid) {
+			public int getAmount(BlockPos pos, int sltid) {
 				AtomicInteger _retval = new AtomicInteger(0);
 				TileEntity _ent = world.getTileEntity(pos);
 				if (_ent != null) {
@@ -79,7 +79,7 @@ public class WorkbenchUpdateTickProcedure extends BossToolsModElements.ModElemen
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (14))) < 64) && ((((new Object() {
+		}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (14))) < 64) && ((((new Object() {
 			public ItemStack getItemStack(BlockPos pos, int sltid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -314,7 +314,7 @@ public class WorkbenchUpdateTickProcedure extends BossToolsModElements.ModElemen
 																																		(int) (1))
 																																				.getItem()))))))))))))))
 				&& ((((new Object() {
-					public int getAmount(IWorld world, BlockPos pos, int sltid) {
+					public int getAmount(BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -324,7 +324,7 @@ public class WorkbenchUpdateTickProcedure extends BossToolsModElements.ModElemen
 						}
 						return _retval.get();
 					}
-				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (14))) <= 63) && ((new Object() {
+				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (14))) <= 63) && ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -563,7 +563,7 @@ public class WorkbenchUpdateTickProcedure extends BossToolsModElements.ModElemen
 						final int _sltid = (int) (14);
 						final ItemStack _setstack = new ItemStack(Tier1RocketItemItem.block, (int) (1));
 						_setstack.setCount((int) ((new Object() {
-							public int getAmount(IWorld world, BlockPos pos, int sltid) {
+							public int getAmount(BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
 								if (_ent != null) {
@@ -573,7 +573,7 @@ public class WorkbenchUpdateTickProcedure extends BossToolsModElements.ModElemen
 								}
 								return _retval.get();
 							}
-						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (14))) + 1));
+						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (14))) + 1));
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable) {
 								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -814,7 +814,7 @@ public class WorkbenchUpdateTickProcedure extends BossToolsModElements.ModElemen
 			}
 		}
 		if ((((new Object() {
-			public int getAmount(IWorld world, BlockPos pos, int sltid) {
+			public int getAmount(BlockPos pos, int sltid) {
 				AtomicInteger _retval = new AtomicInteger(0);
 				TileEntity _ent = world.getTileEntity(pos);
 				if (_ent != null) {
@@ -824,7 +824,7 @@ public class WorkbenchUpdateTickProcedure extends BossToolsModElements.ModElemen
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (14))) < 64) && ((((new Object() {
+		}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (14))) < 64) && ((((new Object() {
 			public ItemStack getItemStack(BlockPos pos, int sltid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -1060,7 +1060,7 @@ public class WorkbenchUpdateTickProcedure extends BossToolsModElements.ModElemen
 																																		(int) (1))
 																																				.getItem()))))))))))))))
 				&& ((((new Object() {
-					public int getAmount(IWorld world, BlockPos pos, int sltid) {
+					public int getAmount(BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -1070,7 +1070,7 @@ public class WorkbenchUpdateTickProcedure extends BossToolsModElements.ModElemen
 						}
 						return _retval.get();
 					}
-				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (14))) <= 63) && ((new Object() {
+				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (14))) <= 63) && ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -1309,7 +1309,7 @@ public class WorkbenchUpdateTickProcedure extends BossToolsModElements.ModElemen
 						final int _sltid = (int) (14);
 						final ItemStack _setstack = new ItemStack(Tier2RocketItemItem.block, (int) (1));
 						_setstack.setCount((int) ((new Object() {
-							public int getAmount(IWorld world, BlockPos pos, int sltid) {
+							public int getAmount(BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
 								if (_ent != null) {
@@ -1319,7 +1319,7 @@ public class WorkbenchUpdateTickProcedure extends BossToolsModElements.ModElemen
 								}
 								return _retval.get();
 							}
-						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (14))) + 1));
+						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (14))) + 1));
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable) {
 								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -1560,7 +1560,7 @@ public class WorkbenchUpdateTickProcedure extends BossToolsModElements.ModElemen
 			}
 		}
 		if ((((new Object() {
-			public int getAmount(IWorld world, BlockPos pos, int sltid) {
+			public int getAmount(BlockPos pos, int sltid) {
 				AtomicInteger _retval = new AtomicInteger(0);
 				TileEntity _ent = world.getTileEntity(pos);
 				if (_ent != null) {
@@ -1570,7 +1570,7 @@ public class WorkbenchUpdateTickProcedure extends BossToolsModElements.ModElemen
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (14))) < 64) && ((((new Object() {
+		}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (14))) < 64) && ((((new Object() {
 			public ItemStack getItemStack(BlockPos pos, int sltid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -1805,7 +1805,7 @@ public class WorkbenchUpdateTickProcedure extends BossToolsModElements.ModElemen
 																																		(int) (1))
 																																				.getItem()))))))))))))))
 				&& ((((new Object() {
-					public int getAmount(IWorld world, BlockPos pos, int sltid) {
+					public int getAmount(BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -1815,7 +1815,7 @@ public class WorkbenchUpdateTickProcedure extends BossToolsModElements.ModElemen
 						}
 						return _retval.get();
 					}
-				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (14))) <= 63) && ((new Object() {
+				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (14))) <= 63) && ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -2054,7 +2054,7 @@ public class WorkbenchUpdateTickProcedure extends BossToolsModElements.ModElemen
 						final int _sltid = (int) (14);
 						final ItemStack _setstack = new ItemStack(Tier3RocketItemItem.block, (int) (1));
 						_setstack.setCount((int) ((new Object() {
-							public int getAmount(IWorld world, BlockPos pos, int sltid) {
+							public int getAmount(BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
 								if (_ent != null) {
@@ -2064,7 +2064,7 @@ public class WorkbenchUpdateTickProcedure extends BossToolsModElements.ModElemen
 								}
 								return _retval.get();
 							}
-						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (14))) + 1));
+						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (14))) + 1));
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable) {
 								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);

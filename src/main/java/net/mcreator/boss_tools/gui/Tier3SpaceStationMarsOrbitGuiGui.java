@@ -56,17 +56,17 @@ public class Tier3SpaceStationMarsOrbitGuiGui extends BossToolsModElements.ModEl
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,
 				GUISlotChangedMessage::handler);
 		containerType = new ContainerType<>(new GuiContainerModFactory());
-		FMLJavaModLoadingContext.get().getModEventBus().register(new ContainerRegisterHandler());
+		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
-	private static class ContainerRegisterHandler {
-		@SubscribeEvent
-		public void registerContainer(RegistryEvent.Register<ContainerType<?>> event) {
-			event.getRegistry().register(containerType.setRegistryName("tier_3_space_station_mars_orbit_gui"));
-		}
-	}
+
 	@OnlyIn(Dist.CLIENT)
 	public void initElements() {
 		DeferredWorkQueue.runLater(() -> ScreenManager.registerFactory(containerType, GuiWindow::new));
+	}
+
+	@SubscribeEvent
+	public void registerContainer(RegistryEvent.Register<ContainerType<?>> event) {
+		event.getRegistry().register(containerType.setRegistryName("tier_3_space_station_mars_orbit_gui"));
 	}
 	public static class GuiContainerModFactory implements IContainerFactory {
 		public GuiContainerMod create(int id, PlayerInventory inv, PacketBuffer extraData) {
