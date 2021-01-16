@@ -41,7 +41,7 @@ public class WhiteFlagBlock extends BossToolsModElements.ModElement {
 	@ObjectHolder("boss_tools:white_flag")
 	public static final Block block = null;
 	public WhiteFlagBlock(BossToolsModElements instance) {
-		super(instance, 63);
+		super(instance, 55);
 	}
 
 	@Override

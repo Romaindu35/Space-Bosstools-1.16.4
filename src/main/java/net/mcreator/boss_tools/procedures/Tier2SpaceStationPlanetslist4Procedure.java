@@ -23,7 +23,7 @@ import java.util.Collection;
 @BossToolsModElements.ModElement.Tag
 public class Tier2SpaceStationPlanetslist4Procedure extends BossToolsModElements.ModElement {
 	public Tier2SpaceStationPlanetslist4Procedure(BossToolsModElements instance) {
-		super(instance, 456);
+		super(instance, 424);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

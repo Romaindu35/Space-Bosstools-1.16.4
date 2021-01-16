@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "boss_tools:items/mooncopperingot"
+    "layer0": "boss_tools:items/desh_ingot"
   }
 }

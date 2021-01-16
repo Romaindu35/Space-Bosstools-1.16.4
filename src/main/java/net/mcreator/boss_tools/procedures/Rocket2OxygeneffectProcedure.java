@@ -15,7 +15,7 @@ import java.util.HashMap;
 @BossToolsModElements.ModElement.Tag
 public class Rocket2OxygeneffectProcedure extends BossToolsModElements.ModElement {
 	public Rocket2OxygeneffectProcedure(BossToolsModElements instance) {
-		super(instance, 210);
+		super(instance, 179);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

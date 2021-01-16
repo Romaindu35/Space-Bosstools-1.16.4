@@ -31,7 +31,7 @@ import java.util.Random;
 @BossToolsModElements.ModElement.Tag
 public class MeteorStructure extends BossToolsModElements.ModElement {
 	public MeteorStructure(BossToolsModElements instance) {
-		super(instance, 139);
+		super(instance, 116);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

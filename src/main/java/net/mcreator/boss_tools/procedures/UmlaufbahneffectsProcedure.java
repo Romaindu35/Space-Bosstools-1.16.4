@@ -27,7 +27,7 @@ import java.util.HashMap;
 @BossToolsModElements.ModElement.Tag
 public class UmlaufbahneffectsProcedure extends BossToolsModElements.ModElement {
 	public UmlaufbahneffectsProcedure(BossToolsModElements instance) {
-		super(instance, 166);
+		super(instance, 139);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

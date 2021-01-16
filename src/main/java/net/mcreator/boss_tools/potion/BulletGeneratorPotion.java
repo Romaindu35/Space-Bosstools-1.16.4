@@ -18,7 +18,7 @@ public class BulletGeneratorPotion extends BossToolsModElements.ModElement {
 	@ObjectHolder("boss_tools:bullet_generator")
 	public static final Effect potion = null;
 	public BulletGeneratorPotion(BossToolsModElements instance) {
-		super(instance, 422);
+		super(instance, 391);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

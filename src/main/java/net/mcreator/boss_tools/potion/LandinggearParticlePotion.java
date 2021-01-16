@@ -24,7 +24,7 @@ public class LandinggearParticlePotion extends BossToolsModElements.ModElement {
 	@ObjectHolder("boss_tools:landinggear_particle")
 	public static final Effect potion = null;
 	public LandinggearParticlePotion(BossToolsModElements instance) {
-		super(instance, 233);
+		super(instance, 202);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

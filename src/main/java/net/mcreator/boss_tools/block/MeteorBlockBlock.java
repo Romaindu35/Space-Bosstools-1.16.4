@@ -24,7 +24,7 @@ public class MeteorBlockBlock extends BossToolsModElements.ModElement {
 	@ObjectHolder("boss_tools:meteor_block")
 	public static final Block block = null;
 	public MeteorBlockBlock(BossToolsModElements instance) {
-		super(instance, 23);
+		super(instance, 20);
 	}
 
 	@Override

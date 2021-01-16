@@ -41,7 +41,7 @@ public class RedFlagBlock extends BossToolsModElements.ModElement {
 	@ObjectHolder("boss_tools:red_flag")
 	public static final Block block = null;
 	public RedFlagBlock(BossToolsModElements instance) {
-		super(instance, 67);
+		super(instance, 59);
 	}
 
 	@Override

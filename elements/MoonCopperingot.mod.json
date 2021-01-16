@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "mooncopperingot",
+    "texture": "desh_ingot",
     "customModelName": "Normal",
     "name": "Desh Ingot",
     "rarity": "COMMON",

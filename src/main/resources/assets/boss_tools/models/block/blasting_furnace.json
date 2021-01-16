@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "boss_tools:blocks/furnace_top",
-    "up": "boss_tools:blocks/furnace_top",
-    "north": "boss_tools:blocks/furnace_front_on",
-    "east": "boss_tools:blocks/furnace_side",
-    "south": "boss_tools:blocks/furnace_side",
-    "west": "boss_tools:blocks/furnace_side",
-    "particle": "boss_tools:blocks/furnace_top"
+    "down": "boss_tools:blocks/machineback",
+    "up": "boss_tools:blocks/machineback",
+    "north": "boss_tools:blocks/basic_electric_smelter_front_inactive",
+    "east": "boss_tools:blocks/machineside",
+    "south": "boss_tools:blocks/machineside",
+    "west": "boss_tools:blocks/machineside",
+    "particle": "boss_tools:blocks/machineback"
   }
 }

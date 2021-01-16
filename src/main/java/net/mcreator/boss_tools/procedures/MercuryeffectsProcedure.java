@@ -15,7 +15,7 @@ import java.util.HashMap;
 @BossToolsModElements.ModElement.Tag
 public class MercuryeffectsProcedure extends BossToolsModElements.ModElement {
 	public MercuryeffectsProcedure(BossToolsModElements instance) {
-		super(instance, 387);
+		super(instance, 356);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

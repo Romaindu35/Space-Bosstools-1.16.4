@@ -42,7 +42,7 @@ public class RockedBaseBlock extends BossToolsModElements.ModElement {
 	@ObjectHolder("boss_tools:rocked_base")
 	public static final Block block = null;
 	public RockedBaseBlock(BossToolsModElements instance) {
-		super(instance, 6);
+		super(instance, 4);
 	}
 
 	@Override

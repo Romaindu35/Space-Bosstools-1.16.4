@@ -27,7 +27,7 @@ import java.util.HashMap;
 @BossToolsModElements.ModElement.Tag
 public class VanillaBeeSpawnProcedure extends BossToolsModElements.ModElement {
 	public VanillaBeeSpawnProcedure(BossToolsModElements instance) {
-		super(instance, 227);
+		super(instance, 196);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

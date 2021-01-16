@@ -41,7 +41,7 @@ public class PurpleFlagBlock extends BossToolsModElements.ModElement {
 	@ObjectHolder("boss_tools:purple_flag")
 	public static final Block block = null;
 	public PurpleFlagBlock(BossToolsModElements instance) {
-		super(instance, 68);
+		super(instance, 60);
 	}
 
 	@Override

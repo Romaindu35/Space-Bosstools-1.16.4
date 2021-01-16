@@ -4,7 +4,7 @@
   "definition": {
     "name": "Space-BossTools",
     "icon": {
-      "value": "CUSTOM:Tier2RocketItem"
+      "value": "CUSTOM:Tier3RocketItem"
     },
     "showSearch": false
   }

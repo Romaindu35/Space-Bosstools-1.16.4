@@ -16,7 +16,7 @@ public class CompressedTinItem extends BossToolsModElements.ModElement {
 	@ObjectHolder("boss_tools:compressed_tin")
 	public static final Item block = null;
 	public CompressedTinItem(BossToolsModElements instance) {
-		super(instance, 18);
+		super(instance, 16);
 	}
 
 	@Override

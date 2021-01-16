@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "tinplate",
+    "texture": "desh_plate",
     "customModelName": "Normal",
     "name": "Desh Plate",
     "rarity": "COMMON",

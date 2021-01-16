@@ -25,7 +25,7 @@ import java.util.Collection;
 @BossToolsModElements.ModElement.Tag
 public class LandingGearOnEntityTickUpdateProcedure extends BossToolsModElements.ModElement {
 	public LandingGearOnEntityTickUpdateProcedure(BossToolsModElements instance) {
-		super(instance, 228);
+		super(instance, 197);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

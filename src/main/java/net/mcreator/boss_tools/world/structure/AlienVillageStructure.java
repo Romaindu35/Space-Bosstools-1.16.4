@@ -32,7 +32,7 @@ import java.util.Random;
 @BossToolsModElements.ModElement.Tag
 public class AlienVillageStructure extends BossToolsModElements.ModElement {
 	public AlienVillageStructure(BossToolsModElements instance) {
-		super(instance, 97);
+		super(instance, 85);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

@@ -40,7 +40,7 @@ import java.util.List;
 public class MercurybiomeBiome extends BossToolsModElements.ModElement {
 	public static Biome biome;
 	public MercurybiomeBiome(BossToolsModElements instance) {
-		super(instance, 386);
+		super(instance, 355);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {

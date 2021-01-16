@@ -38,7 +38,7 @@ import java.util.Comparator;
 @BossToolsModElements.ModElement.Tag
 public class OxygenGeneratortickProcedure extends BossToolsModElements.ModElement {
 	public OxygenGeneratortickProcedure(BossToolsModElements instance) {
-		super(instance, 201);
+		super(instance, 170);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

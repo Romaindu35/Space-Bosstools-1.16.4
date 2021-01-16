@@ -37,7 +37,7 @@ import java.util.List;
 public class OrbitMercuryBiomBiome extends BossToolsModElements.ModElement {
 	public static Biome biome;
 	public OrbitMercuryBiomBiome(BossToolsModElements instance) {
-		super(instance, 409);
+		super(instance, 378);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {

@@ -24,7 +24,7 @@ import java.util.Collection;
 @BossToolsModElements.ModElement.Tag
 public class PowUpOnKeyReleasedProcedure extends BossToolsModElements.ModElement {
 	public PowUpOnKeyReleasedProcedure(BossToolsModElements instance) {
-		super(instance, 169);
+		super(instance, 142);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

@@ -16,7 +16,7 @@ public class OrbitPlacerItem extends BossToolsModElements.ModElement {
 	@ObjectHolder("boss_tools:orbit_placer")
 	public static final Item block = null;
 	public OrbitPlacerItem(BossToolsModElements instance) {
-		super(instance, 5);
+		super(instance, 6);
 	}
 
 	@Override

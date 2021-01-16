@@ -50,7 +50,7 @@ public class Tier3SpaceStationMoonOrbitGuiGui extends BossToolsModElements.ModEl
 	public static HashMap guistate = new HashMap();
 	private static ContainerType<GuiContainerMod> containerType = null;
 	public Tier3SpaceStationMoonOrbitGuiGui(BossToolsModElements instance) {
-		super(instance, 469);
+		super(instance, 437);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,

@@ -25,7 +25,7 @@ import java.util.Collection;
 @BossToolsModElements.ModElement.Tag
 public class AlienBeeOnEntityTickUpdateProcedure extends BossToolsModElements.ModElement {
 	public AlienBeeOnEntityTickUpdateProcedure(BossToolsModElements instance) {
-		super(instance, 204);
+		super(instance, 173);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

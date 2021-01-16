@@ -17,7 +17,7 @@ import java.util.Map;
 @BossToolsModElements.ModElement.Tag
 public class RocketEntityDiesProcedure extends BossToolsModElements.ModElement {
 	public RocketEntityDiesProcedure(BossToolsModElements instance) {
-		super(instance, 83);
+		super(instance, 72);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

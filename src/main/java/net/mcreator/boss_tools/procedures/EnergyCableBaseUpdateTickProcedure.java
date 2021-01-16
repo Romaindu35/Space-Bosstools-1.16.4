@@ -16,7 +16,7 @@ import java.util.Map;
 @BossToolsModElements.ModElement.Tag
 public class EnergyCableBaseUpdateTickProcedure extends BossToolsModElements.ModElement {
 	public EnergyCableBaseUpdateTickProcedure(BossToolsModElements instance) {
-		super(instance, 569);
+		super(instance, 537);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

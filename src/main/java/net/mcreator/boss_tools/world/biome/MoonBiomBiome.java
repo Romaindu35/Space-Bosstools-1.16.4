@@ -40,7 +40,7 @@ import java.util.List;
 public class MoonBiomBiome extends BossToolsModElements.ModElement {
 	public static Biome biome;
 	public MoonBiomBiome(BossToolsModElements instance) {
-		super(instance, 224);
+		super(instance, 193);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {
