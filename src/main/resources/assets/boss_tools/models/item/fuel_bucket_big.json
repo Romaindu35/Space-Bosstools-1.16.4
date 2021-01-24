@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "boss_tools:items/bucket_big"
+    "layer0": "boss_tools:items/bigbucket_fuel"
   }
 }

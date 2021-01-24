@@ -10,13 +10,13 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "CUSTOM:Ironplate"
+        "value": "Items.IRON_INGOT"
       },
       {
         "value": ""
       },
       {
-        "value": "CUSTOM:Ironplate"
+        "value": "Items.IRON_INGOT"
       },
       {
         "value": "Items.IRON_INGOT"

@@ -76,7 +76,7 @@ public class RocketOnEntityTickTier3Procedure extends BossToolsModElements.ModEl
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-							"/effect give @p boss_tools:rocket_potion_9 999999");
+							"/effect give @p boss_tools:rocket_potion_9 999999 1 true");
 				}
 				if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(

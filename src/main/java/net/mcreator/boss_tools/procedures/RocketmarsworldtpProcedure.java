@@ -54,9 +54,16 @@ public class RocketmarsworldtpProcedure extends BossToolsModElements.ModElement 
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		if (world instanceof ServerWorld) {
-			((World) world).getServer().getCommandManager().handleCommand(new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z),
-					Vector2f.ZERO, (ServerWorld) world, 4, "", new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-					"/effect clear @p");
+			((World) world).getServer().getCommandManager().handleCommand(
+					new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+							new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+					"/effect clear @p boss_tools:rocket_potion_8");
+		}
+		if (world instanceof ServerWorld) {
+			((World) world).getServer().getCommandManager().handleCommand(
+					new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+							new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+					"/effect clear @p minecraft:levitation");
 		}
 		if (world instanceof ServerWorld) {
 			((World) world).getServer().getCommandManager()

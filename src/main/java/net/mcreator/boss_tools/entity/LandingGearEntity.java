@@ -76,14 +76,14 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 public class LandingGearEntity extends BossToolsModElements.ModElement {
 	public static EntityType entity = null;
 	public LandingGearEntity(BossToolsModElements instance) {
-		super(instance, 71);
+		super(instance, 63);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ModelRegisterHandler());
 	}
 
 	@Override
 	public void initElements() {
 		entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER).setShouldReceiveVelocityUpdates(true)
-				.setTrackingRange(100).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire().size(0.6f, 1.2f))
+				.setTrackingRange(100).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire().size(0.6f, 2f))
 						.build("landing_gear").setRegistryName("landing_gear");
 		elements.entities.add(() -> entity);
 	}
@@ -144,6 +144,11 @@ public class LandingGearEntity extends BossToolsModElements.ModElement {
 		@Override
 		public boolean canDespawn(double distanceToClosestPlayer) {
 			return false;
+		}
+
+		@Override
+		public double getMountedYOffset() {
+			return super.getMountedYOffset() + -0.6;
 		}
 
 		@Override

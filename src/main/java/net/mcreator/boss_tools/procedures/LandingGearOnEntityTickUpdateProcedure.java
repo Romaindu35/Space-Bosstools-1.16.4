@@ -4,11 +4,8 @@ import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.registry.Registry;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.util.math.vector.Vector2f;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
@@ -90,13 +87,11 @@ public class LandingGearOnEntityTickUpdateProcedure extends BossToolsModElements
 				return false;
 			}
 		}.check(entity))) {
-			if (((entity.isBeingRidden()) == (true))) {
-				if (world instanceof ServerWorld) {
-					((World) world).getServer().getCommandManager().handleCommand(
-							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
-									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-							"/effect give @p boss_tools:landinggear_particle 1 1 true");
-				}
+			if (world instanceof ServerWorld) {
+				((World) world).getServer().getCommandManager().handleCommand(
+						new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+								new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+						"/particle minecraft:spit ~ ~-0.3 ~ .1 .1 .1 .001 3 force");
 			}
 		}
 		if ((new Object() {
@@ -111,17 +106,11 @@ public class LandingGearOnEntityTickUpdateProcedure extends BossToolsModElements
 				return false;
 			}
 		}.check(entity))) {
-			if (((entity.isBeingRidden()) == (false))) {
-				if (entity instanceof LivingEntity)
-					((LivingEntity) entity).clearActivePotions();
-			}
-		}
-		if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
-				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
-						.equals(new ResourceLocation("boss_tools:orbit_overworld_biom")))) {
-			if (((entity.getPosY()) < (-10))) {
-				if (!entity.world.isRemote())
-					entity.remove();
+			if (((entity.getMotion().getY()) >= (-0.01))) {
+				if (((entity.getPosY()) <= 495)) {
+					if (entity instanceof LivingEntity)
+						((LivingEntity) entity).clearActivePotions();
+				}
 			}
 		}
 	}

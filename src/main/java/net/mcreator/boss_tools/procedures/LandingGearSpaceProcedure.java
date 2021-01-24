@@ -29,10 +29,10 @@ public class LandingGearSpaceProcedure extends BossToolsModElements.ModElement {
 		if (((entity.getRidingEntity()) instanceof LandingGearEntity.CustomEntity)) {
 			if ((entity.getRidingEntity()) instanceof LivingEntity)
 				((LivingEntity) (entity.getRidingEntity()))
-						.addPotionEffect(new EffectInstance(Effects.SLOW_FALLING, (int) 1800, (int) 3, (false), (false)));
+						.addPotionEffect(new EffectInstance(Effects.SLOW_FALLING, (int) 99999, (int) 3, (false), (false)));
 			if ((entity.getRidingEntity()) instanceof LivingEntity)
 				((LivingEntity) (entity.getRidingEntity()))
-						.addPotionEffect(new EffectInstance(LandinggearPotion1Potion.potion, (int) 1800, (int) 1, (false), (false)));
+						.addPotionEffect(new EffectInstance(LandinggearPotion1Potion.potion, (int) 99999, (int) 1, (false), (false)));
 			if ((entity.getRidingEntity()) instanceof LivingEntity)
 				((LivingEntity) (entity.getRidingEntity()))
 						.addPotionEffect(new EffectInstance(LandinggearPotion2Potion.potion, (int) 99999, (int) 1, (false), (false)));

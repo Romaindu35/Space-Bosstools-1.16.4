@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "fuel_bucket_big",
+    "texture": "bigbucket",
     "customModelName": "Normal",
     "name": "Big Bucket",
     "rarity": "COMMON",

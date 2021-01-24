@@ -45,10 +45,10 @@
       "value": "Blocks.AIR"
     },
     "treeVines": {
-      "value": "Blocks.AIR"
+      "value": ""
     },
     "treeFruits": {
-      "value": "Blocks.AIR"
+      "value": ""
     },
     "spawnStronghold": false,
     "spawnMineshaft": false,
