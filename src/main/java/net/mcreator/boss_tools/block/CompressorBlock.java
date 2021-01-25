@@ -80,7 +80,7 @@ public class CompressorBlock extends BossToolsModElements.ModElement {
 	@ObjectHolder("boss_tools:compressor")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public CompressorBlock(BossToolsModElements instance) {
-		super(instance, 50);
+		super(instance, 47);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 
@@ -100,7 +100,7 @@ public class CompressorBlock extends BossToolsModElements.ModElement {
 		public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
 		public CustomBlock() {
 			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).harvestLevel(1)
-					.harvestTool(ToolType.PICKAXE));
+					.harvestTool(ToolType.PICKAXE).setRequiresTool());
 			this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH));
 			setRegistryName("compressor");
 		}

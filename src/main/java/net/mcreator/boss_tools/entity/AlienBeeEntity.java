@@ -68,7 +68,7 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 public class AlienBeeEntity extends BossToolsModElements.ModElement {
 	public static EntityType entity = null;
 	public AlienBeeEntity(BossToolsModElements instance) {
-		super(instance, 9);
+		super(instance, 59);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ModelRegisterHandler());
 	}
 
@@ -233,11 +233,6 @@ public class AlienBeeEntity extends BossToolsModElements.ModElement {
 			Entity entity = this;
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
 				AlienBeeOnEntityTickUpdateProcedure.executeProcedure($_dependencies);
 			}
 		}

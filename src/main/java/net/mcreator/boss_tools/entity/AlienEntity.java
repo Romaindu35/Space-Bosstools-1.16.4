@@ -50,7 +50,7 @@ import java.util.HashMap;
 public class AlienEntity extends BossToolsModElements.ModElement {
 	public static EntityType entity = null;
 	public AlienEntity(BossToolsModElements instance) {
-		super(instance, 7);
+		super(instance, 58);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ModelRegisterHandler());
 	}
 

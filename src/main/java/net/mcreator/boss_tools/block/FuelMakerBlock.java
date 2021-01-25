@@ -82,7 +82,7 @@ public class FuelMakerBlock extends BossToolsModElements.ModElement {
 	@ObjectHolder("boss_tools:fuel_maker")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public FuelMakerBlock(BossToolsModElements instance) {
-		super(instance, 51);
+		super(instance, 48);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 
@@ -102,7 +102,7 @@ public class FuelMakerBlock extends BossToolsModElements.ModElement {
 		public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
 		public CustomBlock() {
 			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).harvestLevel(1)
-					.harvestTool(ToolType.PICKAXE));
+					.harvestTool(ToolType.PICKAXE).setRequiresTool());
 			this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH));
 			setRegistryName("fuel_maker");
 		}

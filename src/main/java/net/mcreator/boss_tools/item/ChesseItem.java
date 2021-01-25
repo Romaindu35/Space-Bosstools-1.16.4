@@ -17,7 +17,7 @@ public class ChesseItem extends BossToolsModElements.ModElement {
 	@ObjectHolder("boss_tools:chesse")
 	public static final Item block = null;
 	public ChesseItem(BossToolsModElements instance) {
-		super(instance, 28);
+		super(instance, 25);
 	}
 
 	@Override

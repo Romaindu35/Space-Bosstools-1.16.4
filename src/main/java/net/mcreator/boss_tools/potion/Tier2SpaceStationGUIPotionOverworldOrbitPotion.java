@@ -24,7 +24,7 @@ public class Tier2SpaceStationGUIPotionOverworldOrbitPotion extends BossToolsMod
 	@ObjectHolder("boss_tools:tier_2_space_station_gui_potion_overworld_orbit")
 	public static final Effect potion = null;
 	public Tier2SpaceStationGUIPotionOverworldOrbitPotion(BossToolsModElements instance) {
-		super(instance, 415);
+		super(instance, 409);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

@@ -12,7 +12,7 @@ import java.util.Map;
 @BossToolsModElements.ModElement.Tag
 public class OxygenGeneratorFire9Procedure extends BossToolsModElements.ModElement {
 	public OxygenGeneratorFire9Procedure(BossToolsModElements instance) {
-		super(instance, 335);
+		super(instance, 329);
 	}
 
 	public static boolean executeProcedure(Map<String, Object> dependencies) {
@@ -41,12 +41,12 @@ public class OxygenGeneratorFire9Procedure extends BossToolsModElements.ModEleme
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		return ((new Object() {
-			public double getValue(BlockPos pos, String tag) {
+			public double getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(new BlockPos((int) x, (int) y, (int) z), "fire")) <= 136);
+		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "fire")) <= 136);
 	}
 }

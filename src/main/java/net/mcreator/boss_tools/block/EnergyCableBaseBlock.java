@@ -80,7 +80,7 @@ public class EnergyCableBaseBlock extends BossToolsModElements.ModElement {
 	@ObjectHolder("boss_tools:energy_cable_base")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public EnergyCableBaseBlock(BossToolsModElements instance) {
-		super(instance, 506);
+		super(instance, 500);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 

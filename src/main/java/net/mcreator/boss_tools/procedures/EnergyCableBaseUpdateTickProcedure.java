@@ -16,7 +16,7 @@ import java.util.Map;
 @BossToolsModElements.ModElement.Tag
 public class EnergyCableBaseUpdateTickProcedure extends BossToolsModElements.ModElement {
 	public EnergyCableBaseUpdateTickProcedure(BossToolsModElements instance) {
-		super(instance, 537);
+		super(instance, 531);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -51,14 +51,14 @@ public class EnergyCableBaseUpdateTickProcedure extends BossToolsModElements.Mod
 		double Energy5 = 0;
 		double Energy6 = 0;
 		if (((new Object() {
-			public int getEnergyStored(BlockPos pos) {
+			public int getEnergyStored(IWorld world, BlockPos pos) {
 				AtomicInteger _retval = new AtomicInteger(0);
 				TileEntity _ent = world.getTileEntity(pos);
 				if (_ent != null)
 					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
 				return _retval.get();
 			}
-		}.getEnergyStored(new BlockPos((int) x, (int) y, (int) z))) >= 1)) {
+		}.getEnergyStored(world, new BlockPos((int) x, (int) y, (int) z))) >= 1)) {
 			{
 				TileEntity _ent = world.getTileEntity(new BlockPos((int) (x + 1), (int) y, (int) z));
 				int _amount = (int) 1;
@@ -96,14 +96,14 @@ public class EnergyCableBaseUpdateTickProcedure extends BossToolsModElements.Mod
 					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.receiveEnergy(_amount, false));
 			}
 			if ((new Object() {
-				public boolean canExtractEnergy(BlockPos pos) {
+				public boolean canExtractEnergy(IWorld world, BlockPos pos) {
 					AtomicBoolean _retval = new AtomicBoolean(false);
 					TileEntity _ent = world.getTileEntity(pos);
 					if (_ent != null)
 						_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.canExtract()));
 					return _retval.get();
 				}
-			}.canExtractEnergy(new BlockPos((int) (x + 1), (int) y, (int) z)))) {
+			}.canExtractEnergy(world, new BlockPos((int) (x + 1), (int) y, (int) z)))) {
 				{
 					TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 					int _amount = (int) 1;
@@ -111,14 +111,14 @@ public class EnergyCableBaseUpdateTickProcedure extends BossToolsModElements.Mod
 						_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
 				}
 			} else if ((new Object() {
-				public boolean canExtractEnergy(BlockPos pos) {
+				public boolean canExtractEnergy(IWorld world, BlockPos pos) {
 					AtomicBoolean _retval = new AtomicBoolean(false);
 					TileEntity _ent = world.getTileEntity(pos);
 					if (_ent != null)
 						_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.canExtract()));
 					return _retval.get();
 				}
-			}.canExtractEnergy(new BlockPos((int) (x - 1), (int) y, (int) z)))) {
+			}.canExtractEnergy(world, new BlockPos((int) (x - 1), (int) y, (int) z)))) {
 				{
 					TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 					int _amount = (int) 1;
@@ -126,14 +126,14 @@ public class EnergyCableBaseUpdateTickProcedure extends BossToolsModElements.Mod
 						_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
 				}
 			} else if ((new Object() {
-				public boolean canExtractEnergy(BlockPos pos) {
+				public boolean canExtractEnergy(IWorld world, BlockPos pos) {
 					AtomicBoolean _retval = new AtomicBoolean(false);
 					TileEntity _ent = world.getTileEntity(pos);
 					if (_ent != null)
 						_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.canExtract()));
 					return _retval.get();
 				}
-			}.canExtractEnergy(new BlockPos((int) x, (int) y, (int) (z + 1))))) {
+			}.canExtractEnergy(world, new BlockPos((int) x, (int) y, (int) (z + 1))))) {
 				{
 					TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 					int _amount = (int) 1;
@@ -141,14 +141,14 @@ public class EnergyCableBaseUpdateTickProcedure extends BossToolsModElements.Mod
 						_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
 				}
 			} else if ((new Object() {
-				public boolean canExtractEnergy(BlockPos pos) {
+				public boolean canExtractEnergy(IWorld world, BlockPos pos) {
 					AtomicBoolean _retval = new AtomicBoolean(false);
 					TileEntity _ent = world.getTileEntity(pos);
 					if (_ent != null)
 						_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.canExtract()));
 					return _retval.get();
 				}
-			}.canExtractEnergy(new BlockPos((int) x, (int) y, (int) (z - 1))))) {
+			}.canExtractEnergy(world, new BlockPos((int) x, (int) y, (int) (z - 1))))) {
 				{
 					TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 					int _amount = (int) 1;
@@ -156,14 +156,14 @@ public class EnergyCableBaseUpdateTickProcedure extends BossToolsModElements.Mod
 						_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
 				}
 			} else if ((new Object() {
-				public boolean canExtractEnergy(BlockPos pos) {
+				public boolean canExtractEnergy(IWorld world, BlockPos pos) {
 					AtomicBoolean _retval = new AtomicBoolean(false);
 					TileEntity _ent = world.getTileEntity(pos);
 					if (_ent != null)
 						_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.canExtract()));
 					return _retval.get();
 				}
-			}.canExtractEnergy(new BlockPos((int) x, (int) (y - 1), (int) z)))) {
+			}.canExtractEnergy(world, new BlockPos((int) x, (int) (y - 1), (int) z)))) {
 				{
 					TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 					int _amount = (int) 1;
@@ -171,14 +171,14 @@ public class EnergyCableBaseUpdateTickProcedure extends BossToolsModElements.Mod
 						_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
 				}
 			} else if ((new Object() {
-				public boolean canExtractEnergy(BlockPos pos) {
+				public boolean canExtractEnergy(IWorld world, BlockPos pos) {
 					AtomicBoolean _retval = new AtomicBoolean(false);
 					TileEntity _ent = world.getTileEntity(pos);
 					if (_ent != null)
 						_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.canExtract()));
 					return _retval.get();
 				}
-			}.canExtractEnergy(new BlockPos((int) x, (int) (y + 1), (int) z)))) {
+			}.canExtractEnergy(world, new BlockPos((int) x, (int) (y + 1), (int) z)))) {
 				{
 					TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 					int _amount = (int) 1;

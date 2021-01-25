@@ -25,7 +25,7 @@ import io.netty.buffer.Unpooled;
 @BossToolsModElements.ModElement.Tag
 public class Tier2SpaceStationGuiPotionMoonOrbitonPotionTickProcedure extends BossToolsModElements.ModElement {
 	public Tier2SpaceStationGuiPotionMoonOrbitonPotionTickProcedure(BossToolsModElements instance) {
-		super(instance, 422);
+		super(instance, 416);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

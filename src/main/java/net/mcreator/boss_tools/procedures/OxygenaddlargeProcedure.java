@@ -14,7 +14,7 @@ import java.util.Map;
 @BossToolsModElements.ModElement.Tag
 public class OxygenaddlargeProcedure extends BossToolsModElements.ModElement {
 	public OxygenaddlargeProcedure(BossToolsModElements instance) {
-		super(instance, 340);
+		super(instance, 334);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -43,26 +43,26 @@ public class OxygenaddlargeProcedure extends BossToolsModElements.ModElement {
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		if (((new Object() {
-			public double getValue(BlockPos pos, String tag) {
+			public double getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(new BlockPos((int) x, (int) y, (int) z), "OxygenLarge")) == 0)) {
+		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "OxygenLarge")) == 0)) {
 			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
 					_tileEntity.getTileData().putDouble("OxygenLarge", ((new Object() {
-						public double getValue(BlockPos pos, String tag) {
+						public double getValue(IWorld world, BlockPos pos, String tag) {
 							TileEntity tileEntity = world.getTileEntity(pos);
 							if (tileEntity != null)
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(new BlockPos((int) x, (int) y, (int) z), "OxygenLarge")) + 1));
+					}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "OxygenLarge")) + 1));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}

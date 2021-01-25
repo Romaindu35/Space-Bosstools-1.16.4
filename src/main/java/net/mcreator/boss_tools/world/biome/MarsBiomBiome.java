@@ -8,11 +8,13 @@ import net.minecraftforge.event.RegistryEvent;
 
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilderConfig;
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
+import net.minecraft.world.biome.ParticleEffectAmbience;
 import net.minecraft.world.biome.MobSpawnInfo;
 import net.minecraft.world.biome.DefaultBiomeFeatures;
 import net.minecraft.world.biome.BiomeGenerationSettings;
 import net.minecraft.world.biome.BiomeAmbience;
 import net.minecraft.world.biome.Biome;
+import net.minecraft.particles.ParticleTypes;
 
 import net.mcreator.boss_tools.block.MarssandBlock;
 import net.mcreator.boss_tools.block.MarsStoneBlock;
@@ -22,7 +24,7 @@ import net.mcreator.boss_tools.BossToolsModElements;
 public class MarsBiomBiome extends BossToolsModElements.ModElement {
 	public static Biome biome;
 	public MarsBiomBiome(BossToolsModElements instance) {
-		super(instance, 194);
+		super(instance, 190);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {
@@ -30,7 +32,8 @@ public class MarsBiomBiome extends BossToolsModElements.ModElement {
 		public void registerBiomes(RegistryEvent.Register<Biome> event) {
 			if (biome == null) {
 				BiomeAmbience effects = new BiomeAmbience.Builder().setFogColor(-16777216).setWaterColor(4159204).setWaterFogColor(329011)
-						.withSkyColor(-16777216).withFoliageColor(10387789).withGrassColor(9470285).build();
+						.withSkyColor(-16777216).withFoliageColor(10387789).withGrassColor(9470285)
+						.setParticle(new ParticleEffectAmbience(ParticleTypes.CRIMSON_SPORE, 0.014f)).build();
 				BiomeGenerationSettings.Builder biomeGenerationSettings = new BiomeGenerationSettings.Builder()
 						.withSurfaceBuilder(SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(MarssandBlock.block.getDefaultState(),
 								MarsStoneBlock.block.getDefaultState(), MarsStoneBlock.block.getDefaultState())));

@@ -18,7 +18,7 @@ public class BeePotionPotion extends BossToolsModElements.ModElement {
 	@ObjectHolder("boss_tools:bee_potion")
 	public static final Effect potion = null;
 	public BeePotionPotion(BossToolsModElements instance) {
-		super(instance, 174);
+		super(instance, 170);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

@@ -24,7 +24,7 @@ public class MrrcuryCobblestoneBlock extends BossToolsModElements.ModElement {
 	@ObjectHolder("boss_tools:mrrcury_cobblestone")
 	public static final Block block = null;
 	public MrrcuryCobblestoneBlock(BossToolsModElements instance) {
-		super(instance, 24);
+		super(instance, 21);
 	}
 
 	@Override
@@ -35,7 +35,7 @@ public class MrrcuryCobblestoneBlock extends BossToolsModElements.ModElement {
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).harvestLevel(1)
-					.harvestTool(ToolType.PICKAXE));
+					.harvestTool(ToolType.PICKAXE).setRequiresTool());
 			setRegistryName("mrrcury_cobblestone");
 		}
 

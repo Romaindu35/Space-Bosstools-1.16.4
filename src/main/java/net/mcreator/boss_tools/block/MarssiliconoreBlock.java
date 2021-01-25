@@ -46,7 +46,7 @@ public class MarssiliconoreBlock extends BossToolsModElements.ModElement {
 	@ObjectHolder("boss_tools:marssiliconore")
 	public static final Block block = null;
 	public MarssiliconoreBlock(BossToolsModElements instance) {
-		super(instance, 27);
+		super(instance, 24);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
@@ -58,7 +58,7 @@ public class MarssiliconoreBlock extends BossToolsModElements.ModElement {
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).harvestLevel(1)
-					.harvestTool(ToolType.PICKAXE));
+					.harvestTool(ToolType.PICKAXE).setRequiresTool());
 			setRegistryName("marssiliconore");
 		}
 

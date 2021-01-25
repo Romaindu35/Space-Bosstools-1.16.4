@@ -49,7 +49,7 @@ public class SpaceArmorItem extends BossToolsModElements.ModElement {
 	@ObjectHolder("boss_tools:space_armor_boots")
 	public static final Item boots = null;
 	public SpaceArmorItem(BossToolsModElements instance) {
-		super(instance, 62);
+		super(instance, 51);
 	}
 
 	@Override

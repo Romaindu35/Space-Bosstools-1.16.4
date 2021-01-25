@@ -86,7 +86,7 @@ public class OxygenGeneratorBlock extends BossToolsModElements.ModElement {
 	@ObjectHolder("boss_tools:oxygen_generator")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public OxygenGeneratorBlock(BossToolsModElements instance) {
-		super(instance, 49);
+		super(instance, 46);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 
@@ -106,7 +106,7 @@ public class OxygenGeneratorBlock extends BossToolsModElements.ModElement {
 		public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
 		public CustomBlock() {
 			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).harvestLevel(1)
-					.harvestTool(ToolType.PICKAXE));
+					.harvestTool(ToolType.PICKAXE).setRequiresTool());
 			this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH));
 			setRegistryName("oxygen_generator");
 		}

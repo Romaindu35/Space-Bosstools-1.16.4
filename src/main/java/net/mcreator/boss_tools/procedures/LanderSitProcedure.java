@@ -39,7 +39,7 @@ import java.util.Comparator;
 @BossToolsModElements.ModElement.Tag
 public class LanderSitProcedure extends BossToolsModElements.ModElement {
 	public LanderSitProcedure(BossToolsModElements instance) {
-		super(instance, 505);
+		super(instance, 499);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

@@ -39,7 +39,7 @@ public class MercuryIronoreBlock extends BossToolsModElements.ModElement {
 	@ObjectHolder("boss_tools:mercury_ironore")
 	public static final Block block = null;
 	public MercuryIronoreBlock(BossToolsModElements instance) {
-		super(instance, 357);
+		super(instance, 351);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
@@ -51,7 +51,7 @@ public class MercuryIronoreBlock extends BossToolsModElements.ModElement {
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).harvestLevel(1)
-					.harvestTool(ToolType.PICKAXE));
+					.harvestTool(ToolType.PICKAXE).setRequiresTool());
 			setRegistryName("mercury_ironore");
 		}
 

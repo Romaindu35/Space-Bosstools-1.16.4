@@ -13,7 +13,7 @@ import java.util.Map;
 @BossToolsModElements.ModElement.Tag
 public class SpaceStationIronLogicProcedure extends BossToolsModElements.ModElement {
 	public SpaceStationIronLogicProcedure(BossToolsModElements instance) {
-		super(instance, 397);
+		super(instance, 391);
 	}
 
 	public static boolean executeProcedure(Map<String, Object> dependencies) {

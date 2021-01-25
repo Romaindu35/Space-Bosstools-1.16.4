@@ -34,7 +34,7 @@ import java.util.Comparator;
 @BossToolsModElements.ModElement.Tag
 public class FallGravityProcedure extends BossToolsModElements.ModElement {
 	public FallGravityProcedure(BossToolsModElements instance) {
-		super(instance, 504);
+		super(instance, 498);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

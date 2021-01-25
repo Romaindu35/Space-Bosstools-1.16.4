@@ -38,7 +38,7 @@ import java.util.Comparator;
 @BossToolsModElements.ModElement.Tag
 public class OxygenGeneratortickProcedure extends BossToolsModElements.ModElement {
 	public OxygenGeneratortickProcedure(BossToolsModElements instance) {
-		super(instance, 170);
+		super(instance, 166);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -68,13 +68,13 @@ public class OxygenGeneratortickProcedure extends BossToolsModElements.ModElemen
 		IWorld world = (IWorld) dependencies.get("world");
 		double previousRecepie = 0;
 		previousRecepie = (double) (new Object() {
-			public double getValue(BlockPos pos, String tag) {
+			public double getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(new BlockPos((int) x, (int) y, (int) z), "recipe"));
+		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe"));
 		if ((((new Object() {
 			public ItemStack getItemStack(BlockPos pos, int sltid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -100,7 +100,7 @@ public class OxygenGeneratortickProcedure extends BossToolsModElements.ModElemen
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == new ItemStack(Blocks.OAK_LEAVES, (int) (1))
 						.getItem()) && ((new Object() {
-							public int getAmount(BlockPos pos, int sltid) {
+							public int getAmount(IWorld world, BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
 								if (_ent != null) {
@@ -110,8 +110,8 @@ public class OxygenGeneratortickProcedure extends BossToolsModElements.ModElemen
 								}
 								return _retval.get();
 							}
-						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) <= 1)) || ((new Object() {
-							public int getAmount(BlockPos pos, int sltid) {
+						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) <= 1)) || ((new Object() {
+							public int getAmount(IWorld world, BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
 								if (_ent != null) {
@@ -121,7 +121,7 @@ public class OxygenGeneratortickProcedure extends BossToolsModElements.ModElemen
 								}
 								return _retval.get();
 							}
-						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
+						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
 			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -144,7 +144,7 @@ public class OxygenGeneratortickProcedure extends BossToolsModElements.ModElemen
 			}
 		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == new ItemStack(Blocks.AIR, (int) (1)).getItem())
 				&& ((new Object() {
-					public int getAmount(BlockPos pos, int sltid) {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -154,7 +154,7 @@ public class OxygenGeneratortickProcedure extends BossToolsModElements.ModElemen
 						}
 						return _retval.get();
 					}
-				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0))) {
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0))) {
 			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -189,7 +189,7 @@ public class OxygenGeneratortickProcedure extends BossToolsModElements.ModElemen
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == new ItemStack(Blocks.SPRUCE_LEAVES, (int) (1))
 						.getItem()) && ((new Object() {
-							public int getAmount(BlockPos pos, int sltid) {
+							public int getAmount(IWorld world, BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
 								if (_ent != null) {
@@ -199,8 +199,8 @@ public class OxygenGeneratortickProcedure extends BossToolsModElements.ModElemen
 								}
 								return _retval.get();
 							}
-						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) <= 1)) || ((new Object() {
-							public int getAmount(BlockPos pos, int sltid) {
+						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) <= 1)) || ((new Object() {
+							public int getAmount(IWorld world, BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
 								if (_ent != null) {
@@ -210,7 +210,7 @@ public class OxygenGeneratortickProcedure extends BossToolsModElements.ModElemen
 								}
 								return _retval.get();
 							}
-						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
+						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
 			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -245,7 +245,7 @@ public class OxygenGeneratortickProcedure extends BossToolsModElements.ModElemen
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == new ItemStack(Blocks.BIRCH_LEAVES, (int) (1))
 						.getItem()) && ((new Object() {
-							public int getAmount(BlockPos pos, int sltid) {
+							public int getAmount(IWorld world, BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
 								if (_ent != null) {
@@ -255,8 +255,8 @@ public class OxygenGeneratortickProcedure extends BossToolsModElements.ModElemen
 								}
 								return _retval.get();
 							}
-						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) <= 1)) || ((new Object() {
-							public int getAmount(BlockPos pos, int sltid) {
+						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) <= 1)) || ((new Object() {
+							public int getAmount(IWorld world, BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
 								if (_ent != null) {
@@ -266,7 +266,7 @@ public class OxygenGeneratortickProcedure extends BossToolsModElements.ModElemen
 								}
 								return _retval.get();
 							}
-						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
+						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
 			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -301,7 +301,7 @@ public class OxygenGeneratortickProcedure extends BossToolsModElements.ModElemen
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == new ItemStack(Blocks.JUNGLE_LEAVES, (int) (1))
 						.getItem()) && ((new Object() {
-							public int getAmount(BlockPos pos, int sltid) {
+							public int getAmount(IWorld world, BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
 								if (_ent != null) {
@@ -311,8 +311,8 @@ public class OxygenGeneratortickProcedure extends BossToolsModElements.ModElemen
 								}
 								return _retval.get();
 							}
-						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) <= 1)) || ((new Object() {
-							public int getAmount(BlockPos pos, int sltid) {
+						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) <= 1)) || ((new Object() {
+							public int getAmount(IWorld world, BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
 								if (_ent != null) {
@@ -322,7 +322,7 @@ public class OxygenGeneratortickProcedure extends BossToolsModElements.ModElemen
 								}
 								return _retval.get();
 							}
-						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
+						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
 			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -357,7 +357,7 @@ public class OxygenGeneratortickProcedure extends BossToolsModElements.ModElemen
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == new ItemStack(Blocks.ACACIA_LEAVES, (int) (1))
 						.getItem()) && ((new Object() {
-							public int getAmount(BlockPos pos, int sltid) {
+							public int getAmount(IWorld world, BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
 								if (_ent != null) {
@@ -367,8 +367,8 @@ public class OxygenGeneratortickProcedure extends BossToolsModElements.ModElemen
 								}
 								return _retval.get();
 							}
-						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) <= 1)) || ((new Object() {
-							public int getAmount(BlockPos pos, int sltid) {
+						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) <= 1)) || ((new Object() {
+							public int getAmount(IWorld world, BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
 								if (_ent != null) {
@@ -378,7 +378,7 @@ public class OxygenGeneratortickProcedure extends BossToolsModElements.ModElemen
 								}
 								return _retval.get();
 							}
-						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
+						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
 			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -413,7 +413,7 @@ public class OxygenGeneratortickProcedure extends BossToolsModElements.ModElemen
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == new ItemStack(Blocks.ACACIA_LEAVES, (int) (1))
 						.getItem()) && ((new Object() {
-							public int getAmount(BlockPos pos, int sltid) {
+							public int getAmount(IWorld world, BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
 								if (_ent != null) {
@@ -423,8 +423,8 @@ public class OxygenGeneratortickProcedure extends BossToolsModElements.ModElemen
 								}
 								return _retval.get();
 							}
-						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) <= 1)) || ((new Object() {
-							public int getAmount(BlockPos pos, int sltid) {
+						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) <= 1)) || ((new Object() {
+							public int getAmount(IWorld world, BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
 								if (_ent != null) {
@@ -434,7 +434,7 @@ public class OxygenGeneratortickProcedure extends BossToolsModElements.ModElemen
 								}
 								return _retval.get();
 							}
-						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
+						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
 			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -469,7 +469,7 @@ public class OxygenGeneratortickProcedure extends BossToolsModElements.ModElemen
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == new ItemStack(Blocks.DARK_OAK_LEAVES, (int) (1))
 						.getItem()) && ((new Object() {
-							public int getAmount(BlockPos pos, int sltid) {
+							public int getAmount(IWorld world, BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
 								if (_ent != null) {
@@ -479,8 +479,8 @@ public class OxygenGeneratortickProcedure extends BossToolsModElements.ModElemen
 								}
 								return _retval.get();
 							}
-						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) <= 1)) || ((new Object() {
-							public int getAmount(BlockPos pos, int sltid) {
+						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) <= 1)) || ((new Object() {
+							public int getAmount(IWorld world, BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
 								if (_ent != null) {
@@ -490,7 +490,7 @@ public class OxygenGeneratortickProcedure extends BossToolsModElements.ModElemen
 								}
 								return _retval.get();
 							}
-						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
+						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
 			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -502,13 +502,13 @@ public class OxygenGeneratortickProcedure extends BossToolsModElements.ModElemen
 			}
 		}
 		if (((previousRecepie) != (new Object() {
-			public double getValue(BlockPos pos, String tag) {
+			public double getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(new BlockPos((int) x, (int) y, (int) z), "recipe")))) {
+		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe")))) {
 			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -520,29 +520,29 @@ public class OxygenGeneratortickProcedure extends BossToolsModElements.ModElemen
 			}
 		}
 		if (((new Object() {
-			public double getValue(BlockPos pos, String tag) {
+			public double getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(new BlockPos((int) x, (int) y, (int) z), "recipe")) >= 0)) {
+		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe")) >= 0)) {
 			if (((new Object() {
-				public double getValue(BlockPos pos, String tag) {
+				public double getValue(IWorld world, BlockPos pos, String tag) {
 					TileEntity tileEntity = world.getTileEntity(pos);
 					if (tileEntity != null)
 						return tileEntity.getTileData().getDouble(tag);
 					return -1;
 				}
-			}.getValue(new BlockPos((int) x, (int) y, (int) z), "timer")) >= 400)) {
+			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "timer")) >= 400)) {
 				if (((new Object() {
-					public double getValue(BlockPos pos, String tag) {
+					public double getValue(IWorld world, BlockPos pos, String tag) {
 						TileEntity tileEntity = world.getTileEntity(pos);
 						if (tileEntity != null)
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(new BlockPos((int) x, (int) y, (int) z), "recipe")) == 0)) {
+				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe")) == 0)) {
 					{
 						List<Entity> _entfound = world.getEntitiesWithinAABB(Entity.class, new AxisAlignedBB((x + 0.5) - (12 / 2d), y - (12 / 2d),
 								(z + 0.5) - (12 / 2d), (x + 0.5) + (12 / 2d), y + (12 / 2d), (z + 0.5) + (12 / 2d)), null).stream()
@@ -567,13 +567,13 @@ public class OxygenGeneratortickProcedure extends BossToolsModElements.ModElemen
 								"/effect clear @e[type=minecraft:player,distance=..12] boss_tools:bullet_generator");
 					}
 				} else if (((new Object() {
-					public double getValue(BlockPos pos, String tag) {
+					public double getValue(IWorld world, BlockPos pos, String tag) {
 						TileEntity tileEntity = world.getTileEntity(pos);
 						if (tileEntity != null)
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(new BlockPos((int) x, (int) y, (int) z), "recipe")) == 1)) {
+				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe")) == 1)) {
 					{
 						TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 						if (_ent != null) {
@@ -600,15 +600,15 @@ public class OxygenGeneratortickProcedure extends BossToolsModElements.ModElemen
 				}
 			}
 			if (((new Object() {
-				public double getValue(BlockPos pos, String tag) {
+				public double getValue(IWorld world, BlockPos pos, String tag) {
 					TileEntity tileEntity = world.getTileEntity(pos);
 					if (tileEntity != null)
 						return tileEntity.getTileData().getDouble(tag);
 					return -1;
 				}
-			}.getValue(new BlockPos((int) x, (int) y, (int) z), "fuel")) == 0)) {
+			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "fuel")) == 0)) {
 				if ((((new Object() {
-					public int getAmount(BlockPos pos, int sltid) {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -618,8 +618,8 @@ public class OxygenGeneratortickProcedure extends BossToolsModElements.ModElemen
 						}
 						return _retval.get();
 					}
-				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (0))) > 0) && ((new Object() {
-					public int getAmount(BlockPos pos, int sltid) {
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (0))) > 0) && ((new Object() {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -629,16 +629,16 @@ public class OxygenGeneratortickProcedure extends BossToolsModElements.ModElemen
 						}
 						return _retval.get();
 					}
-				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (0))) != 0))) {
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (0))) != 0))) {
 					if (((new Object() {
-						public int getEnergyStored(BlockPos pos) {
+						public int getEnergyStored(IWorld world, BlockPos pos) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null)
 								_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
 							return _retval.get();
 						}
-					}.getEnergyStored(new BlockPos((int) x, (int) y, (int) z))) >= 1)) {
+					}.getEnergyStored(world, new BlockPos((int) x, (int) y, (int) z))) >= 1)) {
 						if (((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -970,80 +970,80 @@ public class OxygenGeneratortickProcedure extends BossToolsModElements.ModElemen
 			}
 		}
 		if (((new Object() {
-			public double getValue(BlockPos pos, String tag) {
+			public double getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(new BlockPos((int) x, (int) y, (int) z), "fuel")) > 0)) {
+		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "fuel")) > 0)) {
 			if (((new Object() {
-				public int getEnergyStored(BlockPos pos) {
+				public int getEnergyStored(IWorld world, BlockPos pos) {
 					AtomicInteger _retval = new AtomicInteger(0);
 					TileEntity _ent = world.getTileEntity(pos);
 					if (_ent != null)
 						_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
 					return _retval.get();
 				}
-			}.getEnergyStored(new BlockPos((int) x, (int) y, (int) z))) >= 1)) {
+			}.getEnergyStored(world, new BlockPos((int) x, (int) y, (int) z))) >= 1)) {
 				if (!world.isRemote()) {
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 					TileEntity _tileEntity = world.getTileEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_tileEntity != null)
 						_tileEntity.getTileData().putDouble("fuel", ((new Object() {
-							public double getValue(BlockPos pos, String tag) {
+							public double getValue(IWorld world, BlockPos pos, String tag) {
 								TileEntity tileEntity = world.getTileEntity(pos);
 								if (tileEntity != null)
 									return tileEntity.getTileData().getDouble(tag);
 								return -1;
 							}
-						}.getValue(new BlockPos((int) x, (int) y, (int) z), "fuel")) - 1));
+						}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "fuel")) - 1));
 					if (world instanceof World)
 						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 				}
 			}
 			if (((new Object() {
-				public double getValue(BlockPos pos, String tag) {
+				public double getValue(IWorld world, BlockPos pos, String tag) {
 					TileEntity tileEntity = world.getTileEntity(pos);
 					if (tileEntity != null)
 						return tileEntity.getTileData().getDouble(tag);
 					return -1;
 				}
-			}.getValue(new BlockPos((int) x, (int) y, (int) z), "recipe")) >= 0)) {
+			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe")) >= 0)) {
 				if (!world.isRemote()) {
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 					TileEntity _tileEntity = world.getTileEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_tileEntity != null)
 						_tileEntity.getTileData().putDouble("timer", ((new Object() {
-							public double getValue(BlockPos pos, String tag) {
+							public double getValue(IWorld world, BlockPos pos, String tag) {
 								TileEntity tileEntity = world.getTileEntity(pos);
 								if (tileEntity != null)
 									return tileEntity.getTileData().getDouble(tag);
 								return -1;
 							}
-						}.getValue(new BlockPos((int) x, (int) y, (int) z), "timer")) + 1));
+						}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "timer")) + 1));
 					if (world instanceof World)
 						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 				}
 				if (((new Object() {
-					public int getEnergyStored(BlockPos pos) {
+					public int getEnergyStored(IWorld world, BlockPos pos) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null)
 							_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
 						return _retval.get();
 					}
-				}.getEnergyStored(new BlockPos((int) x, (int) y, (int) z))) >= 1)) {
+				}.getEnergyStored(world, new BlockPos((int) x, (int) y, (int) z))) >= 1)) {
 					if (((new Object() {
-						public double getValue(BlockPos pos, String tag) {
+						public double getValue(IWorld world, BlockPos pos, String tag) {
 							TileEntity tileEntity = world.getTileEntity(pos);
 							if (tileEntity != null)
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(new BlockPos((int) x, (int) y, (int) z), "OxygenLarge")) == 0)) {
+					}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "OxygenLarge")) == 0)) {
 						{
 							TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 							int _amount = (int) 1;
@@ -1078,13 +1078,13 @@ public class OxygenGeneratortickProcedure extends BossToolsModElements.ModElemen
 						}
 					}
 					if (((new Object() {
-						public double getValue(BlockPos pos, String tag) {
+						public double getValue(IWorld world, BlockPos pos, String tag) {
 							TileEntity tileEntity = world.getTileEntity(pos);
 							if (tileEntity != null)
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(new BlockPos((int) x, (int) y, (int) z), "OxygenLarge")) == 1)) {
+					}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "OxygenLarge")) == 1)) {
 						{
 							TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 							int _amount = (int) 1;
@@ -1128,20 +1128,20 @@ public class OxygenGeneratortickProcedure extends BossToolsModElements.ModElemen
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
 				_tileEntity.getTileData().putDouble("fuelRemaining", (((new Object() {
-					public double getValue(BlockPos pos, String tag) {
+					public double getValue(IWorld world, BlockPos pos, String tag) {
 						TileEntity tileEntity = world.getTileEntity(pos);
 						if (tileEntity != null)
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(new BlockPos((int) x, (int) y, (int) z), "fuel")) / (new Object() {
-					public double getValue(BlockPos pos, String tag) {
+				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "fuel")) / (new Object() {
+					public double getValue(IWorld world, BlockPos pos, String tag) {
 						TileEntity tileEntity = world.getTileEntity(pos);
 						if (tileEntity != null)
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(new BlockPos((int) x, (int) y, (int) z), "maxFuel"))) * 100));
+				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "maxFuel"))) * 100));
 			if (world instanceof World)
 				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
@@ -1151,14 +1151,14 @@ public class OxygenGeneratortickProcedure extends BossToolsModElements.ModElemen
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
 				_tileEntity.getTileData().putDouble("EnergyGui", (new Object() {
-					public int getEnergyStored(BlockPos pos) {
+					public int getEnergyStored(IWorld world, BlockPos pos) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null)
 							_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
 						return _retval.get();
 					}
-				}.getEnergyStored(new BlockPos((int) x, (int) y, (int) z))));
+				}.getEnergyStored(world, new BlockPos((int) x, (int) y, (int) z))));
 			if (world instanceof World)
 				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
@@ -1168,13 +1168,13 @@ public class OxygenGeneratortickProcedure extends BossToolsModElements.ModElemen
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
 				_tileEntity.getTileData().putDouble("fire", (new Object() {
-					public double getValue(BlockPos pos, String tag) {
+					public double getValue(IWorld world, BlockPos pos, String tag) {
 						TileEntity tileEntity = world.getTileEntity(pos);
 						if (tileEntity != null)
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(new BlockPos((int) x, (int) y, (int) z), "fuel")));
+				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "fuel")));
 			if (world instanceof World)
 				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}

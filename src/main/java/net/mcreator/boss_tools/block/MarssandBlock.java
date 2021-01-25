@@ -25,7 +25,7 @@ public class MarssandBlock extends BossToolsModElements.ModElement {
 	@ObjectHolder("boss_tools:marssand")
 	public static final Block block = null;
 	public MarssandBlock(BossToolsModElements instance) {
-		super(instance, 21);
+		super(instance, 18);
 	}
 
 	@Override
@@ -36,7 +36,7 @@ public class MarssandBlock extends BossToolsModElements.ModElement {
 	public static class CustomBlock extends FallingBlock {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.SAND).sound(SoundType.SAND).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).harvestLevel(1)
-					.harvestTool(ToolType.SHOVEL));
+					.harvestTool(ToolType.SHOVEL).setRequiresTool());
 			setRegistryName("marssand");
 		}
 

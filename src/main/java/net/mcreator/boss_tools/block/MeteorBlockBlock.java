@@ -24,7 +24,7 @@ public class MeteorBlockBlock extends BossToolsModElements.ModElement {
 	@ObjectHolder("boss_tools:meteor_block")
 	public static final Block block = null;
 	public MeteorBlockBlock(BossToolsModElements instance) {
-		super(instance, 20);
+		super(instance, 17);
 	}
 
 	@Override
@@ -35,7 +35,7 @@ public class MeteorBlockBlock extends BossToolsModElements.ModElement {
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(20f, 10f).setLightLevel(s -> 0).harvestLevel(1)
-					.harvestTool(ToolType.PICKAXE));
+					.harvestTool(ToolType.PICKAXE).setRequiresTool());
 			setRegistryName("meteor_block");
 		}
 

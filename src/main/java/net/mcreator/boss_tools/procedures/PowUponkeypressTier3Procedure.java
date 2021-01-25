@@ -24,7 +24,7 @@ import java.util.Collection;
 @BossToolsModElements.ModElement.Tag
 public class PowUponkeypressTier3Procedure extends BossToolsModElements.ModElement {
 	public PowUponkeypressTier3Procedure(BossToolsModElements instance) {
-		super(instance, 351);
+		super(instance, 345);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

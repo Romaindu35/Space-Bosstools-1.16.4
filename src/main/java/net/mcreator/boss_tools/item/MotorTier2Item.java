@@ -16,7 +16,7 @@ public class MotorTier2Item extends BossToolsModElements.ModElement {
 	@ObjectHolder("boss_tools:motor_tier_2")
 	public static final Item block = null;
 	public MotorTier2Item(BossToolsModElements instance) {
-		super(instance, 35);
+		super(instance, 32);
 	}
 
 	@Override

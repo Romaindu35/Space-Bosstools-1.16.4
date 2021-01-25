@@ -40,7 +40,7 @@ public class CheeseBlockBlock extends BossToolsModElements.ModElement {
 	@ObjectHolder("boss_tools:cheese_block")
 	public static final Block block = null;
 	public CheeseBlockBlock(BossToolsModElements instance) {
-		super(instance, 26);
+		super(instance, 23);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
@@ -52,7 +52,7 @@ public class CheeseBlockBlock extends BossToolsModElements.ModElement {
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).harvestLevel(1)
-					.harvestTool(ToolType.PICKAXE));
+					.harvestTool(ToolType.PICKAXE).setRequiresTool());
 			setRegistryName("cheese_block");
 		}
 
