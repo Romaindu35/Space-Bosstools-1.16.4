@@ -9,7 +9,7 @@
     "textureRight": "energy_cable",
     "textureBack": "energy_cable",
     "renderType": 2,
-    "customModelName": "energy_cable_base:default",
+    "customModelName": "energy_cable:default",
     "rotationMode": 0,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
@@ -28,7 +28,7 @@
     "Mz": 0.7,
     "name": "Energy Cable",
     "specialInfo": [
-      "§9Capacity: §72 FE/t"
+      "§9Capacity: §71 FE/t"
     ],
     "hardness": 0.5,
     "resistance": 10.0,
@@ -79,8 +79,8 @@
     "particleSpawningRadious": 0.5,
     "particleAmount": 4,
     "hasInventory": true,
-    "guiBoundTo": "FuelRefineryGUI",
-    "openGUIOnRightClick": true,
+    "guiBoundTo": "<NONE>",
+    "openGUIOnRightClick": false,
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": false,
