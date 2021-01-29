@@ -25,9 +25,12 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.util.Mirror;
 
+import net.mcreator.boss_tools.procedures.AlienVillageAdditionalGenerationConditionProcedure;
 import net.mcreator.boss_tools.BossToolsModElements;
 
 import java.util.Random;
+
+import com.google.common.collect.ImmutableMap;
 
 @BossToolsModElements.ModElement.Tag
 public class AlienVillageStructure extends BossToolsModElements.ModElement {
@@ -62,6 +65,8 @@ public class AlienVillageStructure extends BossToolsModElements.ModElement {
 						int x = spawnTo.getX();
 						int y = spawnTo.getY();
 						int z = spawnTo.getZ();
+						if (!AlienVillageAdditionalGenerationConditionProcedure.executeProcedure(ImmutableMap.of()))
+							continue;
 						Template template = world.getWorld().getStructureTemplateManager()
 								.getTemplateDefaulted(new ResourceLocation("boss_tools", "moonhouse2"));
 						if (template == null)

@@ -9,6 +9,7 @@ import net.minecraft.potion.EffectInstance;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
+import net.mcreator.boss_tools.BossToolsModVariables;
 import net.mcreator.boss_tools.BossToolsModElements;
 import net.mcreator.boss_tools.BossToolsMod;
 
@@ -68,6 +69,10 @@ public class AlienOnEntityTickUpdateProcedure extends BossToolsModElements.ModEl
 						.equals(new ResourceLocation("boss_tools:orbit_overworld_biom")))) {
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOW_FALLING, (int) 60, (int) 1, (false), (false)));
+		} // Config
+		if (((BossToolsModVariables.Config) == 2)) {
+			if (!entity.world.isRemote())
+				entity.remove();
 		}
 	}
 }
