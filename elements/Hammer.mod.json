@@ -4,7 +4,7 @@
   "definition": {
     "renderType": 0,
     "texture": "hammernew",
-    "customModelName": "Normal",
+    "customModelName": "Tool",
     "name": "Hammer",
     "rarity": "COMMON",
     "creativeTab": {
