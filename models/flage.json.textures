@@ -2,9 +2,9 @@
   "mappings": {
     "default": {
       "map": {
-        "0": "smooth_stone",
+        "0": "flag",
         "1": "blue_wool",
-        "2": "smooth_stone",
+        "2": "flag",
         "missing": ""
       },
       "name": "default"

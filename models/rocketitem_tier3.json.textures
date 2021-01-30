@@ -2,7 +2,7 @@
   "mappings": {
     "default": {
       "map": {
-        "0": "rocketitemtier2texture",
+        "0": "rocketitemtier2",
         "missing": "rocketitemtier2"
       },
       "name": "default"

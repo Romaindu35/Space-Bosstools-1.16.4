@@ -3,9 +3,9 @@
   "textures": {
     "all": "boss_tools:blocks/purple_wool",
     "particle": "boss_tools:blocks/purple_wool",
-    "0": "boss_tools:blocks/smooth_stone",
+    "0": "boss_tools:blocks/flag",
     "1": "boss_tools:blocks/purple_wool",
-    "2": "boss_tools:blocks/smooth_stone",
+    "2": "boss_tools:blocks/flag",
     "missing": "boss_tools:blocks/"
   }
 }
