@@ -29,6 +29,7 @@ public class ConfigProcedure extends BossToolsModElements.ModElement {
 		String testconfig = "";
 		String titleconfig = "";
 		String alienhouseconfig = "";
+		String Meteor = "";
 		File boss_tools = new File(((System.getProperty("user.dir")) + "" + ("//config/")) + "/" + "Space-Bosstools-Config.toml");
 		try {
 			final BufferedReader boss_toolsReader = new BufferedReader(new FileReader(boss_tools));
@@ -49,7 +50,9 @@ public class ConfigProcedure extends BossToolsModElements.ModElement {
 				boss_toolsbw.newLine();
 				boss_toolsbw.write("Alien Spawn = true");
 				boss_toolsbw.newLine();
-				boss_toolsbw.write("Alien House = true");
+				boss_toolsbw.write("Alien House Structure = true");
+				boss_toolsbw.newLine();
+				boss_toolsbw.write("Meteor Structure = true");
 				boss_toolsbw.close();
 				boss_toolswriter.close();
 			} catch (FileNotFoundException fileNotFoundException) {
@@ -67,6 +70,8 @@ public class ConfigProcedure extends BossToolsModElements.ModElement {
 			testconfig = (String) (boss_toolsReadLine);
 			boss_toolsReadLine = boss_toolsReader.readLine();
 			alienhouseconfig = (String) (boss_toolsReadLine);
+			boss_toolsReadLine = boss_toolsReader.readLine();
+			Meteor = (String) (boss_toolsReadLine);
 			boss_toolsReader.close();
 		} catch (FileNotFoundException fileNotFoundException) {
 			fileNotFoundException.printStackTrace();
@@ -79,11 +84,17 @@ public class ConfigProcedure extends BossToolsModElements.ModElement {
 		if ((!(((testconfig)).equals("Alien Spawn = true")))) {
 			BossToolsModVariables.Config = (double) 2;
 		} // logic Alien House
-		if ((((alienhouseconfig)).equals("Alien House = true"))) {
+		if ((((alienhouseconfig)).equals("Alien House Structure = true"))) {
 			BossToolsModVariables.Configalienhouse = (double) 1;
 		}
-		if ((!(((alienhouseconfig)).equals("Alien House = true")))) {
+		if ((!(((alienhouseconfig)).equals("Alien House Structure = true")))) {
 			BossToolsModVariables.Configalienhouse = (double) 2;
+		} // logic Meteor
+		if ((((Meteor)).equals("Meteor Structure = true"))) {
+			BossToolsModVariables.ConfigMeteor = (double) 1;
+		}
+		if ((!(((Meteor)).equals("Meteor Structure = true")))) {
+			BossToolsModVariables.ConfigMeteor = (double) 2;
 		}
 	}
 

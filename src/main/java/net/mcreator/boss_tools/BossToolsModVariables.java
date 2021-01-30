@@ -38,6 +38,7 @@ public class BossToolsModVariables {
 	}
 	public static double Config = 0;
 	public static double Configalienhouse = 0;
+	public static double ConfigMeteor = 0;
 	@CapabilityInject(PlayerVariables.class)
 	public static Capability<PlayerVariables> PLAYER_VARIABLES_CAPABILITY = null;
 	@SubscribeEvent
