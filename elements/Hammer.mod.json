@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "hammernew",
+    "texture": "item_hammer",
     "customModelName": "Tool",
     "name": "Hammer",
     "rarity": "COMMON",

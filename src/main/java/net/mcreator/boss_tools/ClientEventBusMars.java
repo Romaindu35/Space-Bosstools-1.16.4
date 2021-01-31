@@ -58,7 +58,7 @@ public class ClientEventBusMars {
 					@Override
 					// useThickFog
 					public boolean func_230493_a_(int posX, int posY) {
-						return false;
+						return true; //eneable fog
 					}
 
 					@Override
@@ -175,7 +175,7 @@ public class ClientEventBusMars {
 								WorldVertexBufferUploader.draw(bufferbuilder);
 								RenderSystem.disableTexture();
 								// f11 = 1000.0F;// Star Brightness
-								float f10 = 1.0F;// world.getStarBrightness(partialTicks) * f11;
+								float f10 = 0.0F;// world.getStarBrightness(partialTicks) * f11; //1.0F is default
 								// f11
 								if (f10 > 0.0F) {
 									RenderSystem.color4f(f10, f10, f10, f10);
