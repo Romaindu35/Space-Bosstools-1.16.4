@@ -10744,6 +10744,7 @@
       "effect.rocket_paticle_2": "RocketParticle2",
       "block.boss_tools.mercurystone": "Mercury Stone",
       "item.minecraft.splash_potion.effect.rocket_particle_3": "Splash RocketParticle3",
+      "death.attack.oxygen": "%1$s couldn\u0027t breathe anymore",
       "item.minecraft.tipped_arrow.effect.tier_3_space_station_gui_potion_mercury_orbit": "Arrow of Tier3SpaceStationGUIPotionMarsorbit",
       "item.minecraft.potion.effect.tier_3_space_station_gui_potion_overworld_orbit": "Tier3SpaceStationGUIPotionOverworldorbit",
       "biome.boss_tools.orbit_moon_biom": "Orbit Biome",

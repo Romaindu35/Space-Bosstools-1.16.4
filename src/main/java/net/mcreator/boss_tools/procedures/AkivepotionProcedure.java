@@ -96,16 +96,24 @@ public class AkivepotionProcedure extends BossToolsModElements.ModElement {
 																		.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
 																		.equals(new ResourceLocation("boss_tools:orbit_mercury_biom")))))))))) {
 			if (((entity.getPersistentData().getBoolean("SpaceSuitH")) == (false))) {
-				entity.attackEntityFrom(DamageSource.WITHER, (float) 1);
+				if (entity instanceof LivingEntity) {
+					((LivingEntity) entity).attackEntityFrom(new DamageSource("oxygen").setDamageBypassesArmor(), (float) 1);
+				}
 			}
 			if (((entity.getPersistentData().getBoolean("SpaceSuitC")) == (false))) {
-				entity.attackEntityFrom(DamageSource.WITHER, (float) 1);
+				if (entity instanceof LivingEntity) {
+					((LivingEntity) entity).attackEntityFrom(new DamageSource("oxygen").setDamageBypassesArmor(), (float) 1);
+				}
 			}
 			if (((entity.getPersistentData().getBoolean("SpaceSuitL")) == (false))) {
-				entity.attackEntityFrom(DamageSource.WITHER, (float) 1);
+				if (entity instanceof LivingEntity) {
+					((LivingEntity) entity).attackEntityFrom(new DamageSource("oxygen").setDamageBypassesArmor(), (float) 1);
+				}
 			}
 			if (((entity.getPersistentData().getBoolean("SpaceSuitB")) == (false))) {
-				entity.attackEntityFrom(DamageSource.WITHER, (float) 1);
+				if (entity instanceof LivingEntity) {
+					((LivingEntity) entity).attackEntityFrom(new DamageSource("oxygen").setDamageBypassesArmor(), (float) 1);
+				}
 			}
 		}
 		if ((!(new Object() {
