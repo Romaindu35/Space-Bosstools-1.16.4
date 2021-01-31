@@ -15,7 +15,7 @@ import java.util.Map;
 @BossToolsModElements.ModElement.Tag
 public class Fueltank31Procedure extends BossToolsModElements.ModElement {
 	public Fueltank31Procedure(BossToolsModElements instance) {
-		super(instance, 482);
+		super(instance, 480);
 	}
 
 	public static boolean executeProcedure(Map<String, Object> dependencies) {

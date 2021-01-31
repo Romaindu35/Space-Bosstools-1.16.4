@@ -10,31 +10,31 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "Items.IRON_INGOT"
+        "value": "CUSTOM:Ironplate"
       },
       {
-        "value": ""
+        "value": "Items.BUCKET"
       },
       {
-        "value": "Items.IRON_INGOT"
+        "value": "CUSTOM:Ironplate"
       },
       {
-        "value": "Items.IRON_INGOT"
+        "value": "CUSTOM:Ironplate"
       },
       {
-        "value": ""
+        "value": "Items.DYE#11"
       },
       {
-        "value": "Items.IRON_INGOT"
+        "value": "CUSTOM:Ironplate"
       },
       {
-        "value": ""
+        "value": "CUSTOM:Ironplate"
       },
       {
-        "value": "Items.IRON_INGOT"
+        "value": "Items.BUCKET"
       },
       {
-        "value": ""
+        "value": "CUSTOM:Ironplate"
       }
     ],
     "recipeReturnStack": {

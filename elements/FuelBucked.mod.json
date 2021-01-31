@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "feul_bucket",
+    "texture": "item_fuel_bucket",
     "customModelName": "Normal",
     "name": "Fuel Bucket",
     "rarity": "COMMON",

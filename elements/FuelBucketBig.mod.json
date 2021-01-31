@@ -3,9 +3,9 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "bigbucket_fuel",
+    "texture": "item_barrel_fuel",
     "customModelName": "Normal",
-    "name": "Big Fuel Bucket",
+    "name": "Barrel of Fuel",
     "rarity": "COMMON",
     "creativeTab": {
       "value": "CUSTOM:BossTools"

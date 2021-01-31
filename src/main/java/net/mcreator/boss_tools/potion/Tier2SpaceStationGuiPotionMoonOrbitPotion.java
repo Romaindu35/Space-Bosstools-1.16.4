@@ -24,7 +24,7 @@ public class Tier2SpaceStationGuiPotionMoonOrbitPotion extends BossToolsModEleme
 	@ObjectHolder("boss_tools:tier_2_space_station_gui_potion_moon_orbit")
 	public static final Effect potion = null;
 	public Tier2SpaceStationGuiPotionMoonOrbitPotion(BossToolsModElements instance) {
-		super(instance, 415);
+		super(instance, 413);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

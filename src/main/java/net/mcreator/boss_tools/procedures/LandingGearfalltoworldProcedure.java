@@ -45,7 +45,7 @@ import java.util.Collection;
 @BossToolsModElements.ModElement.Tag
 public class LandingGearfalltoworldProcedure extends BossToolsModElements.ModElement {
 	public LandingGearfalltoworldProcedure(BossToolsModElements instance) {
-		super(instance, 399);
+		super(instance, 397);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

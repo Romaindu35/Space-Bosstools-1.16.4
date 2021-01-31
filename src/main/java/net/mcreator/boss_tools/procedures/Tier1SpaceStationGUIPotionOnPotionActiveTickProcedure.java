@@ -25,7 +25,7 @@ import io.netty.buffer.Unpooled;
 @BossToolsModElements.ModElement.Tag
 public class Tier1SpaceStationGUIPotionOnPotionActiveTickProcedure extends BossToolsModElements.ModElement {
 	public Tier1SpaceStationGUIPotionOnPotionActiveTickProcedure(BossToolsModElements instance) {
-		super(instance, 393);
+		super(instance, 391);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

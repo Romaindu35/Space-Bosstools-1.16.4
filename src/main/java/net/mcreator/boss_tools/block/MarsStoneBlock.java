@@ -24,7 +24,7 @@ public class MarsStoneBlock extends BossToolsModElements.ModElement {
 	@ObjectHolder("boss_tools:mars_stone")
 	public static final Block block = null;
 	public MarsStoneBlock(BossToolsModElements instance) {
-		super(instance, 19);
+		super(instance, 21);
 	}
 
 	@Override

@@ -20,7 +20,7 @@ import net.mcreator.boss_tools.BossToolsModElements;
 public class OrbitMarsBiomBiome extends BossToolsModElements.ModElement {
 	public static Biome biome;
 	public OrbitMarsBiomBiome(BossToolsModElements instance) {
-		super(instance, 371);
+		super(instance, 369);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {

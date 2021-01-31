@@ -21,7 +21,7 @@ import java.util.Map;
 @BossToolsModElements.ModElement.Tag
 public class RocketPlaceTier3Procedure extends BossToolsModElements.ModElement {
 	public RocketPlaceTier3Procedure(BossToolsModElements instance) {
-		super(instance, 341);
+		super(instance, 339);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

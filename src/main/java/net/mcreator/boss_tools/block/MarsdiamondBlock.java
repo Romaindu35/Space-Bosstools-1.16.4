@@ -40,7 +40,7 @@ public class MarsdiamondBlock extends BossToolsModElements.ModElement {
 	@ObjectHolder("boss_tools:marsdiamond")
 	public static final Block block = null;
 	public MarsdiamondBlock(BossToolsModElements instance) {
-		super(instance, 133);
+		super(instance, 132);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

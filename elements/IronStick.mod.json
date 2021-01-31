@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "ironstick",
+    "texture": "item_iron_stick",
     "customModelName": "Tool",
     "name": "Iron Stick",
     "rarity": "COMMON",

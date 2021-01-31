@@ -16,7 +16,7 @@ import java.util.Map;
 @BossToolsModElements.ModElement.Tag
 public class RockedBaseOnBlockRightClickedProcedure extends BossToolsModElements.ModElement {
 	public RockedBaseOnBlockRightClickedProcedure(BossToolsModElements instance) {
-		super(instance, 131);
+		super(instance, 130);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

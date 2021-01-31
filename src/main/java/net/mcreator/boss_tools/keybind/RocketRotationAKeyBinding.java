@@ -33,7 +33,7 @@ public class RocketRotationAKeyBinding extends BossToolsModElements.ModElement {
 	private KeyBinding keys;
 	private long lastpress = 0;
 	public RocketRotationAKeyBinding(BossToolsModElements instance) {
-		super(instance, 380);
+		super(instance, 378);
 		elements.addNetworkMessage(KeyBindingPressedMessage.class, KeyBindingPressedMessage::buffer, KeyBindingPressedMessage::new,
 				KeyBindingPressedMessage::handler);
 	}

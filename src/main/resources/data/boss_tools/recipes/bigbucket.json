@@ -2,25 +2,37 @@
   "group": "boss_tools",
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "0 2",
-    "3 5",
-    " 7 "
+    "012",
+    "345",
+    "678"
   ],
   "key": {
     "0": {
-      "item": "minecraft:iron_ingot"
+      "item": "boss_tools:ironplate"
+    },
+    "1": {
+      "item": "minecraft:bucket"
     },
     "2": {
-      "item": "minecraft:iron_ingot"
+      "item": "boss_tools:ironplate"
     },
     "3": {
-      "item": "minecraft:iron_ingot"
+      "item": "boss_tools:ironplate"
+    },
+    "4": {
+      "item": "minecraft:yellow_dye"
     },
     "5": {
-      "item": "minecraft:iron_ingot"
+      "item": "boss_tools:ironplate"
+    },
+    "6": {
+      "item": "boss_tools:ironplate"
     },
     "7": {
-      "item": "minecraft:iron_ingot"
+      "item": "minecraft:bucket"
+    },
+    "8": {
+      "item": "boss_tools:ironplate"
     }
   },
   "result": {

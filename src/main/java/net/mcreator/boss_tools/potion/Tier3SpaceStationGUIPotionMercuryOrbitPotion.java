@@ -24,7 +24,7 @@ public class Tier3SpaceStationGUIPotionMercuryOrbitPotion extends BossToolsModEl
 	@ObjectHolder("boss_tools:tier_3_space_station_gui_potion_mercury_orbit")
 	public static final Effect potion = null;
 	public Tier3SpaceStationGUIPotionMercuryOrbitPotion(BossToolsModElements instance) {
-		super(instance, 445);
+		super(instance, 443);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

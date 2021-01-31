@@ -34,7 +34,7 @@ import com.google.common.collect.ImmutableMap;
 @BossToolsModElements.ModElement.Tag
 public class MeteorStructure extends BossToolsModElements.ModElement {
 	public MeteorStructure(BossToolsModElements instance) {
-		super(instance, 116);
+		super(instance, 115);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

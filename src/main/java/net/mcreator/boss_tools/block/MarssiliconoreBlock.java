@@ -46,7 +46,7 @@ public class MarssiliconoreBlock extends BossToolsModElements.ModElement {
 	@ObjectHolder("boss_tools:marssiliconore")
 	public static final Block block = null;
 	public MarssiliconoreBlock(BossToolsModElements instance) {
-		super(instance, 24);
+		super(instance, 22);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

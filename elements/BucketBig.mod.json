@@ -3,9 +3,9 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "bigbucket",
+    "texture": "item_barrel",
     "customModelName": "Normal",
-    "name": "Big Bucket",
+    "name": "Barrel",
     "rarity": "COMMON",
     "creativeTab": {
       "value": "CUSTOM:BossTools"

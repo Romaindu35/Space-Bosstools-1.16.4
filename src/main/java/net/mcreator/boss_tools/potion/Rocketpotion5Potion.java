@@ -18,7 +18,7 @@ public class Rocketpotion5Potion extends BossToolsModElements.ModElement {
 	@ObjectHolder("boss_tools:rocketpotion_5")
 	public static final Effect potion = null;
 	public Rocketpotion5Potion(BossToolsModElements instance) {
-		super(instance, 104);
+		super(instance, 103);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
