@@ -38,7 +38,7 @@
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:WhiteFlag"
+      "value": "CUSTOM:Flag"
     },
     "name": "whiteflagerezept",
     "namespace": "mod"
