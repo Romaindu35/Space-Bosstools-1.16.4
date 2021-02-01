@@ -33,6 +33,7 @@ public class ClientEventBus {
 	private static final ResourceLocation DIM_RENDER_INFO = new ResourceLocation("boss_tools", "moon");
 	private static final ResourceLocation SUN_TEXTURES = new ResourceLocation("boss_tools", "textures/sky/sun.png");
 	private static final ResourceLocation MOON_PHASES_TEXTURES = new ResourceLocation("boss_tools", "textures/sky/earth.png");
+	private static final ResourceLocation EARTH_LIGHT_TEXTURES = new ResourceLocation("boss_tools", "textures/sky/earth_light.png");
 	private static final ResourceLocation SKY_TEXTURE = new ResourceLocation("boss_tools", "textures/sky/sky.png");
 	@SubscribeEvent(priority = EventPriority.HIGHEST)
 	public static void clientSetup(FMLClientSetupEvent event) {
@@ -162,12 +163,27 @@ public class ClientEventBus {
 							//	bufferbuilder.pos(matrix4f1, f12, -100.0F, -f12).tex(f13, f14).endVertex();
 							//	bufferbuilder.pos(matrix4f1, -f12, -100.0F, -f12).tex(f15, f14).endVertex();
 							//New System
-								bufferbuilder.pos(matrix4f1, -35, -100.0F, 35).tex(0.0F, 0.0F).endVertex();
-								bufferbuilder.pos(matrix4f1, 35, -100.0F, 35).tex(1.0F, 0.0F).endVertex();
-								bufferbuilder.pos(matrix4f1, 35, -100.0F, -35).tex(1.0F, 1.0F).endVertex();
-								bufferbuilder.pos(matrix4f1, -35, -100.0F, -35).tex(0.0F, 1.0F).endVertex();
+							//	bufferbuilder.pos(matrix4f1, -35, -100.0F, 35).tex(0.0F, 0.0F).endVertex();
+							//	bufferbuilder.pos(matrix4f1, 35, -100.0F, 35).tex(1.0F, 0.0F).endVertex();
+							//	bufferbuilder.pos(matrix4f1, 35, -100.0F, -35).tex(1.0F, 1.0F).endVertex();
+							//	bufferbuilder.pos(matrix4f1, -35, -100.0F, -35).tex(0.0F, 1.0F).endVertex();
+							//new Texture
+								bufferbuilder.pos(matrix4f1, -9, -100.0F, 9).tex(0.0F, 0.0F).endVertex();
+								bufferbuilder.pos(matrix4f1, 9, -100.0F, 9).tex(1.0F, 0.0F).endVertex();
+								bufferbuilder.pos(matrix4f1, 9, -100.0F, -9).tex(1.0F, 1.0F).endVertex();
+								bufferbuilder.pos(matrix4f1, -9, -100.0F, -9).tex(0.0F, 1.0F).endVertex();
 								bufferbuilder.finishDrawing();
 								WorldVertexBufferUploader.draw(bufferbuilder);
+								//Earth light
+								mc.getTextureManager().bindTexture(EARTH_LIGHT_TEXTURES);
+								bufferbuilder.begin(7, DefaultVertexFormats.POSITION_TEX);
+								bufferbuilder.pos(matrix4f1, -25, -100.0F, 25).tex(0.0F, 0.0F).endVertex();
+								bufferbuilder.pos(matrix4f1, 25, -100.0F, 25).tex(1.0F, 0.0F).endVertex();
+								bufferbuilder.pos(matrix4f1, 25, -100.0F, -25).tex(1.0F, 1.0F).endVertex();
+								bufferbuilder.pos(matrix4f1, -25, -100.0F, -25).tex(0.0F, 1.0F).endVertex();
+								bufferbuilder.finishDrawing();
+								WorldVertexBufferUploader.draw(bufferbuilder);
+								//Earth Light end
 								RenderSystem.disableTexture();
 								// f11 = 1000.0F;// Star Brightness
 								float f10 = 1.0F;// world.getStarBrightness(partialTicks) * f11;

@@ -49,7 +49,7 @@ public class SpaceArmorItem extends BossToolsModElements.ModElement {
 	@ObjectHolder("boss_tools:space_armor_boots")
 	public static final Item boots = null;
 	public SpaceArmorItem(BossToolsModElements instance) {
-		super(instance, 51);
+		super(instance, 56);
 	}
 
 	@Override
@@ -134,7 +134,7 @@ public class SpaceArmorItem extends BossToolsModElements.ModElement {
 				super.addInformation(itemstack, world, list, flag);
                 list.add(new StringTextComponent("\u00A79Oxygen:\u00A76 " + String.valueOf(itemstack.getOrCreateTag().getDouble("Energy")) + "\u00A78 | \u00A7c24000.0"));
 			}
-
+			
 			@Override
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
 				return "boss_tools:textures/models/armor/spacesuitmode__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";

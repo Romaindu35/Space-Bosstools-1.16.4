@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "enginetexture",
+    "texture": "engine_diamond",
     "customModelName": "Normal",
     "name": "Diamond Engine",
     "rarity": "COMMON",
