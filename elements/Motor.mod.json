@@ -3,9 +3,9 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "tank",
+    "texture": "tank_iron",
     "customModelName": "Normal",
-    "name": "Tier 1 Tank",
+    "name": "Iron Tank",
     "rarity": "COMMON",
     "creativeTab": {
       "value": "CUSTOM:BossTools"

@@ -3,7 +3,6 @@
   "textures": {
     "all": "boss_tools:blocks/launchpad",
     "particle": "boss_tools:blocks/launchpad",
-    "1": "boss_tools:blocks/launchpad",
-    "missing": "boss_tools:blocks/launchpad"
+    "1": "boss_tools:blocks/launchpad"
   }
 }

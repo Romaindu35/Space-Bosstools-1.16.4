@@ -40,7 +40,7 @@ import java.util.Map;
 @BossToolsModElements.ModElement.Tag
 public class WorkbenchUpdateTickProcedure extends BossToolsModElements.ModElement {
 	public WorkbenchUpdateTickProcedure(BossToolsModElements instance) {
-		super(instance, 177);
+		super(instance, 171);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

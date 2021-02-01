@@ -78,7 +78,7 @@ public class BlastingFurnaceBlock extends BossToolsModElements.ModElement {
 	@ObjectHolder("boss_tools:blasting_furnace")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public BlastingFurnaceBlock(BossToolsModElements instance) {
-		super(instance, 50);
+		super(instance, 54);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 

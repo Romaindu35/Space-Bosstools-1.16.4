@@ -30,7 +30,7 @@ import java.util.Collection;
 @BossToolsModElements.ModElement.Tag
 public class RocketOnEntityTickTier3Procedure extends BossToolsModElements.ModElement {
 	public RocketOnEntityTickTier3Procedure(BossToolsModElements instance) {
-		super(instance, 340);
+		super(instance, 330);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

@@ -29,6 +29,7 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
+import net.mcreator.boss_tools.itemgroup.BossToolsItemGroup;
 import net.mcreator.boss_tools.BossToolsModElements;
 
 import java.util.Random;
@@ -40,14 +41,14 @@ public class MarsdiamondBlock extends BossToolsModElements.ModElement {
 	@ObjectHolder("boss_tools:marsdiamond")
 	public static final Block block = null;
 	public MarsdiamondBlock(BossToolsModElements instance) {
-		super(instance, 132);
+		super(instance, 26);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
-		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(null)).setRegistryName(block.getRegistryName()));
+		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(BossToolsItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {

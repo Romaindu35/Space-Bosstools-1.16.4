@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "desh_ingot",
+    "texture": "item_desh",
     "customModelName": "Normal",
     "name": "Desh Ingot",
     "rarity": "COMMON",

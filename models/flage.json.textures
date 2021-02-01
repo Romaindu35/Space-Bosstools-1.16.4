@@ -2,10 +2,8 @@
   "mappings": {
     "default": {
       "map": {
-        "0": "flag",
-        "1": "blue_wool",
-        "2": "flag",
-        "missing": ""
+        "0": "flag_white",
+        "missing": "flag_white"
       },
       "name": "default"
     }

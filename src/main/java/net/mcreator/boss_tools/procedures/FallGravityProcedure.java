@@ -34,7 +34,7 @@ import java.util.Comparator;
 @BossToolsModElements.ModElement.Tag
 public class FallGravityProcedure extends BossToolsModElements.ModElement {
 	public FallGravityProcedure(BossToolsModElements instance) {
-		super(instance, 496);
+		super(instance, 486);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
@@ -146,7 +146,7 @@ public class FallGravityProcedure extends BossToolsModElements.ModElement {
 										if ((!(entityiterator instanceof RocketTier3Entity.CustomEntity))) {
 											if (entityiterator instanceof LivingEntity)
 												((LivingEntity) entityiterator).addPotionEffect(
-														new EffectInstance(Effects.SLOW_FALLING, (int) 99999, (int) 1, (false), (false)));
+														new EffectInstance(Effects.SLOW_FALLING, (int) 120, (int) 1, (false), (false)));
 										}
 									}
 								}

@@ -3,9 +3,9 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "tank",
+    "texture": "tank_diamond",
     "customModelName": "Normal",
-    "name": "Tier 3 Tank",
+    "name": "Diamond Tank",
     "rarity": "COMMON",
     "creativeTab": {
       "value": "CUSTOM:BossTools"

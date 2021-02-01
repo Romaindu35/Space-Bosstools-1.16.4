@@ -39,7 +39,7 @@ public class MercuryIronoreBlock extends BossToolsModElements.ModElement {
 	@ObjectHolder("boss_tools:mercury_ironore")
 	public static final Block block = null;
 	public MercuryIronoreBlock(BossToolsModElements instance) {
-		super(instance, 349);
+		super(instance, 339);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

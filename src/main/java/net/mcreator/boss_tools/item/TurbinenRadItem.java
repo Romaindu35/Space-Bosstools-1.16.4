@@ -16,7 +16,7 @@ public class TurbinenRadItem extends BossToolsModElements.ModElement {
 	@ObjectHolder("boss_tools:turbinen_rad")
 	public static final Item block = null;
 	public TurbinenRadItem(BossToolsModElements instance) {
-		super(instance, 29);
+		super(instance, 33);
 	}
 
 	@Override

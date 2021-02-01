@@ -35,7 +35,7 @@ import com.google.common.collect.ImmutableMap;
 @BossToolsModElements.ModElement.Tag
 public class AlienVillageStructure extends BossToolsModElements.ModElement {
 	public AlienVillageStructure(BossToolsModElements instance) {
-		super(instance, 84);
+		super(instance, 83);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

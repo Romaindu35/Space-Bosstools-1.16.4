@@ -26,18 +26,18 @@
     "Mx": 1.0,
     "My": 1.0,
     "Mz": 1.0,
-    "name": "Iron Ore",
+    "name": "Mars Iron Ore",
     "specialInfo": [],
     "hardness": 1.0,
     "resistance": 10.0,
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
-      "value": "No creative tab entry"
+      "value": "CUSTOM:BossTools"
     },
     "destroyTool": "pickaxe",
     "customDrop": {
-      "value": "Blocks.IRON_ORE"
+      "value": ""
     },
     "dropAmount": 1,
     "useLootTableForDrops": false,

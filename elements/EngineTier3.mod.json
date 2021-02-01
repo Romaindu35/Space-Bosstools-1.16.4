@@ -5,7 +5,7 @@
     "renderType": 0,
     "texture": "enginetexture",
     "customModelName": "Normal",
-    "name": "Tier 3 Engine",
+    "name": "Diamond Engine",
     "rarity": "COMMON",
     "creativeTab": {
       "value": "CUSTOM:BossTools"
@@ -15,6 +15,9 @@
     "useDuration": 0,
     "toolType": 1.0,
     "damageCount": 0,
+    "recipeRemainder": {
+      "value": ""
+    },
     "destroyAnyBlock": false,
     "immuneToFire": false,
     "stayInGridWhenCrafting": false,

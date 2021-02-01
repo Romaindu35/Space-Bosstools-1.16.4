@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "compressedtin",
+    "texture": "compressed_desh",
     "customModelName": "Normal",
     "name": "Compressed Desh",
     "rarity": "COMMON",

@@ -36,7 +36,7 @@ import java.util.Map;
 @BossToolsModElements.ModElement.Tag
 public class FuelRefineryTickProcedure extends BossToolsModElements.ModElement {
 	public FuelRefineryTickProcedure(BossToolsModElements instance) {
-		super(instance, 448);
+		super(instance, 438);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

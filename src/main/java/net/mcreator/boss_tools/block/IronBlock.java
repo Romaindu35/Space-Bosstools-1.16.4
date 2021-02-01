@@ -25,10 +25,10 @@ import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
-import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
+import net.mcreator.boss_tools.itemgroup.BossToolsItemGroup;
 import net.mcreator.boss_tools.BossToolsModElements;
 
 import java.util.Random;
@@ -40,14 +40,14 @@ public class IronBlock extends BossToolsModElements.ModElement {
 	@ObjectHolder("boss_tools:iron")
 	public static final Block block = null;
 	public IronBlock(BossToolsModElements instance) {
-		super(instance, 133);
+		super(instance, 24);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
-		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(null)).setRegistryName(block.getRegistryName()));
+		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(BossToolsItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
@@ -61,7 +61,7 @@ public class IronBlock extends BossToolsModElements.ModElement {
 			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
-			return Collections.singletonList(new ItemStack(Blocks.IRON_ORE, (int) (1)));
+			return Collections.singletonList(new ItemStack(this, 1));
 		}
 	}
 	@SubscribeEvent

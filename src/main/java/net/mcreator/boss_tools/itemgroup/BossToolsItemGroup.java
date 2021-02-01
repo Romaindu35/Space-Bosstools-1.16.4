@@ -13,7 +13,7 @@ import net.mcreator.boss_tools.BossToolsModElements;
 @BossToolsModElements.ModElement.Tag
 public class BossToolsItemGroup extends BossToolsModElements.ModElement {
 	public BossToolsItemGroup(BossToolsModElements instance) {
-		super(instance, 131);
+		super(instance, 128);
 	}
 
 	@Override

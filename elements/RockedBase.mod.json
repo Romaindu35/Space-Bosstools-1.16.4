@@ -20,12 +20,12 @@
     "hasTransparency": true,
     "connectedSides": false,
     "transparencyType": "SOLID",
-    "mx": -1.0,
+    "mx": 0.0,
     "my": 0.0,
-    "mz": -1.0,
-    "Mx": 2.0,
-    "My": 0.30000000000000004,
-    "Mz": 2.0,
+    "mz": 0.0,
+    "Mx": 1.0,
+    "My": 0.125,
+    "Mz": 1.0,
     "name": "Rocket Launch Pad",
     "specialInfo": [],
     "hardness": 1.0,
@@ -48,7 +48,7 @@
     "material": {
       "value": "ROCK"
     },
-    "tickRate": 10,
+    "tickRate": 1,
     "tickRandomly": false,
     "isReplaceable": false,
     "colorOnMap": "DEFAULT",
@@ -93,6 +93,9 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onTickUpdate": {
+      "name": "RocketBaseOnBlockRightClicked"
+    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [],

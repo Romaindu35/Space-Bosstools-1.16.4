@@ -21,7 +21,7 @@ import net.minecraft.command.CommandSource;
 import net.minecraft.block.Blocks;
 
 import net.mcreator.boss_tools.item.Tier3RocketItemItem;
-import net.mcreator.boss_tools.block.RockedBaseBlock;
+import net.mcreator.boss_tools.block.LaunchpadbaseBlock;
 import net.mcreator.boss_tools.BossToolsModElements;
 import net.mcreator.boss_tools.BossToolsMod;
 
@@ -30,7 +30,7 @@ import java.util.Map;
 @BossToolsModElements.ModElement.Tag
 public class Tier3RocketItemRightClickedOnBlockProcedure extends BossToolsModElements.ModElement {
 	public Tier3RocketItemRightClickedOnBlockProcedure(BossToolsModElements instance) {
-		super(instance, 376);
+		super(instance, 366);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -64,7 +64,7 @@ public class Tier3RocketItemRightClickedOnBlockProcedure extends BossToolsModEle
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == RockedBaseBlock.block.getDefaultState().getBlock())) {
+		if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == LaunchpadbaseBlock.block.getDefaultState().getBlock())) {
 			if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 					.getItem() == new ItemStack(Tier3RocketItemItem.block, (int) (1)).getItem())) {
 				if (entity instanceof LivingEntity) {

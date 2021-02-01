@@ -3,9 +3,9 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "tank",
+    "texture": "tank_gold",
     "customModelName": "Normal",
-    "name": "Tier 2 Tank",
+    "name": "Gold Tank",
     "rarity": "COMMON",
     "creativeTab": {
       "value": "CUSTOM:BossTools"

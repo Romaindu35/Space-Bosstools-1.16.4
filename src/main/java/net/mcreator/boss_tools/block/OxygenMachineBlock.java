@@ -84,7 +84,7 @@ public class OxygenMachineBlock extends BossToolsModElements.ModElement {
 	@ObjectHolder("boss_tools:oxygen_machine")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public OxygenMachineBlock(BossToolsModElements instance) {
-		super(instance, 45);
+		super(instance, 49);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 

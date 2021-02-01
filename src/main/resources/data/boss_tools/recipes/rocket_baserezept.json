@@ -8,7 +8,7 @@
   ],
   "key": {
     "0": {
-      "item": "minecraft:redstone"
+      "item": "boss_tools:steahl"
     },
     "1": {
       "item": "boss_tools:ironplate"
@@ -17,16 +17,16 @@
       "item": "boss_tools:steahl"
     },
     "3": {
-      "item": "minecraft:iron_block"
+      "item": "boss_tools:ironplate"
     },
     "4": {
-      "item": "boss_tools:battery"
+      "item": "minecraft:iron_ingot"
     },
     "5": {
       "item": "boss_tools:ironplate"
     },
     "6": {
-      "item": "minecraft:redstone"
+      "item": "boss_tools:steahl"
     },
     "7": {
       "item": "boss_tools:ironplate"
@@ -37,6 +37,6 @@
   },
   "result": {
     "item": "boss_tools:rocked_base",
-    "count": 1
+    "count": 3
   }
 }
