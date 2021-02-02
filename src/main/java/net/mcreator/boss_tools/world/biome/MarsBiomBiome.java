@@ -31,8 +31,8 @@ public class MarsBiomBiome extends BossToolsModElements.ModElement {
 		@SubscribeEvent
 		public void registerBiomes(RegistryEvent.Register<Biome> event) {
 			if (biome == null) {
-				BiomeAmbience effects = new BiomeAmbience.Builder().setFogColor(-3508420).setWaterColor(4159204).setWaterFogColor(329011)
-						.withSkyColor(-3508420).withFoliageColor(10387789).withGrassColor(9470285)
+				BiomeAmbience effects = new BiomeAmbience.Builder().setFogColor(-16777216).setWaterColor(4159204).setWaterFogColor(329011)
+						.withSkyColor(-16777216).withFoliageColor(10387789).withGrassColor(9470285)
 						.setParticle(new ParticleEffectAmbience(ParticleTypes.CRIMSON_SPORE, 0.014f)).build();
 				BiomeGenerationSettings.Builder biomeGenerationSettings = new BiomeGenerationSettings.Builder()
 						.withSurfaceBuilder(SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(MarssandBlock.block.getDefaultState(),

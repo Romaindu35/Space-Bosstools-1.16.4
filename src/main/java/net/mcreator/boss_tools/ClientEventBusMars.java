@@ -180,10 +180,10 @@ public class ClientEventBusMars {
 								//bufferbuilder.pos(matrix4f1, 10, -100.0F, -10).tex(1.0F, 1.0F).endVertex();
 								//bufferbuilder.pos(matrix4f1, -10, -100.0F, -10).tex(0.0F, 1.0F).endVertex();
 								//New System
-								bufferbuilder.pos(matrix4f1, -4, -100.0F, 4).tex(0.0F, 0.0F).endVertex();
-								bufferbuilder.pos(matrix4f1, 4, -100.0F, 4).tex(1.0F, 0.0F).endVertex();
-								bufferbuilder.pos(matrix4f1, 4, -100.0F, -4).tex(1.0F, 1.0F).endVertex();
-								bufferbuilder.pos(matrix4f1, -4, -100.0F, -4).tex(0.0F, 1.0F).endVertex();
+								bufferbuilder.pos(matrix4f1, -3, -100.0F, 3).tex(0.0F, 0.0F).endVertex();
+								bufferbuilder.pos(matrix4f1, 3, -100.0F, 3).tex(1.0F, 0.0F).endVertex();
+								bufferbuilder.pos(matrix4f1, 3, -100.0F, -3).tex(1.0F, 1.0F).endVertex();
+								bufferbuilder.pos(matrix4f1, -3, -100.0F, -3).tex(0.0F, 1.0F).endVertex();
 								bufferbuilder.finishDrawing();
 								WorldVertexBufferUploader.draw(bufferbuilder);
 								
@@ -242,15 +242,15 @@ public class ClientEventBusMars {
 								//bufferbuilder.pos(matrix4f1, 10, -100.0F, -10).tex(1.0F, 1.0F).endVertex();
 								//bufferbuilder.pos(matrix4f1, -10, -100.0F, -10).tex(0.0F, 1.0F).endVertex();
 								//New System
-								bufferbuilder.pos(matrix4f1, -6, -100.0F, 6).tex(0.0F, 0.0F).endVertex();
-								bufferbuilder.pos(matrix4f1, 6, -100.0F, 6).tex(1.0F, 0.0F).endVertex();
-								bufferbuilder.pos(matrix4f1, 6, -100.0F, -6).tex(1.0F, 1.0F).endVertex();
-								bufferbuilder.pos(matrix4f1, -6, -100.0F, -6).tex(0.0F, 1.0F).endVertex();
+								bufferbuilder.pos(matrix4f1, -4, -100.0F, 4).tex(0.0F, 0.0F).endVertex();
+								bufferbuilder.pos(matrix4f1, 4, -100.0F, 4).tex(1.0F, 0.0F).endVertex();
+								bufferbuilder.pos(matrix4f1, 4, -100.0F, -4).tex(1.0F, 1.0F).endVertex();
+								bufferbuilder.pos(matrix4f1, -4, -100.0F, -4).tex(0.0F, 1.0F).endVertex();
 								bufferbuilder.finishDrawing();
 								WorldVertexBufferUploader.draw(bufferbuilder);
 								RenderSystem.disableTexture();
 								// f11 = 1000.0F;// Star Brightness
-								float f10 = 0.0F;// world.getStarBrightness(partialTicks) * f11; //1.0F is default
+								float f10 = 1.0F;// world.getStarBrightness(partialTicks) * f11; //1.0F is default
 								// f11
 								if (f10 > 0.0F) {
 									RenderSystem.color4f(f10, f10, f10, f10);
