@@ -34,6 +34,7 @@ public class ClientEventBusMars {
 	private static final ResourceLocation SUN_TEXTURES = new ResourceLocation("boss_tools", "textures/sky/sun.png");
 	private static final ResourceLocation PHOBOS = new ResourceLocation("boss_tools", "textures/sky/phobos.png");
 	private static final ResourceLocation DEIMOS = new ResourceLocation("boss_tools", "textures/sky/deimos.png");
+	private static final ResourceLocation EARTH = new ResourceLocation("boss_tools", "textures/sky/earth.png");
 	private static final ResourceLocation SKY_TEXTURE = new ResourceLocation("boss_tools", "textures/sky/sky.png");
 	@SubscribeEvent(priority = EventPriority.HIGHEST)
 	public static void clientSetup(FMLClientSetupEvent event) {
@@ -181,13 +182,13 @@ public class ClientEventBusMars {
 								//New System
 								bufferbuilder.pos(matrix4f1, -4, -100.0F, 4).tex(0.0F, 0.0F).endVertex();
 								bufferbuilder.pos(matrix4f1, 4, -100.0F, 4).tex(1.0F, 0.0F).endVertex();
-								bufferbuilder.pos(matrix4f1, 4, -100.0F, -4).tex(1.0F, 0.0F).endVertex();
+								bufferbuilder.pos(matrix4f1, 4, -100.0F, -4).tex(1.0F, 1.0F).endVertex();
 								bufferbuilder.pos(matrix4f1, -4, -100.0F, -4).tex(0.0F, 1.0F).endVertex();
 								bufferbuilder.finishDrawing();
 								WorldVertexBufferUploader.draw(bufferbuilder);
 								
-								//New Planet DEIMOS
-								mc.getTextureManager().bindTexture(DEIMOS);
+								//New Planet EARTH
+								mc.getTextureManager().bindTexture(EARTH);
 								//moon Rotation
 								matrixStack.rotate(Vector3f.YP.rotationDegrees(-130.0F)); // Moon Rotation
 								//Moon Rotation stop
@@ -210,10 +211,41 @@ public class ClientEventBusMars {
 								//bufferbuilder.pos(matrix4f1, 10, -100.0F, -10).tex(1.0F, 1.0F).endVertex();
 								//bufferbuilder.pos(matrix4f1, -10, -100.0F, -10).tex(0.0F, 1.0F).endVertex();
 								//New System
-								bufferbuilder.pos(matrix4f1, -3, -100.0F, 3).tex(0.0F, 0.0F).endVertex();
-								bufferbuilder.pos(matrix4f1, 3, -100.0F, 3).tex(1.0F, 0.0F).endVertex();
-								bufferbuilder.pos(matrix4f1, 3, -100.0F, -3).tex(1.0F, 0.0F).endVertex();
-								bufferbuilder.pos(matrix4f1, -3, -100.0F, -3).tex(0.0F, 1.0F).endVertex();
+								bufferbuilder.pos(matrix4f1, -1, -100.0F, 1).tex(0.0F, 0.0F).endVertex();
+								bufferbuilder.pos(matrix4f1, 1, -100.0F, 1).tex(1.0F, 0.0F).endVertex();
+								bufferbuilder.pos(matrix4f1, 1, -100.0F, -1).tex(1.0F, 1.0F).endVertex();
+								bufferbuilder.pos(matrix4f1, -1, -100.0F, -1).tex(0.0F, 1.0F).endVertex();
+								bufferbuilder.finishDrawing();
+								WorldVertexBufferUploader.draw(bufferbuilder);
+
+								//New Planet DEIMOS
+								mc.getTextureManager().bindTexture(DEIMOS);
+								//moon Rotation
+								matrixStack.rotate(Vector3f.YP.rotationDegrees(-110.0F)); // Moon Rotation
+								//Moon Rotation stop
+								//moon on a other side
+								matrixStack.rotate(Vector3f.ZP.rotationDegrees(90.0F));
+								//moon on a other side stop
+								bufferbuilder.begin(7, DefaultVertexFormats.POSITION_TEX);
+							//	bufferbuilder.pos(matrix4f1, -f12, -100.0F, f12).tex(f15, f16).endVertex();
+							//	bufferbuilder.pos(matrix4f1, f12, -100.0F, f12).tex(f13, f16).endVertex();
+							//	bufferbuilder.pos(matrix4f1, f12, -100.0F, -f12).tex(f13, f14).endVertex();
+							//	bufferbuilder.pos(matrix4f1, -f12, -100.0F, -f12).tex(f15, f14).endVertex();
+							//New System
+								//bufferbuilder.pos(matrix4f1, -f12, -100.0F, f12).tex(0.0F, 0.0F).endVertex();
+								//bufferbuilder.pos(matrix4f1, f12, -100.0F, f12).tex(1.0F, 0.0F).endVertex();
+								//bufferbuilder.pos(matrix4f1, f12, -100.0F, -f12).tex(1.0F, 1.0F).endVertex();
+								//bufferbuilder.pos(matrix4f1, -f12, -100.0F, -f12).tex(0.0F, 1.0F).endVertex();
+								//New System
+								//bufferbuilder.pos(matrix4f1, -10, -100.0F, 10).tex(0.0F, 0.0F).endVertex();
+								//bufferbuilder.pos(matrix4f1, 10, -100.0F, 10).tex(1.0F, 0.0F).endVertex();
+								//bufferbuilder.pos(matrix4f1, 10, -100.0F, -10).tex(1.0F, 1.0F).endVertex();
+								//bufferbuilder.pos(matrix4f1, -10, -100.0F, -10).tex(0.0F, 1.0F).endVertex();
+								//New System
+								bufferbuilder.pos(matrix4f1, -6, -100.0F, 6).tex(0.0F, 0.0F).endVertex();
+								bufferbuilder.pos(matrix4f1, 6, -100.0F, 6).tex(1.0F, 0.0F).endVertex();
+								bufferbuilder.pos(matrix4f1, 6, -100.0F, -6).tex(1.0F, 1.0F).endVertex();
+								bufferbuilder.pos(matrix4f1, -6, -100.0F, -6).tex(0.0F, 1.0F).endVertex();
 								bufferbuilder.finishDrawing();
 								WorldVertexBufferUploader.draw(bufferbuilder);
 								RenderSystem.disableTexture();
