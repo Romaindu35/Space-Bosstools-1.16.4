@@ -10948,11 +10948,13 @@
     "modid": "boss_tools",
     "modName": "boss tools",
     "version": "4.1",
+    "description": "Fly to Other Planets!",
     "author": "MrScautHD",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/space-bosstools",
     "license": "Not specified",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
+    "modPicture": "space_bosstools_banner",
     "requiredMods": [
       "obfuscate"
     ],

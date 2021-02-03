@@ -8,7 +8,11 @@ version="4.1"
 displayName="boss tools"
 credits="Made by MrScautHD"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/space-bosstools"
+logoFile="logo.png"
 authors="MrScautHD"
+description='''
+Fly to Other Planets!
+'''
 
 [[dependencies.boss_tools]]
     modId="minecraft"
