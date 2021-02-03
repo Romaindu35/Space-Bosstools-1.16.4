@@ -62,7 +62,7 @@ public class Tier1MoonSpaceStationCreateProcedure extends BossToolsModElements.M
 				((World) world).getServer().getCommandManager().handleCommand(
 						new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 								new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-						"/effect clear @p boss_tools:rocketpotion_7");
+						"/effect clear @p boss_tools:tier_1_space_station_gui_potion");
 			}
 			if (world instanceof ServerWorld) {
 				((World) world).getServer().getCommandManager().handleCommand(

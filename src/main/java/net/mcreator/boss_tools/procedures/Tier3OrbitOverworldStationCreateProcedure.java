@@ -62,7 +62,7 @@ public class Tier3OrbitOverworldStationCreateProcedure extends BossToolsModEleme
 				((World) world).getServer().getCommandManager().handleCommand(
 						new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 								new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-						"/effect clear @p boss_tools:rocket_potion_9");
+						"/effect clear @p boss_tools:tier_3_space_station_gui_potion_overworld_orbit");
 			}
 			if (world instanceof ServerWorld) {
 				((World) world).getServer().getCommandManager().handleCommand(

@@ -62,7 +62,7 @@ public class Tier2OverworldOrbitMarsStationCreateProcedure extends BossToolsModE
 				((World) world).getServer().getCommandManager().handleCommand(
 						new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 								new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-						"/effect clear @p boss_tools:rocket_potion_8");
+						"/effect clear @p boss_tools:tier_2_space_station_gui_potion_mars_orbit");
 			}
 			if (world instanceof ServerWorld) {
 				((World) world).getServer().getCommandManager().handleCommand(
