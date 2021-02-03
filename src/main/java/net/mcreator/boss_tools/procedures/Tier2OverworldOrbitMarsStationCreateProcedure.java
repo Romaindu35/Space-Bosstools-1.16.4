@@ -68,7 +68,7 @@ public class Tier2OverworldOrbitMarsStationCreateProcedure extends BossToolsModE
 				((World) world).getServer().getCommandManager().handleCommand(
 						new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 								new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-						"/effect clear @p minecraft:levitation");
+						"/effect clear @p boss_tools:player_movement");
 			}
 			if (world instanceof ServerWorld) {
 				((World) world).getServer().getCommandManager()

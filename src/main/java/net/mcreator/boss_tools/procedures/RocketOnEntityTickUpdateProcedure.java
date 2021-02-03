@@ -84,7 +84,7 @@ public class RocketOnEntityTickUpdateProcedure extends BossToolsModElements.ModE
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-							"/effect give @p minecraft:levitation 999999 1 true");
+							"/effect give @p boss_tools:player_movement 999999 1 true");
 				}
 				if (!entity.world.isRemote())
 					entity.remove();
