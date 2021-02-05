@@ -18,6 +18,7 @@ import net.minecraft.entity.Entity;
 
 import net.mcreator.boss_tools.potion.BulletGeneratorPotion;
 import net.mcreator.boss_tools.item.SpaceArmorItem;
+import net.mcreator.boss_tools.BossToolsModVariables;
 import net.mcreator.boss_tools.BossToolsModElements;
 import net.mcreator.boss_tools.BossToolsMod;
 
@@ -94,25 +95,27 @@ public class AkivepotionProcedure extends BossToolsModElements.ModElement {
 																.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
 																&& world.func_241828_r().getRegistry(Registry.BIOME_KEY)
 																		.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
-																		.equals(new ResourceLocation("boss_tools:orbit_mercury_biom")))))))))) {
-			if (((entity.getPersistentData().getBoolean("SpaceSuitH")) == (false))) {
-				if (entity instanceof LivingEntity) {
-					((LivingEntity) entity).attackEntityFrom(new DamageSource("oxygen").setDamageBypassesArmor(), (float) 1);
+																		.equals(new ResourceLocation("boss_tools:orbit_mercury_biom")))))))))) {// Config
+			if (((BossToolsModVariables.oxygen_system) == 1)) {
+				if (((entity.getPersistentData().getBoolean("SpaceSuitH")) == (false))) {
+					if (entity instanceof LivingEntity) {
+						((LivingEntity) entity).attackEntityFrom(new DamageSource("oxygen").setDamageBypassesArmor(), (float) 1);
+					}
 				}
-			}
-			if (((entity.getPersistentData().getBoolean("SpaceSuitC")) == (false))) {
-				if (entity instanceof LivingEntity) {
-					((LivingEntity) entity).attackEntityFrom(new DamageSource("oxygen").setDamageBypassesArmor(), (float) 1);
+				if (((entity.getPersistentData().getBoolean("SpaceSuitC")) == (false))) {
+					if (entity instanceof LivingEntity) {
+						((LivingEntity) entity).attackEntityFrom(new DamageSource("oxygen").setDamageBypassesArmor(), (float) 1);
+					}
 				}
-			}
-			if (((entity.getPersistentData().getBoolean("SpaceSuitL")) == (false))) {
-				if (entity instanceof LivingEntity) {
-					((LivingEntity) entity).attackEntityFrom(new DamageSource("oxygen").setDamageBypassesArmor(), (float) 1);
+				if (((entity.getPersistentData().getBoolean("SpaceSuitL")) == (false))) {
+					if (entity instanceof LivingEntity) {
+						((LivingEntity) entity).attackEntityFrom(new DamageSource("oxygen").setDamageBypassesArmor(), (float) 1);
+					}
 				}
-			}
-			if (((entity.getPersistentData().getBoolean("SpaceSuitB")) == (false))) {
-				if (entity instanceof LivingEntity) {
-					((LivingEntity) entity).attackEntityFrom(new DamageSource("oxygen").setDamageBypassesArmor(), (float) 1);
+				if (((entity.getPersistentData().getBoolean("SpaceSuitB")) == (false))) {
+					if (entity instanceof LivingEntity) {
+						((LivingEntity) entity).attackEntityFrom(new DamageSource("oxygen").setDamageBypassesArmor(), (float) 1);
+					}
 				}
 			}
 		}

@@ -30,6 +30,7 @@ public class ConfigProcedure extends BossToolsModElements.ModElement {
 		String titleconfig = "";
 		String alienhouseconfig = "";
 		String Meteor = "";
+		String oxygen = "";
 		File boss_tools = new File(((System.getProperty("user.dir")) + "" + ("//config/")) + "/" + "Space-Bosstools-Config.toml");
 		try {
 			final BufferedReader boss_toolsReader = new BufferedReader(new FileReader(boss_tools));
@@ -53,6 +54,8 @@ public class ConfigProcedure extends BossToolsModElements.ModElement {
 				boss_toolsbw.write("Alien House Structure = true");
 				boss_toolsbw.newLine();
 				boss_toolsbw.write("Meteor Structure = true");
+				boss_toolsbw.newLine();
+				boss_toolsbw.write("Oxygen System = true");
 				boss_toolsbw.close();
 				boss_toolswriter.close();
 			} catch (FileNotFoundException fileNotFoundException) {
@@ -72,6 +75,8 @@ public class ConfigProcedure extends BossToolsModElements.ModElement {
 			alienhouseconfig = (String) (boss_toolsReadLine);
 			boss_toolsReadLine = boss_toolsReader.readLine();
 			Meteor = (String) (boss_toolsReadLine);
+			boss_toolsReadLine = boss_toolsReader.readLine();
+			oxygen = (String) (boss_toolsReadLine);
 			boss_toolsReader.close();
 		} catch (FileNotFoundException fileNotFoundException) {
 			fileNotFoundException.printStackTrace();
@@ -95,6 +100,12 @@ public class ConfigProcedure extends BossToolsModElements.ModElement {
 		}
 		if ((!(((Meteor)).equals("Meteor Structure = true")))) {
 			BossToolsModVariables.ConfigMeteor = (double) 2;
+		} // logic oxygen System
+		if ((((oxygen)).equals("Oxygen System = true"))) {
+			BossToolsModVariables.oxygen_system = (double) 1;
+		}
+		if ((!(((oxygen)).equals("Oxygen System = true")))) {
+			BossToolsModVariables.oxygen_system = (double) 2;
 		}
 	}
 
