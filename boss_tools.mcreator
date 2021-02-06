@@ -10641,6 +10641,15 @@
           }
         ]
       }
+    },
+    {
+      "name": "Moonoreiron",
+      "type": "block",
+      "sortid": 530,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "moonoreiron"
     }
   ],
   "variable_elements": [
@@ -10847,6 +10856,7 @@
       "effect.tier_1_space_station_gui_potion_moon": "Tier1SpaceStationGUIPotionMoon",
       "item.boss_tools.turbinen_gehause": "Engine Casing",
       "item.minecraft.lingering_potion.effect.tier_2_space_station_gui_potion_overworld_orbit": "Lingering Tier2SpaceStationGUIPotionOverworldorbit",
+      "block.boss_tools.moonoreiron": "Moon Iron Ore",
       "item.minecraft.tipped_arrow.effect.rocket_paticle": "Arrow of RocketParticle",
       "item.minecraft.tipped_arrow.effect.rocket_potion_9": "Arrow of Rocketpotion 9",
       "item.minecraft.tipped_arrow.effect.rocket_potion_8": "Arrow of Rocketpotion 8",
@@ -10950,6 +10960,10 @@
       "item.boss_tools.rocket_tier_3_spawn_egg": "Rocket Spawn Egg"
     }
   },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
   "workspaceSettings": {
     "modid": "boss_tools",
     "modName": "boss tools",
@@ -10974,5 +10988,5 @@
     "modElementsPackage": "net.mcreator.boss_tools",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202100104117
+  "mcreatorVersion": 202100105517
 }

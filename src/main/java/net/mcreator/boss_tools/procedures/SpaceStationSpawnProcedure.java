@@ -55,7 +55,7 @@ public class SpaceStationSpawnProcedure extends BossToolsModElements.ModElement 
 		IWorld world = (IWorld) dependencies.get("world");
 		if (((entity.getPersistentData().getDouble("SpaceStation")) == 1)) {
 			entity.getPersistentData().putDouble("SpaceStation", 0);
-			if (world instanceof World && !world.isRemote()) {
+			if (world instanceof ServerWorld) {
 				Template template = ((ServerWorld) world).getStructureTemplateManager()
 						.getTemplateDefaulted(new ResourceLocation("boss_tools", "spacestation1"));
 				if (template != null) {

@@ -2,36 +2,36 @@
   "_fv": 15,
   "_type": "block",
   "definition": {
-    "texture": "model",
-    "textureTop": "",
-    "textureLeft": "",
-    "textureFront": "",
-    "textureRight": "",
-    "textureBack": "",
-    "renderType": 2,
-    "customModelName": "nasaworkbench:default",
-    "rotationMode": 1,
+    "texture": "moon_ore_iron",
+    "textureTop": "moon_ore_iron",
+    "textureLeft": "moon_ore_iron",
+    "textureFront": "moon_ore_iron",
+    "textureRight": "moon_ore_iron",
+    "textureBack": "moon_ore_iron",
+    "renderType": 10,
+    "customModelName": "Normal",
+    "rotationMode": 0,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
     "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,
-    "hasTransparency": true,
+    "hasTransparency": false,
     "connectedSides": false,
     "transparencyType": "SOLID",
     "mx": 0.0,
     "my": 0.0,
     "mz": 0.0,
     "Mx": 1.0,
-    "My": 1.2,
+    "My": 1.0,
     "Mz": 1.0,
-    "name": "§dNASA Workbench",
+    "name": "Moon Iron Ore",
     "specialInfo": [],
-    "hardness": 1.5999999999999999,
+    "hardness": 1.0,
     "resistance": 10.0,
     "hasGravity": false,
-    "isWaterloggable": true,
+    "isWaterloggable": false,
     "creativeTab": {
       "value": "CUSTOM:BossTools"
     },
@@ -44,11 +44,11 @@
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canProvidePower": false,
-    "lightOpacity": 0,
+    "lightOpacity": 255,
     "material": {
-      "value": "IRON"
+      "value": "ROCK"
     },
-    "tickRate": 1,
+    "tickRate": 10,
     "tickRandomly": false,
     "isReplaceable": false,
     "colorOnMap": "DEFAULT",
@@ -64,9 +64,9 @@
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "soundOnStep": {
-      "value": "METAL"
+      "value": "STONE"
     },
-    "luminance": 1,
+    "luminance": 0,
     "unbreakable": false,
     "breakHarvestLevel": 1,
     "spawnParticles": false,
@@ -76,10 +76,10 @@
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.5,
     "particleAmount": 4,
-    "hasInventory": true,
-    "guiBoundTo": "NasaWorkbench",
-    "openGUIOnRightClick": true,
-    "inventorySize": 16,
+    "hasInventory": false,
+    "guiBoundTo": "<NONE>",
+    "openGUIOnRightClick": false,
+    "inventorySize": 9,
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,
@@ -93,15 +93,18 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onTickUpdate": {
-      "name": "WorkbenchUpdateTick"
-    },
-    "spawnWorldTypes": [],
+    "spawnWorldTypes": [
+      "CUSTOM:Moon"
+    ],
     "restrictionBiomes": [],
-    "blocksToReplace": [],
-    "frequencyPerChunks": 10,
-    "frequencyOnChunk": 16,
-    "minGenerateHeight": 0,
+    "blocksToReplace": [
+      {
+        "value": "CUSTOM:MoonStone"
+      }
+    ],
+    "frequencyPerChunks": 5,
+    "frequencyOnChunk": 11,
+    "minGenerateHeight": 1,
     "maxGenerateHeight": 64
   }
 }

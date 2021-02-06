@@ -71,6 +71,11 @@
     "immuneToLightning": false,
     "immuneToPotions": false,
     "immuneToPlayer": false,
+    "immuneToExplosion": false,
+    "immuneToTrident": false,
+    "immuneToAnvil": false,
+    "immuneToWither": false,
+    "immuneToDragonBreath": false,
     "mobDrop": {
       "value": "Items.ROTTEN_FLESH"
     },

@@ -36,11 +36,11 @@ import java.util.List;
 import java.util.Collections;
 
 @BossToolsModElements.ModElement.Tag
-public class IronBlock extends BossToolsModElements.ModElement {
-	@ObjectHolder("boss_tools:iron")
+public class MoonoreironBlock extends BossToolsModElements.ModElement {
+	@ObjectHolder("boss_tools:moonoreiron")
 	public static final Block block = null;
-	public IronBlock(BossToolsModElements instance) {
-		super(instance, 24);
+	public MoonoreironBlock(BossToolsModElements instance) {
+		super(instance, 530);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
@@ -53,7 +53,7 @@ public class IronBlock extends BossToolsModElements.ModElement {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).harvestLevel(1)
 					.harvestTool(ToolType.PICKAXE).setRequiresTool());
-			setRegistryName("iron");
+			setRegistryName("moonoreiron");
 		}
 
 		@Override
@@ -71,16 +71,16 @@ public class IronBlock extends BossToolsModElements.ModElement {
 			public boolean generate(ISeedReader world, ChunkGenerator generator, Random rand, BlockPos pos, OreFeatureConfig config) {
 				RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 				boolean dimensionCriteria = false;
-				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("boss_tools:mars")))
+				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("boss_tools:moon")))
 					dimensionCriteria = true;
 				if (!dimensionCriteria)
 					return false;
 				return super.generate(world, generator, rand, pos, config);
 			}
-		}.withConfiguration(new OreFeatureConfig(new BlockMatchRuleTest(MarsStoneBlock.block.getDefaultState().getBlock()) {
+		}.withConfiguration(new OreFeatureConfig(new BlockMatchRuleTest(MoonStoneBlock.block.getDefaultState().getBlock()) {
 			public boolean test(BlockState blockAt, Random random) {
 				boolean blockCriteria = false;
-				if (blockAt.getBlock() == MarsStoneBlock.block.getDefaultState().getBlock())
+				if (blockAt.getBlock() == MoonStoneBlock.block.getDefaultState().getBlock())
 					blockCriteria = true;
 				return blockCriteria;
 			}

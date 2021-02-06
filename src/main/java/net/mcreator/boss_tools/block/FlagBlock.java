@@ -58,7 +58,7 @@ public class FlagBlock extends BossToolsModElements.ModElement {
 	public static class CustomBlock extends Block {
 		public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
 		public CustomBlock() {
-			super(Block.Properties.create(Material.CARPET).sound(SoundType.STONE).hardnessAndResistance(1f, 10f).setLightLevel(s -> 15).notSolid()
+			super(Block.Properties.create(Material.CARPET).sound(SoundType.STONE).hardnessAndResistance(1f, 10f).setLightLevel(s -> 1).notSolid()
 					.setOpaque((bs, br, bp) -> false));
 			this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH));
 			setRegistryName("flag");

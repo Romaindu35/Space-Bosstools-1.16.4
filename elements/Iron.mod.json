@@ -94,16 +94,12 @@
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "spawnWorldTypes": [
-      "CUSTOM:Moon",
       "CUSTOM:Mars"
     ],
     "restrictionBiomes": [],
     "blocksToReplace": [
       {
         "value": "CUSTOM:MarsStone"
-      },
-      {
-        "value": "CUSTOM:MoonStone"
       }
     ],
     "frequencyPerChunks": 5,
