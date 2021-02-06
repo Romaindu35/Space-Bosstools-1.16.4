@@ -35,7 +35,7 @@ public class Tier3SpaceStationMercuryOrbitGuiGui extends BossToolsModElements.Mo
 	public static HashMap guistate = new HashMap();
 	private static ContainerType<GuiContainerMod> containerType = null;
 	public Tier3SpaceStationMercuryOrbitGuiGui(BossToolsModElements instance) {
-		super(instance, 431);
+		super(instance, 432);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,

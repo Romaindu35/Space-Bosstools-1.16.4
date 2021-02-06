@@ -15,7 +15,7 @@ import java.util.HashMap;
 @BossToolsModElements.ModElement.Tag
 public class JumpGravityProcedure extends BossToolsModElements.ModElement {
 	public JumpGravityProcedure(BossToolsModElements instance) {
-		super(instance, 485);
+		super(instance, 486);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

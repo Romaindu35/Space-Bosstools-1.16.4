@@ -35,7 +35,7 @@ public class Tier2SpaceStationMarsOrbitGuiGui extends BossToolsModElements.ModEl
 	public static HashMap guistate = new HashMap();
 	private static ContainerType<GuiContainerMod> containerType = null;
 	public Tier2SpaceStationMarsOrbitGuiGui(BossToolsModElements instance) {
-		super(instance, 407);
+		super(instance, 408);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,

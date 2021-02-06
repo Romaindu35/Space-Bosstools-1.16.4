@@ -40,7 +40,7 @@ public class IronBlock extends BossToolsModElements.ModElement {
 	@ObjectHolder("boss_tools:iron")
 	public static final Block block = null;
 	public IronBlock(BossToolsModElements instance) {
-		super(instance, 24);
+		super(instance, 25);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

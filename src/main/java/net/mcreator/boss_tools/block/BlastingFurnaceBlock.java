@@ -11,7 +11,6 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.ToolType;
 
 import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
@@ -78,7 +77,7 @@ public class BlastingFurnaceBlock extends BossToolsModElements.ModElement {
 	@ObjectHolder("boss_tools:blasting_furnace")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public BlastingFurnaceBlock(BossToolsModElements instance) {
-		super(instance, 54);
+		super(instance, 55);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 
@@ -97,8 +96,7 @@ public class BlastingFurnaceBlock extends BossToolsModElements.ModElement {
 	public static class CustomBlock extends Block {
 		public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
 		public CustomBlock() {
-			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).harvestLevel(1)
-					.harvestTool(ToolType.PICKAXE).setRequiresTool());
+			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0));
 			this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH));
 			setRegistryName("blasting_furnace");
 		}

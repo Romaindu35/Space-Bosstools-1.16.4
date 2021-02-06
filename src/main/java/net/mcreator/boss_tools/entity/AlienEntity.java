@@ -55,7 +55,7 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 public class AlienEntity extends BossToolsModElements.ModElement {
 	public static EntityType entity = null;
 	public AlienEntity(BossToolsModElements instance) {
-		super(instance, 57);
+		super(instance, 58);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ModelRegisterHandler());
 	}
 

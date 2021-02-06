@@ -16,7 +16,7 @@ public class BatteryItem extends BossToolsModElements.ModElement {
 	@ObjectHolder("boss_tools:battery")
 	public static final Item block = null;
 	public BatteryItem(BossToolsModElements instance) {
-		super(instance, 32);
+		super(instance, 33);
 	}
 
 	@Override

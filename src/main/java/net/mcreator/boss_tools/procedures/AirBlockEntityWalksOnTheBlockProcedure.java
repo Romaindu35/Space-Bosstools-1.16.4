@@ -7,7 +7,7 @@ import java.util.Map;
 @BossToolsModElements.ModElement.Tag
 public class AirBlockEntityWalksOnTheBlockProcedure extends BossToolsModElements.ModElement {
 	public AirBlockEntityWalksOnTheBlockProcedure(BossToolsModElements instance) {
-		super(instance, 158);
+		super(instance, 159);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

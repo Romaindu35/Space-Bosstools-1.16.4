@@ -21,7 +21,7 @@ import java.util.Map;
 @BossToolsModElements.ModElement.Tag
 public class Tier1MoonSpaceStationCreateProcedure extends BossToolsModElements.ModElement {
 	public Tier1MoonSpaceStationCreateProcedure(BossToolsModElements instance) {
-		super(instance, 383);
+		super(instance, 384);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

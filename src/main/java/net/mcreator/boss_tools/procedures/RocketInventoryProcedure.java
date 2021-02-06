@@ -27,7 +27,7 @@ import java.util.HashMap;
 @BossToolsModElements.ModElement.Tag
 public class RocketInventoryProcedure extends BossToolsModElements.ModElement {
 	public RocketInventoryProcedure(BossToolsModElements instance) {
-		super(instance, 226);
+		super(instance, 227);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

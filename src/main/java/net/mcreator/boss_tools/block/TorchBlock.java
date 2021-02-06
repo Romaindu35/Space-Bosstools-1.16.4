@@ -45,7 +45,7 @@ public class TorchBlock extends BossToolsModElements.ModElement {
 	@ObjectHolder("boss_tools:torch")
 	public static final Block block = null;
 	public TorchBlock(BossToolsModElements instance) {
-		super(instance, 155);
+		super(instance, 156);
 	}
 
 	@Override

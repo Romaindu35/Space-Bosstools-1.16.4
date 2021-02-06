@@ -13,7 +13,7 @@ import java.util.Map;
 @BossToolsModElements.ModElement.Tag
 public class ParticleEntityFallsProcedure extends BossToolsModElements.ModElement {
 	public ParticleEntityFallsProcedure(BossToolsModElements instance) {
-		super(instance, 102);
+		super(instance, 103);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

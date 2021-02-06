@@ -22,7 +22,7 @@ import net.mcreator.boss_tools.BossToolsModElements;
 public class MoonBiomBiome extends BossToolsModElements.ModElement {
 	public static Biome biome;
 	public MoonBiomBiome(BossToolsModElements instance) {
-		super(instance, 177);
+		super(instance, 178);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {

@@ -8,7 +8,7 @@ import java.util.Map;
 @BossToolsModElements.ModElement.Tag
 public class MeteorAdditionalGenerationConditionProcedure extends BossToolsModElements.ModElement {
 	public MeteorAdditionalGenerationConditionProcedure(BossToolsModElements instance) {
-		super(instance, 522);
+		super(instance, 523);
 	}
 
 	public static boolean executeProcedure(Map<String, Object> dependencies) {

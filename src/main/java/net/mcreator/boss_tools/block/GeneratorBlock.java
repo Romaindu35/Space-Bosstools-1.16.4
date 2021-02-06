@@ -13,7 +13,6 @@ import net.minecraftforge.energy.EnergyStorage;
 import net.minecraftforge.energy.CapabilityEnergy;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.ToolType;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
@@ -83,7 +82,7 @@ public class GeneratorBlock extends BossToolsModElements.ModElement {
 	@ObjectHolder("boss_tools:generator")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public GeneratorBlock(BossToolsModElements instance) {
-		super(instance, 53);
+		super(instance, 54);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 
@@ -102,8 +101,7 @@ public class GeneratorBlock extends BossToolsModElements.ModElement {
 	public static class CustomBlock extends Block {
 		public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
 		public CustomBlock() {
-			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).harvestLevel(1)
-					.harvestTool(ToolType.PICKAXE).setRequiresTool());
+			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0));
 			this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH));
 			setRegistryName("generator");
 		}

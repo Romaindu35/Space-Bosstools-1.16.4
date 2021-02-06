@@ -35,7 +35,7 @@ public class Tier2SpaceStationOverworldOrbitGUiGui extends BossToolsModElements.
 	public static HashMap guistate = new HashMap();
 	private static ContainerType<GuiContainerMod> containerType = null;
 	public Tier2SpaceStationOverworldOrbitGUiGui(BossToolsModElements instance) {
-		super(instance, 395);
+		super(instance, 396);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,

@@ -31,7 +31,7 @@ public class PowUpTier2KeyBinding extends BossToolsModElements.ModElement {
 	@OnlyIn(Dist.CLIENT)
 	private KeyBinding keys;
 	public PowUpTier2KeyBinding(BossToolsModElements instance) {
-		super(instance, 138);
+		super(instance, 139);
 		elements.addNetworkMessage(KeyBindingPressedMessage.class, KeyBindingPressedMessage::buffer, KeyBindingPressedMessage::new,
 				KeyBindingPressedMessage::handler);
 	}

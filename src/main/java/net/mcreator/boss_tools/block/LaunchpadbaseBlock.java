@@ -55,7 +55,7 @@ public class LaunchpadbaseBlock extends BossToolsModElements.ModElement {
 	@ObjectHolder("boss_tools:launchpadbase")
 	public static final Block block = null;
 	public LaunchpadbaseBlock(BossToolsModElements instance) {
-		super(instance, 525);
+		super(instance, 526);
 	}
 
 	@Override

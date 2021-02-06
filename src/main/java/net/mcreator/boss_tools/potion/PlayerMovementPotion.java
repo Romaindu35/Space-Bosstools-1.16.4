@@ -24,7 +24,7 @@ public class PlayerMovementPotion extends BossToolsModElements.ModElement {
 	@ObjectHolder("boss_tools:player_movement")
 	public static final Effect potion = null;
 	public PlayerMovementPotion(BossToolsModElements instance) {
-		super(instance, 528);
+		super(instance, 529);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

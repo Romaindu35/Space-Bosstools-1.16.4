@@ -28,7 +28,7 @@
     "Mz": 1.0,
     "name": "Mars Sand",
     "specialInfo": [],
-    "hardness": 1.0,
+    "hardness": 0.5,
     "resistance": 10.0,
     "hasGravity": true,
     "isWaterloggable": false,

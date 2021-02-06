@@ -10,7 +10,7 @@ import java.util.Map;
 @BossToolsModElements.ModElement.Tag
 public class PlayerMovementOnPotionActiveTickProcedure extends BossToolsModElements.ModElement {
 	public PlayerMovementOnPotionActiveTickProcedure(BossToolsModElements instance) {
-		super(instance, 529);
+		super(instance, 530);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

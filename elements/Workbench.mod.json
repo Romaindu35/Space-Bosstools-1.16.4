@@ -28,14 +28,14 @@
     "Mz": 1.0,
     "name": "§dNASA Workbench",
     "specialInfo": [],
-    "hardness": 1.5999999999999999,
+    "hardness": 1.0,
     "resistance": 10.0,
     "hasGravity": false,
     "isWaterloggable": true,
     "creativeTab": {
       "value": "CUSTOM:BossTools"
     },
-    "destroyTool": "pickaxe",
+    "destroyTool": "Not specified",
     "customDrop": {
       "value": ""
     },

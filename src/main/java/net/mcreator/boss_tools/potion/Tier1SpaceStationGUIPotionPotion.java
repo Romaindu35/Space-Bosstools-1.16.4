@@ -24,7 +24,7 @@ public class Tier1SpaceStationGUIPotionPotion extends BossToolsModElements.ModEl
 	@ObjectHolder("boss_tools:tier_1_space_station_gui_potion")
 	public static final Effect potion = null;
 	public Tier1SpaceStationGUIPotionPotion(BossToolsModElements instance) {
-		super(instance, 380);
+		super(instance, 381);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
