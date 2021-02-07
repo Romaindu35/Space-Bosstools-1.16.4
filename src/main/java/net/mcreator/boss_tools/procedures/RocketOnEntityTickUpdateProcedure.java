@@ -67,7 +67,7 @@ public class RocketOnEntityTickUpdateProcedure extends BossToolsModElements.ModE
 		double fuelSync = 0;
 		double geckolibsync = 0;
 		if ((entity.isBeingRidden())) {
-			if (((entity.getPosY()) > 600)) {
+			if (((entity.getPosY()) >= 600)) {
 				if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
@@ -125,7 +125,7 @@ public class RocketOnEntityTickUpdateProcedure extends BossToolsModElements.ModE
 				}
 			}
 		}
-		if (((entity.getPosY()) > 615)) {
+		if (((entity.getPosY()) >= 625)) {
 			if (!entity.world.isRemote())
 				entity.remove();
 		}

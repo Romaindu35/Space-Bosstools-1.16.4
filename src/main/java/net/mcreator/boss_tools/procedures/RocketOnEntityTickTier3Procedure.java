@@ -65,7 +65,7 @@ public class RocketOnEntityTickTier3Procedure extends BossToolsModElements.ModEl
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		if ((entity.isBeingRidden())) {
-			if (((entity.getPosY()) > 600)) {
+			if (((entity.getPosY()) >= 600)) {
 				if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
@@ -123,7 +123,7 @@ public class RocketOnEntityTickTier3Procedure extends BossToolsModElements.ModEl
 				}
 			}
 		}
-		if (((entity.getPosY()) > 615)) {
+		if (((entity.getPosY()) >= 615)) {
 			if (!entity.world.isRemote())
 				entity.remove();
 		}
