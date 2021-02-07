@@ -123,7 +123,7 @@ public class RocketOnEntityTickTier3Procedure extends BossToolsModElements.ModEl
 				}
 			}
 		}
-		if (((entity.getPosY()) >= 615)) {
+		if (((entity.getPosY()) >= 625)) {
 			if (!entity.world.isRemote())
 				entity.remove();
 		}
