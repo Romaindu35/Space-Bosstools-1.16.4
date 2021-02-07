@@ -3,7 +3,7 @@
   "_type": "food",
   "definition": {
     "renderType": 0,
-    "texture": "cheeseitem",
+    "texture": "item_chesse",
     "customModelName": "Normal",
     "name": "Chesse",
     "rarity": "COMMON",

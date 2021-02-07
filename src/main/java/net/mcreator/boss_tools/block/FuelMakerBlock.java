@@ -327,6 +327,8 @@ public class FuelMakerBlock extends BossToolsModElements.ModElement {
 
 		@Override
 		public boolean isItemValidForSlot(int index, ItemStack stack) {
+			if (index == 2)
+				return false;
 			return true;
 		}
 

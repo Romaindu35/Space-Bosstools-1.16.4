@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "boss_tools:blocks/chesseore",
-    "up": "boss_tools:blocks/chesseore",
-    "north": "boss_tools:blocks/chesseore",
-    "east": "boss_tools:blocks/chesseore",
-    "south": "boss_tools:blocks/chesseore",
-    "west": "boss_tools:blocks/chesseore",
-    "particle": "boss_tools:blocks/chesseore"
+    "down": "boss_tools:blocks/moon_ore_chesse",
+    "up": "boss_tools:blocks/moon_ore_chesse",
+    "north": "boss_tools:blocks/moon_ore_chesse",
+    "east": "boss_tools:blocks/moon_ore_chesse",
+    "south": "boss_tools:blocks/moon_ore_chesse",
+    "west": "boss_tools:blocks/moon_ore_chesse",
+    "particle": "boss_tools:blocks/moon_ore_chesse"
   }
 }

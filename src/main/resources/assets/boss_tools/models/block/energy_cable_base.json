@@ -3,19 +3,19 @@
   "textures": {
     "all": "boss_tools:blocks/energy_cable",
     "particle": "boss_tools:blocks/energy_cable",
-    "11": "boss_tools:blocks/energy_cable",
-    "12": "boss_tools:blocks/energy_cable_lightning",
-    "13": "boss_tools:blocks/cableside2",
-    "14": "boss_tools:blocks/cablesiderotate3",
+    "11": "boss_tools:blocks/cablesidedown",
+    "12": "boss_tools:blocks/cablesiderotatedown",
+    "13": "boss_tools:blocks/cablesideup",
+    "14": "boss_tools:blocks/cablesiderotateup",
     "0": "boss_tools:blocks/energy_cable",
     "1": "boss_tools:blocks/energy_cable_lightning",
     "2": "boss_tools:blocks/cableside1",
     "3": "boss_tools:blocks/cablesiderotate1",
     "4": "boss_tools:blocks/cableside2",
-    "5": "boss_tools:blocks/cablesiderotate3",
-    "6": "boss_tools:blocks/cableside4",
-    "7": "boss_tools:blocks/cablesiderotatedown",
-    "9": "boss_tools:blocks/cablesidedown",
-    "10": "boss_tools:blocks/cablesiderotateup"
+    "5": "boss_tools:blocks/clabesiderotate2",
+    "6": "boss_tools:blocks/cableside3",
+    "7": "boss_tools:blocks/cablesiderotate3",
+    "9": "boss_tools:blocks/cableside4",
+    "10": "boss_tools:blocks/cablesiderotate4"
   }
 }

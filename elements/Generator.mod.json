@@ -81,12 +81,12 @@
     "hasInventory": true,
     "guiBoundTo": "GeneratorGUI",
     "openGUIOnRightClick": true,
-    "inventorySize": 9,
+    "inventorySize": 2,
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,
     "inventoryOutSlotIDs": [
-      2
+      0
     ],
     "inventoryInSlotIDs": [],
     "hasEnergyStorage": true,
