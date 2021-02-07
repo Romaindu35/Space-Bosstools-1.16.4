@@ -79,12 +79,19 @@
     "hasInventory": true,
     "guiBoundTo": "BlastFurnaceGUI",
     "openGUIOnRightClick": true,
-    "inventorySize": 4,
+    "inventorySize": 9,
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,
     "inventoryOutSlotIDs": [
-      2
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
     ],
     "inventoryInSlotIDs": [],
     "hasEnergyStorage": false,

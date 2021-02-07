@@ -369,6 +369,12 @@ public class WorkbenchBlock extends BossToolsModElements.ModElement {
 
 		@Override
 		public boolean isItemValidForSlot(int index, ItemStack stack) {
+			if (index == 14)
+				return false;
+			if (index == 15)
+				return false;
+			if (index == 16)
+				return false;
 			return true;
 		}
 

@@ -79,12 +79,20 @@
     "hasInventory": true,
     "guiBoundTo": "CompressorGui",
     "openGUIOnRightClick": true,
-    "inventorySize": 3,
+    "inventorySize": 9,
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,
     "inventoryOutSlotIDs": [
-      2
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
     ],
     "inventoryInSlotIDs": [],
     "hasEnergyStorage": true,
