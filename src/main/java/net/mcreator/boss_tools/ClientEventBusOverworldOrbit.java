@@ -32,7 +32,7 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 @Mod.EventBusSubscriber(modid = "boss_tools", bus = Bus.MOD, value = Dist.CLIENT)
 public class ClientEventBusOverworldOrbit {
 	private static final ResourceLocation DIM_RENDER_INFO = new ResourceLocation("boss_tools", "umlaufbahnerde");
-	private static final ResourceLocation SUN_TEXTURES = new ResourceLocation("boss_tools", "textures/sky/earth_orbit.png");
+	private static final ResourceLocation SUN_TEXTURES = new ResourceLocation("boss_tools", "textures/sky/earth.png");
 	private static final ResourceLocation MOON_PHASES_TEXTURES = new ResourceLocation("boss_tools", "textures/sky/sun.png");
 	private static final ResourceLocation MOON = new ResourceLocation("boss_tools", "textures/sky/moon_phases.png");
 	private static final ResourceLocation SKY_TEXTURE = new ResourceLocation("boss_tools", "textures/sky/sky.png");
@@ -151,10 +151,10 @@ public class ClientEventBusOverworldOrbit {
 								
 								//new System (Sun main Planet)
 								float f17 = (float) mc.player.getEyePosition(partialTicks).y /*- world.getWorldInfo().getVoidFogHeight()*/;
-								bufferbuilder.pos(matrix4f1, -250.0F, -f17 -18.0F, 250.0F).tex(0.0F, 0.0F).endVertex(); //350 is nice but fps xD
-						     	bufferbuilder.pos(matrix4f1, 250.0F, -f17 -18.0F, 250.0F).tex(1.0F, 0.0F).endVertex();
-						     	bufferbuilder.pos(matrix4f1, 250.0F, -f17 -18.0F, -250.0F).tex(1.0F, 1.0F).endVertex();
-						     	bufferbuilder.pos(matrix4f1, -250.0F, -f17 -18.0F, -250.0F).tex(0.0F, 1.0F).endVertex();
+								bufferbuilder.pos(matrix4f1, -60.0F, -f17 -18.0F, 60.0F).tex(0.0F, 0.0F).endVertex(); //350 is nice but fps xD
+						     	bufferbuilder.pos(matrix4f1, 60.0F, -f17 -18.0F, 60.0F).tex(1.0F, 0.0F).endVertex();
+						     	bufferbuilder.pos(matrix4f1, 60.0F, -f17 -18.0F, -60.0F).tex(1.0F, 1.0F).endVertex();
+						     	bufferbuilder.pos(matrix4f1, -60.0F, -f17 -18.0F, -60.0F).tex(0.0F, 1.0F).endVertex();
 								bufferbuilder.finishDrawing();
 								WorldVertexBufferUploader.draw(bufferbuilder);
 								f12 = 20.0F;
