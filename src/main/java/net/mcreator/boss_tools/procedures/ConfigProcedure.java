@@ -86,26 +86,38 @@ public class ConfigProcedure extends BossToolsModElements.ModElement {
 		if ((((testconfig)).equals("Alien Spawn = true"))) {
 			BossToolsModVariables.Config = (double) 1;
 		}
-		if ((!(((testconfig)).equals("Alien Spawn = true")))) {
+		if ((((testconfig)).equals("Alien Spawn = false"))) {
 			BossToolsModVariables.Config = (double) 2;
+		}
+		if (((!(((testconfig)).equals("Alien Spawn = true"))) && (!(((testconfig)).equals("Alien Spawn = false"))))) {
+			BossToolsModVariables.Config = (double) 1;
 		} // logic Alien House
 		if ((((alienhouseconfig)).equals("Alien House Structure = true"))) {
 			BossToolsModVariables.Configalienhouse = (double) 1;
 		}
-		if ((!(((alienhouseconfig)).equals("Alien House Structure = true")))) {
+		if ((((alienhouseconfig)).equals("Alien House Structure = false"))) {
 			BossToolsModVariables.Configalienhouse = (double) 2;
+		}
+		if (((!(((alienhouseconfig)).equals("Alien House Structure = true"))) && (!(((alienhouseconfig)).equals("Alien House Structure = false"))))) {
+			BossToolsModVariables.Configalienhouse = (double) 1;
 		} // logic Meteor
 		if ((((Meteor)).equals("Meteor Structure = true"))) {
 			BossToolsModVariables.ConfigMeteor = (double) 1;
 		}
-		if ((!(((Meteor)).equals("Meteor Structure = true")))) {
+		if ((((Meteor)).equals("Meteor Structure = false"))) {
 			BossToolsModVariables.ConfigMeteor = (double) 2;
+		}
+		if (((!(((Meteor)).equals("Meteor Structure = true"))) && (!(((Meteor)).equals("Meteor Structure = false"))))) {
+			BossToolsModVariables.ConfigMeteor = (double) 1;
 		} // logic oxygen System
 		if ((((oxygen)).equals("Oxygen System = true"))) {
 			BossToolsModVariables.oxygen_system = (double) 1;
 		}
-		if ((!(((oxygen)).equals("Oxygen System = true")))) {
+		if ((((oxygen)).equals("Oxygen System = false"))) {
 			BossToolsModVariables.oxygen_system = (double) 2;
+		}
+		if (((!(((oxygen)).equals("Oxygen System = true"))) && (!(((oxygen)).equals("Oxygen System = false"))))) {
+			BossToolsModVariables.oxygen_system = (double) 1;
 		}
 	}
 

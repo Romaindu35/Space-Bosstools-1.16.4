@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "oxygengear",
+    "texture": "item_oxygen_gear",
     "customModelName": "Normal",
     "name": "Oxygen Gear",
     "rarity": "COMMON",
@@ -15,6 +15,9 @@
     "useDuration": 0,
     "toolType": 1.0,
     "damageCount": 0,
+    "recipeRemainder": {
+      "value": ""
+    },
     "destroyAnyBlock": false,
     "immuneToFire": false,
     "stayInGridWhenCrafting": false,

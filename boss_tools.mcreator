@@ -261,7 +261,7 @@
     {
       "name": "SpaceArmor",
       "type": "armor",
-      "sortid": 57,
+      "sortid": 58,
       "compiles": true,
       "locked_code": true,
       "ids": {},
@@ -341,7 +341,7 @@
     {
       "name": "Alien",
       "type": "mob",
-      "sortid": 58,
+      "sortid": 57,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -10900,7 +10900,7 @@
       "item.boss_tools.orbit_moon": "Admin Feuerzeug",
       "item.boss_tools.orbit_mercury": "Admin Feuerzeug",
       "effect.bee_potion": "BeePotion",
-      "item.boss_tools.rocketfins": "Rocket Fins",
+      "item.boss_tools.rocketfins": "Rocket Fin",
       "item.minecraft.potion.effect.rocket_particle_3": "RocketParticle3",
       "item.minecraft.lingering_potion.effect.bee_potion": "Lingering BeePotion",
       "item.boss_tools.oxygen_gear": "Oxygen Gear",
