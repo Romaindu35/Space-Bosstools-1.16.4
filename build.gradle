@@ -3,9 +3,11 @@ buildscript {
         maven { url = 'https://files.minecraftforge.net/maven' }
         jcenter()
         mavenCentral()
+        maven {url='https://dist.creeper.host/Sponge/maven'}
     }
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '3.+', changing: true
+        classpath 'org.spongepowered:mixingradle:0.7-SNAPSHOT'
     }
 }
 repositories {
@@ -34,6 +36,7 @@ minecraft {
     runs {
         client {
             workingDirectory project.file('run')
+            arg "-mixin.config=boss_tools.mixins.json"
 
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
@@ -47,6 +50,7 @@ minecraft {
 
         server {
             workingDirectory project.file('run')
+            arg "-mixin.config=boss_tools.mixins.json"
 
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
@@ -66,5 +70,26 @@ dependencies {
   runtimeOnly fg.deobf("mezz.jei:jei-1.16.4:7.6.0.62")
 }
 
+jar {
+    manifest {
+        attributes([
+                "Specification-Title": "boss_tools",
+                "Specification-Vendor": "MrScautHD",
+                "Specification-Version": "1", // We are version 1 of ourselves
+                "Implementation-Title": project.name,
+                "Implementation-Version": "${version}",
+                "Implementation-Vendor" :"MrScautHD",
+                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
+                "MixinConfigs": "boss_tools.mixins.json"
+        ])
+    }
+}
+
 apply from: 'mcreator.gradle'
+
+apply plugin: 'org.spongepowered.mixin'
+
+mixin {
+    add sourceSets.main, "boss_tools.refmap.json"
+}
 
