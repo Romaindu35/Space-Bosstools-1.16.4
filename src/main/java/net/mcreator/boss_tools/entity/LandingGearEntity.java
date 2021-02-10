@@ -1,14 +1,16 @@
 
 package net.mcreator.boss_tools.entity;
 
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.settings.PointOfView;
+import net.minecraftforge.fml.network.*;
+import net.minecraftforge.fml.network.simple.SimpleChannel;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.items.wrapper.EntityHandsInvWrapper;
 import net.minecraftforge.items.wrapper.EntityArmorInvWrapper;
 import net.minecraftforge.items.wrapper.CombinedInvWrapper;
 import net.minecraftforge.items.ItemStackHandler;
 import net.minecraftforge.items.CapabilityItemHandler;
-import net.minecraftforge.fml.network.NetworkHooks;
-import net.minecraftforge.fml.network.FMLPlayMessages;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
@@ -66,6 +68,7 @@ import javax.annotation.Nonnull;
 
 import java.util.Map;
 import java.util.HashMap;
+import java.util.function.Supplier;
 
 import io.netty.buffer.Unpooled;
 
@@ -78,6 +81,7 @@ public class LandingGearEntity extends BossToolsModElements.ModElement {
 	public LandingGearEntity(BossToolsModElements instance) {
 		super(instance, 63);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ModelRegisterHandler());
+		NetworkLoader.registerMessages();
 	}
 
 	@Override
@@ -149,6 +153,18 @@ public class LandingGearEntity extends BossToolsModElements.ModElement {
 		@Override
 		public double getMountedYOffset() {
 			return super.getMountedYOffset() + -0.6;
+		}
+
+		@Override
+		protected void removePassenger(Entity passenger) {
+			if (passenger.isSneaking() && !passenger.world.isRemote) {
+				if(passenger instanceof ServerPlayerEntity) {
+					ServerPlayerEntity playerEntity = (ServerPlayerEntity) passenger;
+					NetworkLoader.INSTANCE.send(PacketDistributor.PLAYER.with(() -> playerEntity),
+							new RocketDetectPlayer(this.getEntityId(), false));
+				}
+			}
+			super.removePassenger(passenger);
 		}
 
 		@Override
@@ -233,7 +249,8 @@ public class LandingGearEntity extends BossToolsModElements.ModElement {
 					this.entityDropItem(itemstack);
 				}
 			}
-		}*/
+		}
+*/
 
 		@Override
 		public void writeAdditional(CompoundNBT compound) {
@@ -279,6 +296,13 @@ public class LandingGearEntity extends BossToolsModElements.ModElement {
 			}
 			super.func_230254_b_(sourceentity, hand);
 			sourceentity.startRiding(this);
+
+			if(sourceentity instanceof ServerPlayerEntity) {
+				ServerPlayerEntity playerEntity = (ServerPlayerEntity) sourceentity;
+				NetworkLoader.INSTANCE.send(PacketDistributor.PLAYER.with(() -> playerEntity),
+						new RocketDetectPlayer(this.getEntityId(), true));
+			}
+
 			double x = this.getPosX();
 			double y = this.getPosY();
 			double z = this.getPosZ();
@@ -439,6 +463,53 @@ public class LandingGearEntity extends BossToolsModElements.ModElement {
 		}
 
 		public void setRotationAngles(Entity e, float f, float f1, float f2, float f3, float f4) {
+		}
+	}
+
+	private static class NetworkLoader {
+		public static SimpleChannel INSTANCE;
+		private static int id = 1;
+		public static int nextID() {
+			return id++;
+		}
+
+		public static void registerMessages() {
+			INSTANCE = NetworkRegistry.newSimpleChannel(new ResourceLocation("boss_tools", "landing_gear_entity"), () -> "1.0", s -> true, s -> true);
+
+			INSTANCE.registerMessage(nextID(), RocketDetectPlayer.class, RocketDetectPlayer::encode, RocketDetectPlayer::decode, RocketDetectPlayer::handle);
+		}
+	}
+
+	private static class RocketDetectPlayer {
+		private boolean isInRocket;
+		private int entityId;
+		public RocketDetectPlayer(int entityId, boolean isInRocket) {
+			this.isInRocket = isInRocket;
+			this.entityId = entityId;
+		}
+
+		public static void encode(RocketDetectPlayer msg, PacketBuffer buf) {
+			buf.writeInt(msg.entityId);
+			buf.writeBoolean(msg.isInRocket);
+		}
+
+		public static RocketDetectPlayer decode(PacketBuffer buf) {
+			return new RocketDetectPlayer(buf.readInt(), buf.readBoolean());
+		}
+
+		public static void handle(RocketDetectPlayer msg, Supplier<NetworkEvent.Context> ctx) {
+			ctx.get().enqueueWork(() -> {
+				if (msg.isInRocket){
+					Minecraft.getInstance().player.getPersistentData().putString("pointOfView", Minecraft.getInstance().gameSettings.getPointOfView().toString());
+					Minecraft.getInstance().gameSettings.setPointOfView(PointOfView.THIRD_PERSON_FRONT);
+				}
+				else {
+					if (Minecraft.getInstance().player.getPersistentData().contains("pointOfView"))
+						Minecraft.getInstance().gameSettings.setPointOfView(PointOfView.valueOf(Minecraft.getInstance().player.getPersistentData().getString("pointOfView")));
+				}
+				Minecraft.getInstance().player.getPersistentData().putBoolean("isInRocket", msg.isInRocket);
+			});
+			ctx.get().setPacketHandled(true);
 		}
 	}
 }

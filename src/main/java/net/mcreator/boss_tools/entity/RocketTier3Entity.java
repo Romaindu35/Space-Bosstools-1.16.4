@@ -1,6 +1,7 @@
 
 package net.mcreator.boss_tools.entity;
 
+import net.minecraft.client.settings.PointOfView;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.items.wrapper.EntityHandsInvWrapper;
 import net.minecraftforge.items.wrapper.EntityArmorInvWrapper;
@@ -159,6 +160,18 @@ public class RocketTier3Entity extends BossToolsModElements.ModElement {
 		}
 
 		@Override
+		protected void removePassenger(Entity passenger) {
+			if (passenger.isSneaking() && !passenger.world.isRemote) {
+				if(passenger instanceof ServerPlayerEntity) {
+					ServerPlayerEntity playerEntity = (ServerPlayerEntity) passenger;
+					NetworkLoader.INSTANCE.send(PacketDistributor.PLAYER.with(() -> playerEntity),
+							new RocketDetectPlayer(this.getEntityId(), false));
+				}
+			}
+			super.removePassenger(passenger);
+		}
+
+		@Override
 		public net.minecraft.util.SoundEvent getHurtSound(DamageSource ds) {
 			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation(""));
 		}
@@ -270,6 +283,13 @@ public class RocketTier3Entity extends BossToolsModElements.ModElement {
 			}
 			super.func_230254_b_(sourceentity, hand);
 			sourceentity.startRiding(this);
+
+			if(sourceentity instanceof ServerPlayerEntity) {
+				ServerPlayerEntity playerEntity = (ServerPlayerEntity) sourceentity;
+				NetworkLoader.INSTANCE.send(PacketDistributor.PLAYER.with(() -> playerEntity),
+						new RocketDetectPlayer(this.getEntityId(), true));
+			}
+
 			double x = this.getPosX();
 			double y = this.getPosY();
 			double z = this.getPosZ();
@@ -606,6 +626,7 @@ public class RocketTier3Entity extends BossToolsModElements.ModElement {
 			// new animationpitch
 			INSTANCE.registerMessage(nextID(), RocketSpin2Packet.class, RocketSpin2Packet::encode, RocketSpin2Packet::decode,
 					RocketSpin2Packet::handle);
+			INSTANCE.registerMessage(nextID(), RocketDetectPlayer.class, RocketDetectPlayer::encode, RocketDetectPlayer::decode, RocketDetectPlayer::handle);
 		}
 	}
 
@@ -662,6 +683,39 @@ public class RocketTier3Entity extends BossToolsModElements.ModElement {
 				if (entity instanceof LivingEntity) {
 					((LivingEntity) entity).getPersistentData().putDouble("AnimationPitch", msg.animationpitch);
 				}
+			});
+			ctx.get().setPacketHandled(true);
+		}
+	}
+
+	private static class RocketDetectPlayer {
+		private boolean isInRocket;
+		private int entityId;
+		public RocketDetectPlayer(int entityId, boolean isInRocket) {
+			this.isInRocket = isInRocket;
+			this.entityId = entityId;
+		}
+
+		public static void encode(RocketDetectPlayer msg, PacketBuffer buf) {
+			buf.writeInt(msg.entityId);
+			buf.writeBoolean(msg.isInRocket);
+		}
+
+		public static RocketDetectPlayer decode(PacketBuffer buf) {
+			return new RocketDetectPlayer(buf.readInt(), buf.readBoolean());
+		}
+
+		public static void handle(RocketDetectPlayer msg, Supplier<NetworkEvent.Context> ctx) {
+			ctx.get().enqueueWork(() -> {
+				if (msg.isInRocket){
+					Minecraft.getInstance().player.getPersistentData().putString("pointOfView", Minecraft.getInstance().gameSettings.getPointOfView().toString());
+					Minecraft.getInstance().gameSettings.setPointOfView(PointOfView.THIRD_PERSON_FRONT);
+				}
+				else {
+					if (Minecraft.getInstance().player.getPersistentData().contains("pointOfView"))
+						Minecraft.getInstance().gameSettings.setPointOfView(PointOfView.valueOf(Minecraft.getInstance().player.getPersistentData().getString("pointOfView")));
+				}
+				Minecraft.getInstance().player.getPersistentData().putBoolean("isInRocket", msg.isInRocket);
 			});
 			ctx.get().setPacketHandled(true);
 		}

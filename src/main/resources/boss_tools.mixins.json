@@ -7,7 +7,7 @@
 
   ],
   "client":[
-
+    "PointOfViewMixin"
   ],
   "injectors": {
     "defaultRequire": 1

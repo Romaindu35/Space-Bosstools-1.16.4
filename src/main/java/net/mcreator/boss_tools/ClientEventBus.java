@@ -1,5 +1,8 @@
 package net.mcreator.boss_tools;
 
+import net.minecraft.client.GameConfiguration;
+import net.minecraft.client.gui.screen.OptionsScreen;
+import net.minecraft.client.gui.screen.SettingsScreen;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.fml.common.Mod;
@@ -30,6 +33,8 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 
 @Mod.EventBusSubscriber(modid = "boss_tools", bus = Bus.MOD, value = Dist.CLIENT)
 public class ClientEventBus {
+
+
 	private static final ResourceLocation DIM_RENDER_INFO = new ResourceLocation("boss_tools", "moon");
 	private static final ResourceLocation SUN_TEXTURES = new ResourceLocation("boss_tools", "textures/sky/sun.png");
 	private static final ResourceLocation MOON_PHASES_TEXTURES = new ResourceLocation("boss_tools", "textures/sky/earth.png");
